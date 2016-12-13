@@ -73,28 +73,5 @@ $(window).on("load", function() {
 
 $(document).ready(function(){
     typed2();
-    $('#fullpage').fullpage({
-        navigation: true,
-        navigationPosition: 'right',
-        // fitToSection: false, //default: true
-        scrollingSpeed: 1000, //default: 700
-        // scrollBar: true, //deault: false
-        responsiveWidth: 640,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-        controlArrows: false,
-        onLeave: function(index, nextIndex, direction){
-            //var leavingSection = $(this);
-            if(nextIndex == 3){
-                $('#portfolio-section').addClass('in-view');
-                $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background-color', '#fff');
-                $('#fp-nav ul li .fp-tooltip').addClass('light');
-            } else {
-                $('#portfolio-section').removeClass('in-view');
-                $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background-color', '#333');
-                $('#fp-nav ul li .fp-tooltip').removeClass('light');
-            }
-        }
-    });
     portfolioDescription();
 });

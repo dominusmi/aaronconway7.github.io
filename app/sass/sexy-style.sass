@@ -169,8 +169,6 @@
 
 .universe
     display: none
-    //width: 100vw
-    //overflow: hidden
 
 #footer
     transform: none
@@ -262,6 +260,9 @@
 .emoji
     height: 1em
     margin-bottom: -0.18em
+
+section
+    min-height: 100vh
 
 #home-pg
 
@@ -375,11 +376,9 @@
             color: rgba(0, 0, 0, 0.75)
 
     #portfolio-section
-        height: 100vh
+        min-height: 100vh
         transition: background-color 1s ease-in-out
-
-        &.in-view
-            background-color: #171717
+        background-color: #171717
 
         .portfolio-title
             position: absolute
@@ -449,15 +448,11 @@
                         &:after
                             background: white
 
-            .description
-                position: absolute
-                left: 0px
-                top: 0px
-
         .work
             height: 60vh
             background-color: rgb(46, 46, 46)
             width: 100%
+            margin-bottom: 25px
             // background-size: 100% auto
             background-size: cover
             box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.75)
@@ -490,106 +485,107 @@
             &.fdis-web
                 background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg)
 
-        .description
-            background-color: #171717
-            color: white
-            width: 100vw
-            height: 100vh
-            z-index: 99
-            visibility: hidden
-            transform: translate3d(-100%, 0px, 0px)
-            transition: all 1s ease-in-out
-
-            &.is-open
-                transform: none
-                visibility: visible
-                overflow-y: scroll
-
-            .loading
-
-                p
-                    margin-bottom: 10px
-                    font-family: 'Playfair Display'
-                    opacity: 0.5
-
-                .loading-bar
-                    height: 1px
-                    width: 100px
-                    background-color: #fff
-                    transform: scale3d(0, 1, 1)
-                    transform-origin: left
-                    transition: transform 3s ease-in-out
-
-                    &.loaded
-                        transform: scale3d(1, 1, 1)
-
-            .content
+            .description
                 display: none
-                animation: slideDown 1s ease-in-out
+                background-color: #171717
+                color: white
+                width: 100vw
+                height: 100vh
+                z-index: 99
+                visibility: hidden
+                transform: translate3d(-100%, 0px, 0px)
+                transition: all 1s ease-in-out
 
-                h1
-                    font-family: 'Playfair Display'
-                    font-weight: 300
-                    margin-bottom: 10px
-                    font-size: 1.5rem
+                &.is-open
+                    transform: none
+                    visibility: visible
+                    overflow-y: scroll
 
-                    a
+                .loading
+
+                    p
+                        margin-bottom: 10px
                         font-family: 'Playfair Display'
-                        font-weight: 300
-                        transition: all 0.3s ease-in-out
-
-                        &.strike-through
-
-                            &:after
-                                background: #fff
-
-                    img
-                        margin-bottom: -2.5px
-                        height: 1em
                         opacity: 0.5
 
-                p
-                    font-family: 'Playfair Display'
-                    color: rgba(255, 255, 255, 0.5)
-                    margin-bottom: 20px
+                    .loading-bar
+                        height: 1px
+                        width: 100px
+                        background-color: #fff
+                        transform: scale3d(0, 1, 1)
+                        transform-origin: left
+                        transition: transform 3s ease-in-out
 
-                    .bold
+                        &.loaded
+                            transform: scale3d(1, 1, 1)
+
+                .content
+                    display: none
+                    animation: slideDown 1s ease-in-out
+
+                    h1
                         font-family: 'Playfair Display'
-                        color: rgba(255, 255, 255, 0.7)
+                        font-weight: 300
+                        margin-bottom: 10px
+                        font-size: 1.5rem
 
-                .stats
+                        a
+                            font-family: 'Playfair Display'
+                            font-weight: 300
+                            transition: all 0.3s ease-in-out
+
+                            &.strike-through
+
+                                &:after
+                                    background: #fff
+
+                        img
+                            margin-bottom: -2.5px
+                            height: 1em
+                            opacity: 0.5
+
                     p
-                        margin-bottom: 5px
-                        font-size: 0.9em
+                        font-family: 'Playfair Display'
+                        color: rgba(255, 255, 255, 0.5)
+                        margin-bottom: 20px
 
-                        &:last-of-type
-                            margin-bottom: 50px
+                        .bold
+                            font-family: 'Playfair Display'
+                            color: rgba(255, 255, 255, 0.7)
 
-                .screenshot
-                    width: 100%
-                    // box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
-                    margin-bottom: 25px
+                    .stats
+                        p
+                            margin-bottom: 5px
+                            font-size: 0.9em
 
-                    &.shadow
-                        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
-                        transform: scale(0.93)
+                            &:last-of-type
+                                margin-bottom: 50px
 
-            .close
-                display: none
-                animation: slideDown 1s ease-in-out
-                position: absolute
-                right: 20px
-                top: 15px
-                color: white
+                    .screenshot
+                        width: 100%
+                        // box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
+                        margin-bottom: 25px
 
-                span
-                    font-size: 2rem
-                    opacity: 0.5
-                    transition: all 0.3s ease-in-out
+                        &.shadow
+                            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
+                            transform: scale(0.93)
 
-                    &:hover
-                        opacity: 1
-                        cursor: pointer
+                .close
+                    display: none
+                    animation: slideDown 1s ease-in-out
+                    position: absolute
+                    right: 20px
+                    top: 15px
+                    color: white
+
+                    span
+                        font-size: 2rem
+                        opacity: 0.5
+                        transition: all 0.3s ease-in-out
+
+                        &:hover
+                            opacity: 1
+                            cursor: pointer
 
     #projects-section
         p

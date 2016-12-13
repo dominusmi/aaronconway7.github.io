@@ -213,6 +213,9 @@
   height: 1em;
   margin-bottom: -0.18em; }
 
+section {
+  min-height: 100vh; }
+
 #home-pg #hello-section {
   height: 100vh;
   background-image: url(../assets/img/background.jpg);
@@ -304,10 +307,9 @@
     color: rgba(0, 0, 0, 0.75); }
 
 #home-pg #portfolio-section {
-  height: 100vh;
-  transition: background-color 1s ease-in-out; }
-  #home-pg #portfolio-section.in-view {
-    background-color: #171717; }
+  min-height: 100vh;
+  transition: background-color 1s ease-in-out;
+  background-color: #171717; }
   #home-pg #portfolio-section .portfolio-title {
     position: absolute;
     width: 100vw;
@@ -363,14 +365,11 @@
           margin-right: 0px; }
       #home-pg #portfolio-section .slide .work-container > p .strike-through:after {
         background: white; }
-    #home-pg #portfolio-section .slide .description {
-      position: absolute;
-      left: 0px;
-      top: 0px; }
   #home-pg #portfolio-section .work {
     height: 60vh;
     background-color: #2e2e2e;
     width: 100%;
+    margin-bottom: 25px;
     background-size: cover;
     box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.75);
     background-position: center;
@@ -399,82 +398,83 @@
       background-image: url(../assets/img/portfolio/raw/raw.jpg); }
     #home-pg #portfolio-section .work.fdis-web {
       background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg); }
-  #home-pg #portfolio-section .description {
-    background-color: #171717;
-    color: white;
-    width: 100vw;
-    height: 100vh;
-    z-index: 99;
-    visibility: hidden;
-    transform: translate3d(-100%, 0px, 0px);
-    transition: all 1s ease-in-out; }
-    #home-pg #portfolio-section .description.is-open {
-      transform: none;
-      visibility: visible;
-      overflow-y: scroll; }
-    #home-pg #portfolio-section .description .loading p {
-      margin-bottom: 10px;
-      font-family: 'Playfair Display';
-      opacity: 0.5; }
-    #home-pg #portfolio-section .description .loading .loading-bar {
-      height: 1px;
-      width: 100px;
-      background-color: #fff;
-      transform: scale3d(0, 1, 1);
-      transform-origin: left;
-      transition: transform 3s ease-in-out; }
-      #home-pg #portfolio-section .description .loading .loading-bar.loaded {
-        transform: scale3d(1, 1, 1); }
-    #home-pg #portfolio-section .description .content {
+    #home-pg #portfolio-section .work .description {
       display: none;
-      animation: slideDown 1s ease-in-out; }
-      #home-pg #portfolio-section .description .content h1 {
-        font-family: 'Playfair Display';
-        font-weight: 300;
+      background-color: #171717;
+      color: white;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+      visibility: hidden;
+      transform: translate3d(-100%, 0px, 0px);
+      transition: all 1s ease-in-out; }
+      #home-pg #portfolio-section .work .description.is-open {
+        transform: none;
+        visibility: visible;
+        overflow-y: scroll; }
+      #home-pg #portfolio-section .work .description .loading p {
         margin-bottom: 10px;
-        font-size: 1.5rem; }
-        #home-pg #portfolio-section .description .content h1 a {
+        font-family: 'Playfair Display';
+        opacity: 0.5; }
+      #home-pg #portfolio-section .work .description .loading .loading-bar {
+        height: 1px;
+        width: 100px;
+        background-color: #fff;
+        transform: scale3d(0, 1, 1);
+        transform-origin: left;
+        transition: transform 3s ease-in-out; }
+        #home-pg #portfolio-section .work .description .loading .loading-bar.loaded {
+          transform: scale3d(1, 1, 1); }
+      #home-pg #portfolio-section .work .description .content {
+        display: none;
+        animation: slideDown 1s ease-in-out; }
+        #home-pg #portfolio-section .work .description .content h1 {
           font-family: 'Playfair Display';
           font-weight: 300;
-          transition: all 0.3s ease-in-out; }
-          #home-pg #portfolio-section .description .content h1 a.strike-through:after {
-            background: #fff; }
-        #home-pg #portfolio-section .description .content h1 img {
-          margin-bottom: -2.5px;
-          height: 1em;
-          opacity: 0.5; }
-      #home-pg #portfolio-section .description .content p {
-        font-family: 'Playfair Display';
-        color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 20px; }
-        #home-pg #portfolio-section .description .content p .bold {
+          margin-bottom: 10px;
+          font-size: 1.5rem; }
+          #home-pg #portfolio-section .work .description .content h1 a {
+            font-family: 'Playfair Display';
+            font-weight: 300;
+            transition: all 0.3s ease-in-out; }
+            #home-pg #portfolio-section .work .description .content h1 a.strike-through:after {
+              background: #fff; }
+          #home-pg #portfolio-section .work .description .content h1 img {
+            margin-bottom: -2.5px;
+            height: 1em;
+            opacity: 0.5; }
+        #home-pg #portfolio-section .work .description .content p {
           font-family: 'Playfair Display';
-          color: rgba(255, 255, 255, 0.7); }
-      #home-pg #portfolio-section .description .content .stats p {
-        margin-bottom: 5px;
-        font-size: 0.9em; }
-        #home-pg #portfolio-section .description .content .stats p:last-of-type {
-          margin-bottom: 50px; }
-      #home-pg #portfolio-section .description .content .screenshot {
-        width: 100%;
-        margin-bottom: 25px; }
-        #home-pg #portfolio-section .description .content .screenshot.shadow {
-          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75);
-          transform: scale(0.93); }
-    #home-pg #portfolio-section .description .close {
-      display: none;
-      animation: slideDown 1s ease-in-out;
-      position: absolute;
-      right: 20px;
-      top: 15px;
-      color: white; }
-      #home-pg #portfolio-section .description .close span {
-        font-size: 2rem;
-        opacity: 0.5;
-        transition: all 0.3s ease-in-out; }
-        #home-pg #portfolio-section .description .close span:hover {
-          opacity: 1;
-          cursor: pointer; }
+          color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 20px; }
+          #home-pg #portfolio-section .work .description .content p .bold {
+            font-family: 'Playfair Display';
+            color: rgba(255, 255, 255, 0.7); }
+        #home-pg #portfolio-section .work .description .content .stats p {
+          margin-bottom: 5px;
+          font-size: 0.9em; }
+          #home-pg #portfolio-section .work .description .content .stats p:last-of-type {
+            margin-bottom: 50px; }
+        #home-pg #portfolio-section .work .description .content .screenshot {
+          width: 100%;
+          margin-bottom: 25px; }
+          #home-pg #portfolio-section .work .description .content .screenshot.shadow {
+            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75);
+            transform: scale(0.93); }
+      #home-pg #portfolio-section .work .description .close {
+        display: none;
+        animation: slideDown 1s ease-in-out;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        color: white; }
+        #home-pg #portfolio-section .work .description .close span {
+          font-size: 2rem;
+          opacity: 0.5;
+          transition: all 0.3s ease-in-out; }
+          #home-pg #portfolio-section .work .description .close span:hover {
+            opacity: 1;
+            cursor: pointer; }
 
 #home-pg #projects-section p {
   font-size: 1.75rem;
