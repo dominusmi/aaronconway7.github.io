@@ -69,6 +69,11 @@ gulp.task('docs', function() {
         .pipe(gulp.dest('dist/assets/docs'))
 });
 
+gulp.task('vid', function() {
+    return gulp.src('app/assets/vid/**/*')
+        .pipe(gulp.dest('dist/assets/vid'))
+});
+
 gulp.task('bower-css', function() {
 
     var cssFilter = filter('**/*.css', {restore: true});
@@ -91,13 +96,13 @@ gulp.task('minify', ['html-min', 'uglify', 'css-nano', 'image-optimise']);
 
 gulp.task('bower', ['bower-css', 'bower-js']);
 
-gulp.task('transfer', ['fonts', 'docs'])
+gulp.task('transfer', ['fonts', 'docs', 'vid'])
 
 gulp.task('jade-watch', ['jade'], reload);
 
 gulp.task('watch', ['browserSync', 'sass', 'jade'], function (){
-    gulp.watch('app/sass/*.sass', ['sass']);
-    gulp.watch('./app/jade/*.jade', ['jade-watch']);
+    gulp.watch('app/sass/**/*.sass', ['sass']);
+    gulp.watch('./app/jade/**/*.jade', ['jade-watch']);
     // Other watchers
 });
 

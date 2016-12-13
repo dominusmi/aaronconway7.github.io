@@ -1,10 +1,301 @@
 doctype html
-html(lang='en')
+html(lang="en")
     head
         include include/head
-        title
+        title Aaron Conway.
+        // stylesheet
+        link(rel='stylesheet', href='css/sexy-style.css')
+        link(rel='stylesheet', href='css/jquery.fullpage.css')
     body
-        // Add your site or app content here
-        h1 Hello World!
-        p My Workflow
-        include include/foot
+        #loader
+            .row.left-bottom
+                object(type='image/svg+xml', data='assets/img/outline.svg')
+        .universe#home-pg
+            .page-container#fullpage
+                section#hello-section.section(data-tooltip="Hello")
+                    .photo-creds
+                        span #[span.bold PhotoCreds]#[img.emoji(src="assets/img/emoji/camera.png" alt="Camera Emoji")] : #[a.strike-through(href="https://twitter.com/AnnaBlackbourn") Anna Blackbourn]
+                    .container
+                        .col.content.right-bottom
+                            object.logo(type='image/svg+xml', data='assets/img/Designer.svg')
+                            .typewriter
+                                #typed-strings
+                                    p Developer.
+                                span.typed
+                            h1 Hello World!#[img.emoji(src="assets/img/emoji/wave.png", alt="Waving Hand Emoji")] I'm #[span.bold Aaron].
+                    
+                section#intro-section.section(data-tooltip="Intro")
+                    .container
+                        .col.content
+                            .typewriter
+                                #typed-strings-2
+                                    p Hello. Hi. Sup. Yo. What's Up.
+                                span.typed-2
+                            p I’m #[span.bold Aaron Conway]. I’m a student, #[span.bold designer], front-end developer, and former baby #[img.emoji(src="assets/img/emoji/baby.png", alt="Baby Emoji")]. I #[span.bold.red love] making things look sick (in a good way)! Let me show you...
+                
+                section#portfolio-section.section(data-tooltip="Portfolio")
+                    .portfolio-title
+                        .container
+                            h1.title Portfolio
+                    .slide.fdis-web-slide
+                        .container.work-container
+                            //p
+                                //a.strike-through(href="https://github.com/aaronconway7/", target="_blank") GitHub
+                                //- a.strike-through(href="#", target="_blank") Bēhance
+                                //- a.strike-through(href="#", target="_blank") dribble
+                            .work.fdis-web
+                        .description
+                            .loading.col.center-center
+                                p loading awesomeness
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://fdisuk.com", target='_blank') Fire Door Inspection Solutions.
+                                        img(src="assets/img/link.png", alt="FDIS Link")
+                                p Fire Door Inspection Solutions is a facilities management provider to the fire door industry offering products on a short lead time in comparison to competitors. 
+                                p I designed the brand behind the company, beginning with the logo and material such as business cards going through many designs before agreeing on a final outcome. With the logo, we wanted to create something that was distinctly different to the competition, hence the major use of the colour yellow as most companies in the industry focus on either red or orange. The idea behind the logo is the flaming door with the datil in the door also forming the 'F' in FDIS.
+                                p I also designed and developed their webiste. The idea was to develop a site attractive to the customer and with enough information to catch the viewers attention enough to query further. I have designed the site to make it very easy for more information to be shown but only if it is wanted via the use of distinct and clear action buttons. I have used design features such as parallax and fixed scrolling methods. In developement we set out a clear timeline which involved wireframing, prototyping and testing with constant communication between myself and the FDIS team.
+                                .stats
+                                    p #[span.bold Skills Used:] Adobe Illustrator, Adobe Photoshop, Sketch, HTML, Jade, CSS, SASS, JQuery.
+                                    p #[span.bold Date:] April 2016 - November 2016
+                                img.screenshot.shadow(alt="FDIS Logo" src="assets/img/portfolio/fdis/fdis-logo.jpg")
+                                img.screenshot(alt="FDIS Homepage" src="assets/img/portfolio/fdis/screenshot1.png")
+                                img.screenshot(alt="FDIS About Page" src="assets/img/portfolio/fdis/screenshot2.png")
+                            .close
+                                span ⤫
+                    .slide.raw-slide
+                        .container.work-container
+                            .work.raw
+                        .description
+                            .loading.col.center-center
+                                p loading awesomeness
+                                .loading-bar
+                            .container.content
+                                h1 RAW.
+                                p RAW, (or RaW 1251AM), is the student radio station at The University of Warwick broadcasting 24hours a day. They are a student society at The University of Warwick's Student Union comprised of hundreds of members.
+                                p RAW had their current logo at the time for a number of years, and the exec felt it was time for a big and modern change. I was recruited to help make this change. I produced a number of designs as shown below with the theme that the RAW team wanted some sort of radio waves incorporated. Minimilism was my idea. Keeping the brand simple and elegant is a vision that some of the most popular brands in the world keep in line with. This was one of the projects I enjoyed the most and I'm extremely happy and proud of the outcome. Here's an extract from Nick Harris, one of RAWs station manager who wrote an article on the rebrand in the student newspaper:
+                                p "This notion was even more evident in the decision behind employing the help of computer science student, web designer, and genius Aaron Conway to capture our ideas in a new logo. His ingenuity and particularly his patience with us, changing the tiniest details and accepting the pettiest of criticisms was fundamental to the eventual outcome". (The Boar, Vol.39, Issue 1, pg.14)
+                                .stats
+                                    p #[span.bold Skills Used:] Adobe Photoshop, Adobe Illustrator.
+                                    p #[span.bold Date:] August 2016
+                                img.screenshot.shadow(alt="RAW Logo" src="assets/img/portfolio/raw/raw.jpg")
+                                .row.center-center
+                                    .col.one-third.mob-whole
+                                        img.screenshot.shadow(alt="RAW Design" src="assets/img/portfolio/raw/design1.png")
+                                    .col.one-third.mob-whole
+                                        img.screenshot.shadow(alt="RAW Design" src="assets/img/portfolio/raw/design2.png")
+                                    .col.one-third.mob-whole
+                                        img.screenshot.shadow(alt="RAW Design" src="assets/img/portfolio/raw/design3.png")
+                            .close
+                                span ⤫
+                    .slide.lush-heat-slide
+                        .container.work-container
+                            .work.lush-heat
+                        .description
+                            .loading.col.center-center
+                                p loading awesomeness
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://lush-heat.com", target='_blank') Lush Heat Treatment Ltd.
+                                        img(src="assets/img/link.png", alt="Lush Heat Link")
+                                p Lush Heat Treatment is an independent company established in 1952. They specialise in Vacuum processing and brazing for clients across the Aerospace, Defence, Space, Power and Commercial sectors.
+                                p The aim for this project was to revamp the design of their site to keep in touch with the modern web design trends, while at the same time staying professional to suit the target audience. Their current website at the time was very old fashioned and out of date and needed some major changes.
+                                .stats
+                                    p #[span.bold Skills Used:] HTML, CSS, SASS, JQuery
+                                    p #[span.bold Date:] August 2016
+                                img.screenshot(alt="Lush Heat Homepage" src="assets/img/portfolio/lush-heat/screenshot1.png")
+                                .row.center-center
+                                    .col.one-half.mob-whole
+                                        img.screenshot(alt="Lush Heat Screenshot" src="assets/img/portfolio/lush-heat/screenshot2.png")
+                                    .col.one-half.mob-whole
+                                        img.screenshot(alt="Lush Heat Screenshot" src="assets/img/portfolio/lush-heat/screenshot4.png")
+                            .close
+                                span ⤫ 
+                    .slide.fdis-logo.slide
+                        .container.work-container
+                            .work.fdis-logo
+                        .description
+                            .loading.col.center-center
+                                p loading awesomeness
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://fdisuk.com", target='_blank') Fire Door Inspection Solutions.
+                                        img(src="assets/img/link.png", alt="FDIS Link")
+                                p Fire Door Inspection Solutions is a facilities management provider to the fire door industry offering products on a short lead time in comparison to competitors. 
+                                p I designed the brand behind the company, beginning with the logo and material such as business cards going through many designs before agreeing on a final outcome. With the logo, we wanted to create something that was distinctly different to the competition, hence the major use of the colour yellow as most companies in the industry focus on either red or orange. The idea behind the logo is the flaming door with the datil in the door also forming the 'F' in FDIS.
+                                p I also designed and developed their webiste. The idea was to develop a site attractive to the customer and with enough information to catch the viewers attention enough to query further. I have designed the site to make it very easy for more information to be shown but only if it is wanted via the use of distinct and clear action buttons. I have used design features such as parallax and fixed scrolling methods. In developement we set out a clear timeline which involved wireframing, prototyping and testing with constant communication between myself and the FDIS team.
+                                .stats
+                                    p #[span.bold Skills Used:] Adobe Illustrator, Adobe Photoshop, Sketch, HTML, Jade, CSS, SASS, JQuery.
+                                    p #[span.bold Date:] April 2016 - November 2016
+                                img.screenshot.shadow(alt="FDIS Logo" src="assets/img/portfolio/fdis/fdis-logo.jpg")
+                                img.screenshot(alt="FDIS Homepage" src="assets/img/portfolio/fdis/screenshot1.png")
+                                img.screenshot(alt="FDIS Homepage" src="assets/img/portfolio/fdis/screenshot2.png")
+                            .close
+                                span ⤫
+                    .slide.tutorial-slide
+                        .container.work-container
+                            .work.tutorial
+                        .description
+                            .loading.col.center-center
+                                p loading awesomeness
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://tutorial-ltd.co.uk", target='_blank') Tutorial Ltd.
+                                        img(src="assets/img/link.png", alt="Tutorial Link")
+                                p Tutorial Ltd is one of Essex's leading tuition centres and Performing Arts schools offering both 1 to 1 and group tuition. They specialise in Maths, English, Science, Performing Arts and Music.
+                                p I worked as a Tutor and designer at Tutorial for a number of years starting in Sixth Form. One of my first major roles was to make an advert showcasing the centre. This was a great oppurtunity for me in a creative project that I thoroughly enjoyed. This was my first video project.
+                                p Into my second year of university, I was quickly developing the skills of a web developer and this came to use when at Tutorial we agreed that their current website needed a revamp. Working on a project so close to my heart and one I had a lot of knowledge of was perfect in the design and development and easy communication with employees of the centre. 
+                                .stats
+                                    p #[span.bold Skills Used:] HTML, CSS, PHP, JQuery, JavaScript, Bootstrap
+                                    p #[span.bold Date:] December 2015
+                                img.screenshot(alt="Tutorial Homepage" src="assets/img/portfolio/tutorial/screenshot1.png")
+                                iframe.screenshot.shadow(src='https://player.vimeo.com/video/191710919', width='100%', height='360', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+                            .close
+                                span ⤫
+                    .slide.moneywise-slide
+                        .container.work-container
+                            .work.moneywise
+                        .description
+                            .loading.col.center-center
+                                p loading my first client work
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://www.moneywisequoteme.com/, target='_blank'") MoneyWiseQuoteMe.
+                                        img(src="assets/img/link.png", alt="Moneywise Link")
+                                p MoneywiseQuoteMe.com is a Trading Name of Moneywise Investments Plc. They are an Insurance Broker and Independent Financial Advisers Authorised & Regulated by The Financial Conduct Authority.
+                                p MoneywiseQuoteMe.com was my first piece of client work, and really set me on my way for future projects from the experience I gained.
+                                .stats
+                                    p #[span.bold Skills Used:] HTML, CSS, PHP, JQuery, JavaScript, Bootstrap
+                                    p #[span.bold Date:] July 2015 - August 2015
+                                img.screenshot(alt="MoneywiseQuoteMe Homepage" src="assets/img/portfolio/moneywise/screenshot1.png")
+                            .close
+                                span ⤫
+                    .slide.uprising-slide
+                        .container.work-container
+                            .work.uprising
+                        .description
+                            .loading.col.center-center
+                                p loading awesomeness
+                                .loading-bar
+                            .container.content
+                                h1 Uprising.
+                                p Uprising was a local rock band, near my home town in Essex.
+                                .stats
+                                    p #[span.bold Skills Used:] Adobe Photoshop
+                                    p #[span.bold Date:] May 2015
+                                img.screenshot.shadow(alt="Uprising Logo" src="assets/img/portfolio/uprising/uprising.jpg")
+                            .close
+                                span ⤫
+                    .slide.fairpay-slide
+                        .container.work-container
+                            .work.fairpay
+                        .description
+                            .loading.col.center-center
+                                p loading some very old work
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target='_blank') FairPay.
+                                        img(src="assets/img/link.png", alt="FairPay Link")
+                                p Fairpay is a web application designed to help students keep track of their bills when moving into their new off campus accomodation.
+                                p It was a University project in the Web Development Technologies module.
+                                .stats
+                                    p #[span.bold Skills Used:] HTML, CSS, PHP, JQuery, JavaScript, AJAX, SQL
+                                    p #[span.bold Date:] February 2015 - March 2015
+                                img.screenshot(alt="FairPay Homepage" src="assets/img/portfolio/fairpay/screenshot1.png")
+                            .close
+                                span ⤫
+                    .slide.to-do-slide
+                        .container.work-container
+                            .work.do-to
+                        .description
+                            .loading.col.center-center
+                                p loading my very first web project
+                                .loading-bar
+                            .container.content
+                                h1 
+                                    a.strike-through(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target='_blank') DoTo!.
+                                        img(src="assets/img/link.png", alt="DoTo! Link")
+                                p DoTo! is a to-do list web application.
+                                p It is my first ever web project as a University module, Web Development Technologies.
+                                .stats
+                                    p #[span.bold Skills Used:] HTML, CSS, PHP, JQuery, JavaScript, AJAX, SQL
+                                    p #[span.bold Date:] January 2015 - February 2015
+                                img.screenshot(alt="DoTo! Homepage" src="assets/img/portfolio/do-to/screenshot1.png")
+                            .close
+                                span ⤫
+            
+                section#projects-section.section(data-tooltip="Projects")
+                    .container
+                        p.text-center … I also have a few bits i’m working on at the moment…
+                        .row.logos.tab-col
+                            img.logo(alt="frecibo", src="assets/img/portfolio/frecibo/frecibo-b&w.png")
+                            img.logo(alt="ndorsa", src="assets/img/portfolio/ndorsa/ndorsa-b&w.png")
+                            img.logo(alt="eden", src="assets/img/portfolio/eden/eden-b&w.png")
+                            img.logo(alt="the boar", src="assets/img/portfolio/boar/boar-b&w.png")
+                            img.logo(alt="givee", src="assets/img/portfolio/givee/givee-b&w.png")
+                
+                section#interests-section-1.section(data-tooltip="Inte...")
+                    .row.background-vid
+                        .video-clip
+                            video(data-autoplay='', loop='', muted='', poster="assets/img/kicking-football.jpg")
+                                source(data-src='assets/vid/footgolf.mp4', type='video/mp4')
+                                source(data-src='assets/vid/footgolf.webm', type='video/webm')
+                                source(data-src='assets/vid/footgolf.ogg', type='video/ogg')
+                            span VidCreds#[img.emoji(src="assets/img/emoji/video.png" alt="Video Camera Emoji")] : #[a.strike-through(href="https://twitter.com/lukemackin96") Luke Mackin]
+                    .container
+                        p ...besides from work, I #[img.emoji(src="assets/img/emoji/heart.png", alt="Heart Emoji")] #[span.bold football]! So much so, I even formed Warwick’s Computer Sceince Football Team! (Here’s me kicking a ball, enjoy)...
+                
+                section#interests-section-2.section(data-tooltip="...rests")
+                    .container
+                        .row.content.tab-col
+                            .col.one-half.tab-whole
+                                iframe(src='https://embed.spotify.com/?uri=spotify%3Auser%3Aaaronconway7%3Aplaylist%3A7jQB0ke0WAUfajQesY0G5T', width='100%', frameborder='0', allowtransparency='true')
+                            .col.one-half.tab-whole
+                                p ...I also #[span.bold play] #[img.emoji(src="assets/img/emoji/guitar.png", alt="Guitar Emoji")], and take great pride in creating banging #[a.spotify.strike-through.bold(href="https://open.spotify.com/user/aaronconway7", target="_blank") spotify] playlists with witty names if I say so myself! Take a listen...
+                
+                section#fwends-section.section(data-tooltip="Fwends")
+                    .container
+                        p.text-center ...Now before I let you get back to watching videos of cats or whatever you were doing, be sure to check out some of my #[span.bold mates] on the line...
+                        p.text-center (ooo fwends #[img.emoji(src="assets/img/emoji/thumbs-up.png", alt="Thumbs Up Emoji")])
+                        .row.friends.center-center.mob-col
+                            a(href="http://tbjgolden.com", target='_blank')
+                                .friend.golden
+                            a(href="http://hlacmane.co.uk", target='_blank')
+                                .friend.wastemane
+                            a(href="http://edoardobarp.com", target='_blank')
+                                .friend.barp
+                            a(href="http://alexmacpherson.uk", target='_blank')
+                                .friend.macpherson
+                            a(href="https://yashasword.wordpress.com/", target='_blank')
+                                .friend.yash
+                
+                section#contact-section.section(data-tooltip="Contact")
+                    .container
+                        p ...and if you want to get in touch, grab a beer #[img.emoji(src="assets/img/emoji/beer.png", alt="Beer Emoji")] or something, you can reach me on #[a.facebook.social-media.strike-through.bold(href="https://www.facebook.com/aconway7", target="_blank") facebook], #[a.twitter.social-media.strike-through.bold(href="twitter.com/aaronconway7", target="_blank") twitter], #[a.instagram.social-media.strike-through.bold(href="https://instagram.com/aaronconway7", target="_blank") instagram], #[a.linkedin.social-media.strike-through.bold(href="https://www.linkedin.com/in/aaronconway7", target="_blank") linkedin] or just drop me an #[a.email.social-media.strike-through.bold(href="mailto:hello@aaronconway.co.uk", target="_blank") email].
+                
+                section#bye-section.section(data-tooltip="Bye")
+                    .container
+                        p.text-center.pacifico That's all folks!
+                        p.text-center.lost See you in another life brother (if you know you know)
+                    .footer
+                        .container
+                            .row.content.mob-col-reverse
+                                p.copyright Copyright &copy; 2016 #[span.bold Aaron Conway] All Rights Reserved. Made In Essex.
+                                .version-number 
+                                    span.current v3.0.0
+                                    .prev-versions
+                                        span
+                                            a.strike-through(href="v2.0.0/", target='_blank') v2.0.0
+                                        span
+                                            a.strike-through(href="v1.0.0/", target='_blank') v1.0.0
+
+        // jQuery script
+        script(src='js/jquery.js')
+        script(src='js/typed.min.js')
+        script(src='js/fancy-footwork.js')
+        script(src='js/jquery.fullpage.js')
