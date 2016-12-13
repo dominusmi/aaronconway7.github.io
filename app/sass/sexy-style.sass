@@ -13,30 +13,6 @@
     -moz-animation: blink 0.7s infinite
     animation: blink 0.7s infinite
 
-    // @media screen and (max-width: 400px)
-    //     display: none
-
-#fp-nav
-    display: none
-    animation: slideLeft 1s ease-in-out
-
-    &.right
-        @media screen and (max-width: 768px)
-            right: 10px !important
-
-#fp-nav ul li .fp-tooltip
-    color: black !important
-    font-family: 'Montserrat', 'Lato', sans-serif !important
-
-    &.light
-        color: white !important
-
-.fp-slidesNav
-    transform: translate3d(-50%,0,0) !important
-
-    ul
-        text-align: center
-
 @keyframes portfolioSlide
     0%
         transform: translate3d(-100%, 0px, 0px)
@@ -266,7 +242,45 @@ section
 
 #home-pg
 
-    #hello-section
+    .nav-dots
+        position: fixed
+        right: 0px
+        width: 75px
+        height: 100%
+        z-index: 99
+
+        ul
+            list-style: none
+            text-align: -webkit-center
+
+            li
+                width: 8px
+                height: 8px
+                background-color: black
+                border-radius: 100%
+                margin-bottom: 18px
+                position: relative
+                transition: all 0.1s ease-in-out
+
+                &:hover
+                    cursor: pointer
+                    width: 12px
+                    height: 12px
+
+                    span
+                        display: block
+
+                &.is-active
+                    width: 12px
+                    height: 12px
+
+                span
+                    position: absolute
+                    right: 15px
+                    top: -8px
+                    display: none
+
+    #hello
         height: 100vh
         background-image: url(../assets/img/background.jpg)
         // background-position: center center
@@ -358,7 +372,7 @@ section
                 visibility: visible
                 transform: none
 
-    #intro-section
+    #intro
         height: 100vh
 
         #typed-strings-2
@@ -375,7 +389,7 @@ section
             font-size: 1.5rem
             color: rgba(0, 0, 0, 0.75)
 
-    #portfolio-section
+    #portfolio
         min-height: 100vh
         transition: background-color 1s ease-in-out
         background-color: #171717
@@ -587,7 +601,7 @@ section
                             opacity: 1
                             cursor: pointer
 
-    #projects-section
+    #projects
         p
 
             font-size: 1.75rem
@@ -618,7 +632,7 @@ section
                     &:last-of-type
                         margin-bottom: 0px
 
-    #interests-section-1
+    #interests-1
 
         .background-vid
             position: absolute
@@ -685,7 +699,7 @@ section
             @media screen and (max-width: 425px)
                 font-size: 1.5rem
 
-    #interests-section-2
+    #interests-2
 
         .tab-col
 
@@ -711,7 +725,7 @@ section
             @media screen and (max-width: 425px)
                 height: 100%
 
-    #fwends-section
+    #fwends
         height: 100vh
 
         p
@@ -761,7 +775,7 @@ section
                 &.yash
                     background-image: url(../assets/img/fwends/yash.jpg)
 
-    #contact-section
+    #contact
 
         p
             font-size: 1.75rem
@@ -800,7 +814,7 @@ section
             &.email
                 color: #dd4b39
 
-    #bye-section
+    #bye
         position: relative
         height: 100vh
 

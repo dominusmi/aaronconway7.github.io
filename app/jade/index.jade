@@ -11,8 +11,37 @@ html(lang="en")
             .row.center-bottom
                 object(type='image/svg+xml', data='assets/img/outline.svg')
         .universe#home-pg
+            .nav-dots.col.center-center
+                ul
+                    li
+                        a(href="#hello")
+                        span hello
+                    li.is-active
+                        a(href="#intro")
+                        span intro
+                    li
+                        a(href="#portfolio")
+                        span portfolio
+                    li
+                        a(href="#projects")
+                        span projects
+                    li
+                        a(href="#interests-1")
+                        span inter...
+                    li
+                        a(href="#interests-2")
+                        span ...ests
+                    li
+                        a(href="#fwends")
+                        span fwends
+                    li
+                        a(href="#contact")
+                        span contact
+                    li
+                        a(href="#bye")
+                        span bye
             .page-container
-                section#hello-section.row.right-center
+                section#hello.row.right-center
                     .photo-creds
                         span #[span.bold PhotoCreds]#[img.emoji(src="assets/img/emoji/camera.png" alt="Camera Emoji")] : #[a.strike-through(href="https://twitter.com/AnnaBlackbourn") Anna Blackbourn]
                     .container
@@ -24,7 +53,7 @@ html(lang="en")
                                 span.typed
                             h1 Hello World!#[img.emoji(src="assets/img/emoji/wave.png", alt="Waving Hand Emoji")] I'm #[span.bold Aaron].
                     
-                section#intro-section.row.center-center
+                section#intro.row.center-center
                     .container
                         .col.content
                             .typewriter
@@ -33,10 +62,10 @@ html(lang="en")
                                 span.typed-2
                             p I’m #[span.bold Aaron Conway]. I’m a student, #[span.bold designer], front-end developer, and former baby #[img.emoji(src="assets/img/emoji/baby.png", alt="Baby Emoji")]. I #[span.bold.red love] making things look sick (in a good way)! Let me show you...
                 
-                section#portfolio-section
+                section#portfolio
                     .container
                         .row
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.fdis-web
                                     .description
                                         .loading.col.center-center
@@ -57,7 +86,7 @@ html(lang="en")
                                             img.screenshot(alt="FDIS About Page" src="assets/img/portfolio/fdis/screenshot2.png")
                                         .close
                                             span ⤫
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.raw
                                     .description
                                         .loading.col.center-center
@@ -82,7 +111,7 @@ html(lang="en")
                                         .close
                                             span ⤫
                         .row
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.lush-heat
                                     .description
                                         .loading.col.center-center
@@ -105,7 +134,7 @@ html(lang="en")
                                                     img.screenshot(alt="Lush Heat Screenshot" src="assets/img/portfolio/lush-heat/screenshot4.png")
                                         .close
                                             span ⤫ 
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.fdis-logo
                                     .description
                                         .loading.col.center-center
@@ -127,7 +156,7 @@ html(lang="en")
                                         .close
                                             span ⤫
                         .row
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.tutorial
                                     .description
                                         .loading.col.center-center
@@ -147,7 +176,7 @@ html(lang="en")
                                             iframe.screenshot.shadow(src='https://player.vimeo.com/video/191710919', width='100%', height='360', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
                                         .close
                                             span ⤫
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.moneywise
                                     .description
                                         .loading.col.center-center
@@ -166,7 +195,7 @@ html(lang="en")
                                         .close
                                             span ⤫
                         .row
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.uprising
                                     .description
                                         .loading.col.center-center
@@ -181,7 +210,7 @@ html(lang="en")
                                             img.screenshot.shadow(alt="Uprising Logo" src="assets/img/portfolio/uprising/uprising.jpg")
                                         .close
                                             span ⤫
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.fairpay
                                     .description
                                         .loading.col.center-center
@@ -200,7 +229,7 @@ html(lang="en")
                                         .close
                                             span ⤫
                         .row
-                            .col-1-2.mob-full
+                            .col.half.mob-full
                                 .work.do-to
                                     .description
                                         .loading.col.center-center
@@ -219,7 +248,7 @@ html(lang="en")
                                         .close
                                             span ⤫
             
-                section#projects-section.row.center-center
+                section#projects.row.center-center
                     .container
                         p.text-center … I also have a few bits i’m working on at the moment…
                         .row.logos.tab-col
@@ -229,7 +258,7 @@ html(lang="en")
                             img.logo(alt="the boar", src="assets/img/portfolio/boar/boar-b&w.png")
                             img.logo(alt="givee", src="assets/img/portfolio/givee/givee-b&w.png")
                 
-                section#interests-section-1.row.center-center
+                section#interests-1.row.center-center
                     .row.background-vid
                         .video-clip
                             video(data-autoplay='', loop='', muted='', poster="assets/img/kicking-football.jpg")
@@ -240,7 +269,7 @@ html(lang="en")
                     .container
                         p ...besides from work, I #[img.emoji(src="assets/img/emoji/heart.png", alt="Heart Emoji")] #[span.bold football]! So much so, I even formed Warwick’s Computer Sceince Football Team! (Here’s me kicking a ball, enjoy)...
                 
-                section#interests-section-2.row.center-center
+                section#interests-2.row.center-center
                     .container
                         .row.content.tab-col
                             .col.one-half.tab-whole
@@ -248,7 +277,7 @@ html(lang="en")
                             .col.one-half.tab-whole
                                 p ...I also #[span.bold play] #[img.emoji(src="assets/img/emoji/guitar.png", alt="Guitar Emoji")], and take great pride in creating banging #[a.spotify.strike-through.bold(href="https://open.spotify.com/user/aaronconway7", target="_blank") spotify] playlists with witty names if I say so myself! Take a listen...
                 
-                section#fwends-section.row.center-center
+                section#fwends.row.center-center
                     .container
                         p.text-center ...Now before I let you get back to watching videos of cats or whatever you were doing, be sure to check out some of my #[span.bold mates] on the line...
                         p.text-center (ooo fwends #[img.emoji(src="assets/img/emoji/thumbs-up.png", alt="Thumbs Up Emoji")])
@@ -264,11 +293,11 @@ html(lang="en")
                             a(href="https://yashasword.wordpress.com/", target='_blank')
                                 .friend.yash
                 
-                section#contact-section.row.center-center
+                section#contact.row.center-center
                     .container
                         p ...and if you want to get in touch, grab a beer #[img.emoji(src="assets/img/emoji/beer.png", alt="Beer Emoji")] or something, you can reach me on #[a.facebook.social-media.strike-through.bold(href="https://www.facebook.com/aconway7", target="_blank") facebook], #[a.twitter.social-media.strike-through.bold(href="twitter.com/aaronconway7", target="_blank") twitter], #[a.instagram.social-media.strike-through.bold(href="https://instagram.com/aaronconway7", target="_blank") instagram], #[a.linkedin.social-media.strike-through.bold(href="https://www.linkedin.com/in/aaronconway7", target="_blank") linkedin] or just drop me an #[a.email.social-media.strike-through.bold(href="mailto:hello@aaronconway.co.uk", target="_blank") email].
                 
-                section#bye-section.row.center-center
+                section#bye.row.center-center
                     .container
                         p.text-center.pacifico That's all folks!
                         p.text-center.lost See you in another life brother (if you know you know)

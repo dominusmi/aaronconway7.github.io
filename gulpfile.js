@@ -100,7 +100,13 @@ gulp.task('transfer', ['fonts', 'docs', 'vid'])
 
 gulp.task('jade-watch', ['jade'], reload);
 
-gulp.task('watch', ['browserSync', 'sass', 'jade'], function (){
+gulp.task('watch', ['sass', 'jade'], function (){
+    gulp.watch('app/sass/**/*.sass', ['sass']);
+    gulp.watch('./app/jade/**/*.jade', ['jade-watch']);
+    // Other watchers
+});
+
+gulp.task('live', ['browserSync', 'sass', 'jade'], function (){
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('./app/jade/**/*.jade', ['jade-watch']);
     // Other watchers
@@ -120,6 +126,6 @@ gulp.task('default', function () {
     runSequence(
         ['jade', 'sass', 'bower'],
         'compile',
-        'watch'
+        'live'
     )
 });
