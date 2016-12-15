@@ -327,6 +327,21 @@ section {
 #home-pg #portfolio {
   transition: background-color 1s ease-in-out;
   background-color: #171717; }
+  #home-pg #portfolio > .container > h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: SourceSansPro-Black;
+    letter-spacing: 0.2em;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block; }
+    #home-pg #portfolio > .container > h1 .overline {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      border: 1px solid white;
+      width: 100%; }
   #home-pg #portfolio .portfolio-title {
     position: absolute;
     width: 100vw;
