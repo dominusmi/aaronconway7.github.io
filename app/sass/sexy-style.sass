@@ -2,6 +2,9 @@
     height: 100% !important
     overflow: hidden !important
 
+a
+    color: inherit
+
 ::selection
     background: black
     color: white
@@ -28,6 +31,7 @@
 .strike-through
     position: relative
     display: inline-block
+    text-decoration: none
 
     &:hover
         cursor: pointer
@@ -61,7 +65,7 @@
         display: block
         width: 100%
         height: 0.1em
-        margin-top: -0.5em
+        margin-top: -0.75em
         transform: scale3d(0, 1, 1)
         transform-origin: center left
         transition: transform 0.5s cubic-bezier(.55, 0, .1, 1)
@@ -281,7 +285,7 @@ section
                     display: none
 
     #hello
-        height: 100vh
+        // height: 100vh
         background-image: url(../assets/img/background.jpg)
         // background-position: center center
         background-repeat: no-repeat
@@ -373,7 +377,7 @@ section
                 transform: none
 
     #intro
-        height: 100vh
+        // height: 100vh
 
         #typed-strings-2
             display: none
@@ -390,7 +394,7 @@ section
             color: rgba(0, 0, 0, 0.75)
 
     #portfolio
-        min-height: 100vh
+        // min-height: 100vh
         transition: background-color 1s ease-in-out
         background-color: #171717
 
@@ -633,6 +637,7 @@ section
                         margin-bottom: 0px
 
     #interests-1
+        position: relative
 
         .background-vid
             position: absolute
@@ -726,7 +731,7 @@ section
                 height: 100%
 
     #fwends
-        height: 100vh
+        // height: 100vh
 
         p
             font-size: 1.75rem
@@ -816,7 +821,7 @@ section
 
     #bye
         position: relative
-        height: 100vh
+        // height: 100vh
 
         p
 
