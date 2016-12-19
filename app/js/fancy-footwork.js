@@ -12,6 +12,7 @@ $(document).ready(function(){
     animatedScroll();
     typed2();
     portfolioDescription();
+    masonry();
 });
 
 $(window).scroll(function(){
@@ -125,4 +126,12 @@ function navDots(){
     // if(navMid > $('#projects').offset().top){
     //     $('.nav-dots ul li').css('background-color', 'black');
     // }
+}
+
+function masonry(){
+    $('.grid').masonry({
+        itemSelector: '.work',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+    });
 }

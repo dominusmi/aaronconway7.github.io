@@ -409,6 +409,7 @@ section
                 margin-bottom: 50px
                 position: relative
                 display: inline-block
+                margin-left: 10px
 
                 .overline
                     position: absolute
@@ -416,6 +417,16 @@ section
                     top: 0px
                     border: 1px solid white
                     width: 100%
+
+                span
+                    opacity: 0.5
+                    font-size: 0.6em
+                    margin-left: 10px
+
+                    .strike-through
+
+                        &:after
+                            background: white
 
         .portfolio-title
             position: absolute
@@ -485,144 +496,205 @@ section
                         &:after
                             background: white
 
-        .work
-            height: 60vh
-            background-color: rgb(46, 46, 46)
-            width: 100%
-            margin-bottom: 25px
-            // background-size: 100% auto
-            background-size: cover
-            box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.75)
-            background-position: center
-            background-repeat: no-repeat
-            filter: grayscale(100%)
-            transition: filter 0.3s ease-in-out, background-size 1s ease-in-out
+        .grid
 
-            &:hover
-                filter: none
-                cursor: pointer
+            .grid-sizer, .work
+                width: 33.333%
 
-            &.do-to
-                background-image: url(../assets/img/portfolio/do-to/do-to.jpg)
-            &.fairpay
-                background-image: url(../assets/img/portfolio/fairpay/fairpay.jpg)
-            &.moneywise
-                background-image: url(../assets/img/portfolio/moneywise/moneywise.jpg)
-            &.uprising
-                background-image: url(../assets/img/portfolio/uprising/uprising.jpg)
-                background-position: top
-            &.tutorial
-                background-image: url(../assets/img/portfolio/tutorial/tutorial.jpg)
-            &.fdis-logo
-                background-image: url(../assets/img/portfolio/fdis/fdis-logo.jpg)
-            &.lush-heat
-                background-image: url(../assets/img/portfolio/lush-heat/lush-heat.jpg)
-            &.raw
-                background-image: url(../assets/img/portfolio/raw/raw.jpg)
-            &.fdis-web
-                background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg)
+            .width-2
+                width: 66.666666%
+            .width-full
+                width: 100%
 
-            .description
-                display: none
-                background-color: #171717
-                color: white
-                width: 100vw
-                height: 100vh
-                z-index: 99
-                visibility: hidden
-                transform: translate3d(-100%, 0px, 0px)
-                transition: all 1s ease-in-out
+            .work
+                height: 250px
+                float: left
+                margin-bottom: 25px
+                padding: 0px 10px
+                overflow: hidden
 
-                &.is-open
-                    transform: none
-                    visibility: visible
-                    overflow-y: scroll
+                @media screen and (max-width: 425px)
+                    width: 100%
+                    height: 200px !important
 
-                .loading
+                .client
+                    height: 100%
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-position: center
+                    background-size: cover
+                    filter: grayscale(100%)
+                    transition: all 1s ease-in-out
 
-                    p
-                        margin-bottom: 10px
-                        font-family: 'Playfair Display'
-                        opacity: 0.5
+                    &:hover
+                        filter: none
+                        height: 110%
+                        // background-size: auto 110%
+                        cursor: pointer
 
-                    .loading-bar
-                        height: 1px
-                        width: 100px
-                        background-color: #fff
-                        transform: scale3d(0, 1, 1)
-                        transform-origin: left
-                        transition: transform 3s ease-in-out
+                .do-to
+                    background-image: url(../assets/img/portfolio/do-to/do-to.jpg)
+                .fairpay
+                    background-image: url(../assets/img/portfolio/fairpay/fairpay.jpg)
+                .moneywise
+                    background-image: url(../assets/img/portfolio/moneywise/moneywise.jpg)
+                .uprising
+                    background-image: url(../assets/img/portfolio/uprising/uprising.jpg)
+                    background-position: top
+                .tutorial
+                    background-image: url(../assets/img/portfolio/tutorial/tutorial.jpg)
+                .fdis-logo
+                    background-image: url(../assets/img/portfolio/fdis/fdis-logo.jpg)
+                .lush-heat
+                    background-image: url(../assets/img/portfolio/lush-heat/lush-heat.jpg)
+                .raw
+                    background-image: url(../assets/img/portfolio/raw/raw.jpg)
+                .fdis-web
+                    background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg)
 
-                        &.loaded
-                            transform: scale3d(1, 1, 1)
+            .height-half
+                height: 125px
+            .height-double
+                height: 500px
 
-                .content
-                    display: none
-                    animation: slideDown 1s ease-in-out
-
-                    h1
-                        font-family: 'Playfair Display'
-                        font-weight: 300
-                        margin-bottom: 10px
-                        font-size: 1.5rem
-
-                        a
-                            font-family: 'Playfair Display'
-                            font-weight: 300
-                            transition: all 0.3s ease-in-out
-
-                            &.strike-through
-
-                                &:after
-                                    background: #fff
-
-                        img
-                            margin-bottom: -2.5px
-                            height: 1em
-                            opacity: 0.5
-
-                    p
-                        font-family: 'Playfair Display'
-                        color: rgba(255, 255, 255, 0.5)
-                        margin-bottom: 20px
-
-                        .bold
-                            font-family: 'Playfair Display'
-                            color: rgba(255, 255, 255, 0.7)
-
-                    .stats
-                        p
-                            margin-bottom: 5px
-                            font-size: 0.9em
-
-                            &:last-of-type
-                                margin-bottom: 50px
-
-                    .screenshot
-                        width: 100%
-                        // box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
-                        margin-bottom: 25px
-
-                        &.shadow
-                            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
-                            transform: scale(0.93)
-
-                .close
-                    display: none
-                    animation: slideDown 1s ease-in-out
-                    position: absolute
-                    right: 20px
-                    top: 15px
-                    color: white
-
-                    span
-                        font-size: 2rem
-                        opacity: 0.5
-                        transition: all 0.3s ease-in-out
-
-                        &:hover
-                            opacity: 1
-                            cursor: pointer
+        // .work
+        //     height: 60vh
+        //     background-color: rgb(46, 46, 46)
+        //     width: 100%
+        //     margin-bottom: 25px
+        //     // background-size: 100% auto
+        //     background-size: cover
+        //     box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.75)
+        //     background-position: center
+        //     background-repeat: no-repeat
+        //     filter: grayscale(100%)
+        //     transition: filter 0.3s ease-in-out, background-size 1s ease-in-out
+        //
+        //     &:hover
+        //         filter: none
+        //         cursor: pointer
+        //
+        //     &.do-to
+        //         background-image: url(../assets/img/portfolio/do-to/do-to.jpg)
+        //     &.fairpay
+        //         background-image: url(../assets/img/portfolio/fairpay/fairpay.jpg)
+        //     &.moneywise
+        //         background-image: url(../assets/img/portfolio/moneywise/moneywise.jpg)
+        //     &.uprising
+        //         background-image: url(../assets/img/portfolio/uprising/uprising.jpg)
+        //         background-position: top
+        //     &.tutorial
+        //         background-image: url(../assets/img/portfolio/tutorial/tutorial.jpg)
+        //     &.fdis-logo
+        //         background-image: url(../assets/img/portfolio/fdis/fdis-logo.jpg)
+        //     &.lush-heat
+        //         background-image: url(../assets/img/portfolio/lush-heat/lush-heat.jpg)
+        //     &.raw
+        //         background-image: url(../assets/img/portfolio/raw/raw.jpg)
+        //     &.fdis-web
+        //         background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg)
+        //
+        //     .description
+        //         display: none
+        //         background-color: #171717
+        //         color: white
+        //         width: 100vw
+        //         height: 100vh
+        //         z-index: 99
+        //         visibility: hidden
+        //         transform: translate3d(-100%, 0px, 0px)
+        //         transition: all 1s ease-in-out
+        //
+        //         &.is-open
+        //             transform: none
+        //             visibility: visible
+        //             overflow-y: scroll
+        //
+        //         .loading
+        //
+        //             p
+        //                 margin-bottom: 10px
+        //                 font-family: 'Playfair Display'
+        //                 opacity: 0.5
+        //
+        //             .loading-bar
+        //                 height: 1px
+        //                 width: 100px
+        //                 background-color: #fff
+        //                 transform: scale3d(0, 1, 1)
+        //                 transform-origin: left
+        //                 transition: transform 3s ease-in-out
+        //
+        //                 &.loaded
+        //                     transform: scale3d(1, 1, 1)
+        //
+        //         .content
+        //             display: none
+        //             animation: slideDown 1s ease-in-out
+        //
+        //             h1
+        //                 font-family: 'Playfair Display'
+        //                 font-weight: 300
+        //                 margin-bottom: 10px
+        //                 font-size: 1.5rem
+        //
+        //                 a
+        //                     font-family: 'Playfair Display'
+        //                     font-weight: 300
+        //                     transition: all 0.3s ease-in-out
+        //
+        //                     &.strike-through
+        //
+        //                         &:after
+        //                             background: #fff
+        //
+        //                 img
+        //                     margin-bottom: -2.5px
+        //                     height: 1em
+        //                     opacity: 0.5
+        //
+        //             p
+        //                 font-family: 'Playfair Display'
+        //                 color: rgba(255, 255, 255, 0.5)
+        //                 margin-bottom: 20px
+        //
+        //                 .bold
+        //                     font-family: 'Playfair Display'
+        //                     color: rgba(255, 255, 255, 0.7)
+        //
+        //             .stats
+        //                 p
+        //                     margin-bottom: 5px
+        //                     font-size: 0.9em
+        //
+        //                     &:last-of-type
+        //                         margin-bottom: 50px
+        //
+        //             .screenshot
+        //                 width: 100%
+        //                 // box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
+        //                 margin-bottom: 25px
+        //
+        //                 &.shadow
+        //                     box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
+        //                     transform: scale(0.93)
+        //
+        //         .close
+        //             display: none
+        //             animation: slideDown 1s ease-in-out
+        //             position: absolute
+        //             right: 20px
+        //             top: 15px
+        //             color: white
+        //
+        //             span
+        //                 font-size: 2rem
+        //                 opacity: 0.5
+        //                 transition: all 0.3s ease-in-out
+        //
+        //                 &:hover
+        //                     opacity: 1
+        //                     cursor: pointer
 
     #projects
         p

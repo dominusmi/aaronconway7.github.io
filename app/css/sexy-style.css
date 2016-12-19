@@ -335,13 +335,20 @@ section {
     font-size: 1rem;
     margin-bottom: 50px;
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 10px; }
     #home-pg #portfolio > .container > h1 .overline {
       position: absolute;
       left: 0px;
       top: 0px;
       border: 1px solid white;
       width: 100%; }
+    #home-pg #portfolio > .container > h1 span {
+      opacity: 0.5;
+      font-size: 0.6em;
+      margin-left: 10px; }
+      #home-pg #portfolio > .container > h1 span .strike-through:after {
+        background: white; }
   #home-pg #portfolio .portfolio-title {
     position: absolute;
     width: 100vw;
@@ -397,116 +404,57 @@ section {
           margin-right: 0px; }
       #home-pg #portfolio .slide .work-container > p .strike-through:after {
         background: white; }
-  #home-pg #portfolio .work {
-    height: 60vh;
-    background-color: #2e2e2e;
-    width: 100%;
+  #home-pg #portfolio .grid .grid-sizer, #home-pg #portfolio .grid .work {
+    width: 33.333%; }
+  #home-pg #portfolio .grid .width-2 {
+    width: 66.666666%; }
+  #home-pg #portfolio .grid .width-full {
+    width: 100%; }
+  #home-pg #portfolio .grid .work {
+    height: 250px;
+    float: left;
     margin-bottom: 25px;
-    background-size: cover;
-    box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.75);
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out, background-size 1s ease-in-out; }
-    #home-pg #portfolio .work:hover {
-      filter: none;
-      cursor: pointer; }
-    #home-pg #portfolio .work.do-to {
+    padding: 0px 10px;
+    overflow: hidden; }
+    @media screen and (max-width: 425px) {
+      #home-pg #portfolio .grid .work {
+        width: 100%;
+        height: 200px !important; } }
+    #home-pg #portfolio .grid .work .client {
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      filter: grayscale(100%);
+      transition: all 1s ease-in-out; }
+      #home-pg #portfolio .grid .work .client:hover {
+        filter: none;
+        height: 110%;
+        cursor: pointer; }
+    #home-pg #portfolio .grid .work .do-to {
       background-image: url(../assets/img/portfolio/do-to/do-to.jpg); }
-    #home-pg #portfolio .work.fairpay {
+    #home-pg #portfolio .grid .work .fairpay {
       background-image: url(../assets/img/portfolio/fairpay/fairpay.jpg); }
-    #home-pg #portfolio .work.moneywise {
+    #home-pg #portfolio .grid .work .moneywise {
       background-image: url(../assets/img/portfolio/moneywise/moneywise.jpg); }
-    #home-pg #portfolio .work.uprising {
+    #home-pg #portfolio .grid .work .uprising {
       background-image: url(../assets/img/portfolio/uprising/uprising.jpg);
       background-position: top; }
-    #home-pg #portfolio .work.tutorial {
+    #home-pg #portfolio .grid .work .tutorial {
       background-image: url(../assets/img/portfolio/tutorial/tutorial.jpg); }
-    #home-pg #portfolio .work.fdis-logo {
+    #home-pg #portfolio .grid .work .fdis-logo {
       background-image: url(../assets/img/portfolio/fdis/fdis-logo.jpg); }
-    #home-pg #portfolio .work.lush-heat {
+    #home-pg #portfolio .grid .work .lush-heat {
       background-image: url(../assets/img/portfolio/lush-heat/lush-heat.jpg); }
-    #home-pg #portfolio .work.raw {
+    #home-pg #portfolio .grid .work .raw {
       background-image: url(../assets/img/portfolio/raw/raw.jpg); }
-    #home-pg #portfolio .work.fdis-web {
+    #home-pg #portfolio .grid .work .fdis-web {
       background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg); }
-    #home-pg #portfolio .work .description {
-      display: none;
-      background-color: #171717;
-      color: white;
-      width: 100vw;
-      height: 100vh;
-      z-index: 99;
-      visibility: hidden;
-      transform: translate3d(-100%, 0px, 0px);
-      transition: all 1s ease-in-out; }
-      #home-pg #portfolio .work .description.is-open {
-        transform: none;
-        visibility: visible;
-        overflow-y: scroll; }
-      #home-pg #portfolio .work .description .loading p {
-        margin-bottom: 10px;
-        font-family: 'Playfair Display';
-        opacity: 0.5; }
-      #home-pg #portfolio .work .description .loading .loading-bar {
-        height: 1px;
-        width: 100px;
-        background-color: #fff;
-        transform: scale3d(0, 1, 1);
-        transform-origin: left;
-        transition: transform 3s ease-in-out; }
-        #home-pg #portfolio .work .description .loading .loading-bar.loaded {
-          transform: scale3d(1, 1, 1); }
-      #home-pg #portfolio .work .description .content {
-        display: none;
-        animation: slideDown 1s ease-in-out; }
-        #home-pg #portfolio .work .description .content h1 {
-          font-family: 'Playfair Display';
-          font-weight: 300;
-          margin-bottom: 10px;
-          font-size: 1.5rem; }
-          #home-pg #portfolio .work .description .content h1 a {
-            font-family: 'Playfair Display';
-            font-weight: 300;
-            transition: all 0.3s ease-in-out; }
-            #home-pg #portfolio .work .description .content h1 a.strike-through:after {
-              background: #fff; }
-          #home-pg #portfolio .work .description .content h1 img {
-            margin-bottom: -2.5px;
-            height: 1em;
-            opacity: 0.5; }
-        #home-pg #portfolio .work .description .content p {
-          font-family: 'Playfair Display';
-          color: rgba(255, 255, 255, 0.5);
-          margin-bottom: 20px; }
-          #home-pg #portfolio .work .description .content p .bold {
-            font-family: 'Playfair Display';
-            color: rgba(255, 255, 255, 0.7); }
-        #home-pg #portfolio .work .description .content .stats p {
-          margin-bottom: 5px;
-          font-size: 0.9em; }
-          #home-pg #portfolio .work .description .content .stats p:last-of-type {
-            margin-bottom: 50px; }
-        #home-pg #portfolio .work .description .content .screenshot {
-          width: 100%;
-          margin-bottom: 25px; }
-          #home-pg #portfolio .work .description .content .screenshot.shadow {
-            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75);
-            transform: scale(0.93); }
-      #home-pg #portfolio .work .description .close {
-        display: none;
-        animation: slideDown 1s ease-in-out;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        color: white; }
-        #home-pg #portfolio .work .description .close span {
-          font-size: 2rem;
-          opacity: 0.5;
-          transition: all 0.3s ease-in-out; }
-          #home-pg #portfolio .work .description .close span:hover {
-            opacity: 1;
-            cursor: pointer; }
+  #home-pg #portfolio .grid .height-half {
+    height: 125px; }
+  #home-pg #portfolio .grid .height-double {
+    height: 500px; }
 
 #home-pg #projects p {
   font-size: 1.75rem;
