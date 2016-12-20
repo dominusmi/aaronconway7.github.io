@@ -71,15 +71,15 @@ function portfolioDescriptionUnLoad() {
 }
 
 function portfolioDescription(){
-    $('#portfolio .work').click(function(){
-        $(this).parents('.slide').find('.description').addClass('is-open');
-        $('body').css('overflow', 'hidden');
+    $('#portfolio .client').click(function(){
+        $(this).find('.description').addClass('is-open');
+        $('body').addClass('no-scroll');
         portfolioDescriptionLoad();
     });
 
     $('#portfolio .description .close span').click(function(){
         $(this).parents('.description').removeClass('is-open');
-        $('body').css('overflow', 'visible');
+        $('body').removeClass('no-scroll');
         setTimeout( function(){
             portfolioDescriptionUnLoad();
         }, 1000 );

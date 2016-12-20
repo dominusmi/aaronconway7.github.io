@@ -432,6 +432,83 @@ section {
         filter: none;
         height: 110%;
         cursor: pointer; }
+      #home-pg #portfolio .grid .work .client .description {
+        background-color: #171717;
+        color: white;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99;
+        visibility: hidden;
+        transform: translate3d(-100%, 0px, 0px);
+        transition: all 1s ease-in-out; }
+        #home-pg #portfolio .grid .work .client .description.is-open {
+          transform: none;
+          visibility: visible;
+          overflow-y: scroll; }
+        #home-pg #portfolio .grid .work .client .description .loading {
+          height: 100%; }
+          #home-pg #portfolio .grid .work .client .description .loading p {
+            margin-bottom: 10px;
+            opacity: 0.5; }
+          #home-pg #portfolio .grid .work .client .description .loading .loading-bar {
+            height: 1px;
+            width: 100px;
+            background-color: #fff;
+            transform: scale3d(0, 1, 1);
+            transform-origin: left;
+            transition: transform 3s ease-in-out; }
+            #home-pg #portfolio .grid .work .client .description .loading .loading-bar.loaded {
+              transform: scale3d(1, 1, 1); }
+        #home-pg #portfolio .grid .work .client .description .content {
+          display: none;
+          animation: slideDown 1s ease-in-out; }
+          #home-pg #portfolio .grid .work .client .description .content h1 {
+            font-family: SourceSansPro-Black;
+            margin-bottom: 10px;
+            font-size: 1.25rem; }
+            #home-pg #portfolio .grid .work .client .description .content h1 a {
+              font-family: SourceSansPro-Black;
+              transition: all 0.3s ease-in-out; }
+              #home-pg #portfolio .grid .work .client .description .content h1 a.strike-through:after {
+                background: #fff; }
+            #home-pg #portfolio .grid .work .client .description .content h1 img {
+              margin-bottom: -2.5px;
+              height: 1em;
+              opacity: 0.5; }
+          #home-pg #portfolio .grid .work .client .description .content p {
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px; }
+            #home-pg #portfolio .grid .work .client .description .content p .bold {
+              font-family: SourceSansPro-Black;
+              color: rgba(255, 255, 255, 0.7); }
+          #home-pg #portfolio .grid .work .client .description .content .stats p {
+            margin-bottom: 5px;
+            font-size: 0.9em; }
+            #home-pg #portfolio .grid .work .client .description .content .stats p:last-of-type {
+              margin-bottom: 50px; }
+          #home-pg #portfolio .grid .work .client .description .content .screenshot {
+            width: 100%;
+            margin-bottom: 25px; }
+            #home-pg #portfolio .grid .work .client .description .content .screenshot.shadow {
+              box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75);
+              transform: scale(0.93); }
+        #home-pg #portfolio .grid .work .client .description .close {
+          display: none;
+          animation: slideDown 1s ease-in-out;
+          position: absolute;
+          right: 20px;
+          top: 15px;
+          color: white; }
+          #home-pg #portfolio .grid .work .client .description .close span {
+            font-size: 2rem;
+            opacity: 0.5;
+            transition: all 0.3s ease-in-out; }
+            #home-pg #portfolio .grid .work .client .description .close span:hover {
+              opacity: 1;
+              cursor: pointer; }
     #home-pg #portfolio .grid .work .do-to {
       background-image: url(../assets/img/portfolio/do-to/do-to.jpg); }
     #home-pg #portfolio .grid .work .fairpay {

@@ -529,8 +529,108 @@ section
                     &:hover
                         filter: none
                         height: 110%
-                        // background-size: auto 110%
                         cursor: pointer
+
+                    .description
+                        background-color: #171717
+                        color: white
+                        position: fixed
+                        left: 0px
+                        top: 0px
+                        width: 100vw
+                        height: 100vh
+                        z-index: 99
+                        visibility: hidden
+                        transform: translate3d(-100%, 0px, 0px)
+                        transition: all 1s ease-in-out
+
+                        &.is-open
+                            transform: none
+                            visibility: visible
+                            overflow-y: scroll
+
+                        .loading
+                            height: 100%
+
+                            p
+                                margin-bottom: 10px
+                                opacity: 0.5
+
+                            .loading-bar
+                                height: 1px
+                                width: 100px
+                                background-color: #fff
+                                transform: scale3d(0, 1, 1)
+                                transform-origin: left
+                                transition: transform 3s ease-in-out
+
+                                &.loaded
+                                    transform: scale3d(1, 1, 1)
+
+                        .content
+                            display: none
+                            animation: slideDown 1s ease-in-out
+
+                            h1
+                                font-family: SourceSansPro-Black
+                                margin-bottom: 10px
+                                font-size: 1.25rem
+
+                                a
+                                    font-family: SourceSansPro-Black
+                                    transition: all 0.3s ease-in-out
+
+                                    &.strike-through
+
+                                        &:after
+                                            background: #fff
+
+                                img
+                                    margin-bottom: -2.5px
+                                    height: 1em
+                                    opacity: 0.5
+
+                            p
+                                color: rgba(255, 255, 255, 0.5)
+                                margin-bottom: 20px
+
+                                .bold
+                                    font-family: SourceSansPro-Black
+                                    color: rgba(255, 255, 255, 0.7)
+
+                            .stats
+                                p
+                                    margin-bottom: 5px
+                                    font-size: 0.9em
+
+                                    &:last-of-type
+                                        margin-bottom: 50px
+
+                            .screenshot
+                                width: 100%
+                                // box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
+                                margin-bottom: 25px
+
+                                &.shadow
+                                    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
+                                    transform: scale(0.93)
+
+                        .close
+                            display: none
+                            animation: slideDown 1s ease-in-out
+                            position: absolute
+                            right: 20px
+                            top: 15px
+                            color: white
+
+                            span
+                                font-size: 2rem
+                                opacity: 0.5
+                                transition: all 0.3s ease-in-out
+
+                                &:hover
+                                    opacity: 1
+                                    cursor: pointer
 
                 .do-to
                     background-image: url(../assets/img/portfolio/do-to/do-to.jpg)
