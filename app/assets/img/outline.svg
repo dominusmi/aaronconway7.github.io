@@ -8,7 +8,7 @@
 		stroke-miterlimit:10;
 		stroke-dasharray: 1200;
 		stroke-dashoffset: 1200;
-		animation: outlineDraw 3s ease-in-out infinite
+		animation: outlineDraw 3s ease-in-out infinite alternate
 	}
 
 	@keyframes outlineDraw {

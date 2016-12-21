@@ -243,6 +243,11 @@ a
 
 section
     min-height: 100vh
+    // transform: translate3d(0px, 200px, 0px)
+    // transition: all 1s ease-in-out
+
+    &.scrolled
+        // transform: none
 
 #home-pg
 
@@ -396,12 +401,21 @@ section
     #portfolio
         // min-height: 100vh
         transition: background-color 1s ease-in-out
-        background-color: #171717
+        background-color: white
+        transform: none
+
+        &.scrolled
+            background-color: #171717
+
+            &>.container
+
+                &>h1
+                    color: white
 
         &>.container
 
             &>h1
-                color: white
+                color: black
                 text-transform: uppercase
                 font-family: SourceSansPro-Black
                 letter-spacing: 0.2em
@@ -512,6 +526,13 @@ section
                 margin-bottom: 25px
                 padding: 0px 10px
                 overflow: hidden
+                transform: translate3d(0px, 50px, 0px)
+                opacity: 0
+                transition: all 1s ease-in-out
+
+                &.loaded
+                    transform: none
+                    opacity: 1
 
                 @media screen and (max-width: 425px)
                     width: 100%

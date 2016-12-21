@@ -4,6 +4,7 @@ $(window).on("load", function() {
         $("#loader").fadeOut(1000, function(){
             $('.universe').fadeIn(1000);
             setTimeout(typed, 1000);
+            $('.grid').masonry();
         });
     }, 3000);
 });
@@ -17,6 +18,7 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
     navDots();
+    sectionScrolled();
 });
 
 function animatedScroll() {
@@ -77,7 +79,8 @@ function portfolioDescription(){
         portfolioDescriptionLoad();
     });
 
-    $('#portfolio .description .close span').click(function(){
+    $('#portfolio .wrok .client .description .close span').click(function(){
+        $(this).parent().parent().removeClass('is-open');
         $(this).parents('.description').removeClass('is-open');
         $('body').removeClass('no-scroll');
         setTimeout( function(){
@@ -113,19 +116,6 @@ function navDots(){
         }
     });
 
-    // var navTop = $('.nav-dots ul').offset().top;
-    // var navMid = navTop + ($('.nav-dots ul').height()/2);
-    // var navBtm = navTop + $('.nav-dots ul').height();
-    //
-    // if(navMid > $('#portfolio').offset().top){
-    //     $('.nav-dots ul li').css('background-color', 'white');
-    // } else {
-    //     $('.nav-dots ul li').css('background-color', 'black');
-    // }
-    //
-    // if(navMid > $('#projects').offset().top){
-    //     $('.nav-dots ul li').css('background-color', 'black');
-    // }
 }
 
 function masonry(){
@@ -133,5 +123,28 @@ function masonry(){
         itemSelector: '.work',
         columnWidth: '.grid-sizer',
         percentPosition: true
+    });
+}
+
+function sectionScrolled(){
+
+    var wScroll = $(window).scrollTop();
+    var wHeight = $(window).height();
+
+    $('section').each(function(i){
+        if((wScroll + (wHeight * 0.75)) > $('section').eq(i).offset().top){
+            $('section').eq(i).addClass('scrolled');
+            if($('section').eq(i).is('#portfolio')){
+                portfolioLoad();
+            }
+        }
+    })
+}
+
+function portfolioLoad(){
+    $('.work').each(function(i){
+        setTimeout(function(){
+            $('.work').eq(i).addClass('loaded');
+        }, 150 * (i+1));
     });
 }
