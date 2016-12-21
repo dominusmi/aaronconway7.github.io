@@ -4,7 +4,6 @@ $(window).on("load", function() {
         $("#loader").fadeOut(1000, function(){
             $('.universe').fadeIn(1000);
             setTimeout(typed, 1000);
-            $('.grid').masonry();
         });
     }, 3000);
 });
@@ -13,7 +12,6 @@ $(document).ready(function(){
     animatedScroll();
     typed2();
     portfolioDescription();
-    masonry();
 });
 
 $(window).scroll(function(){
@@ -57,31 +55,30 @@ function typed2(){
 }
 
 function portfolioDescriptionLoad() {
-    $('#portfolio .description .loading .loading-bar').addClass('loaded');
+    $('.portfolio-description .loading .loading-bar').addClass('loaded');
     setTimeout( function(){
-        $('#portfolio .description .loading').fadeOut();
-        $('#portfolio .description .content').show();
-        $('#portfolio .description .close').show();
+        $('.portfolio-description .loading').fadeOut();
+        $('.portfolio-description .content').show();
+        $('.portfolio-description .close').show();
     }, 3000 );
 }
 
 function portfolioDescriptionUnLoad() {
-    $('#portfolio .description .loading .loading-bar').removeClass('loaded');
-    $('#portfolio .description .loading').show();
-    $('#portfolio .description .content').hide();
-    $('#portfolio .description .close').hide();
+    $('.portfolio-description .loading .loading-bar').removeClass('loaded');
+    $('.portfolio-description .loading').show();
+    $('.portfolio-description .content').hide();
+    $('.portfolio-description .close').hide();
 }
 
 function portfolioDescription(){
-    $('#portfolio .client').click(function(){
-        $(this).find('.description').addClass('is-open');
+    $('#portfolio .work').click(function(){
+        $('.portfolio-description').addClass('is-open');
         $('body').addClass('no-scroll');
         portfolioDescriptionLoad();
     });
 
-    $('#portfolio .wrok .client .description .close span').click(function(){
-        $(this).parent().parent().removeClass('is-open');
-        $(this).parents('.description').removeClass('is-open');
+    $('.portfolio-description .close span').click(function(){
+        $('.portfolio-description').removeClass('is-open');
         $('body').removeClass('no-scroll');
         setTimeout( function(){
             portfolioDescriptionUnLoad();
@@ -116,14 +113,6 @@ function navDots(){
         }
     });
 
-}
-
-function masonry(){
-    $('.grid').masonry({
-        itemSelector: '.work',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-    });
 }
 
 function sectionScrolled(){

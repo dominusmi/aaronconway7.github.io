@@ -16,8 +16,6 @@
   ],
   "dependencies": {
     "jquery": "^3.1.1",
-    "fullpage.js": "fullpage#^2.9.0",
-    "typed.js": "^1.1.4",
-    "masonry": "^4.1.1"
+    "typed.js": "^1.1.4"
   }
 }
