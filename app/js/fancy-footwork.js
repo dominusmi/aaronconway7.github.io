@@ -19,6 +19,12 @@ $(window).scroll(function(){
     sectionScrolled();
 });
 
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        // <DO YOUR WORK HERE>
+    }
+});
+
 function animatedScroll() {
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -72,7 +78,8 @@ function portfolioDescriptionUnLoad() {
 
 function portfolioDescription(){
     $('#portfolio .work').click(function(){
-        $('.portfolio-description').addClass('is-open');
+        var workIndex = $(this).index();
+        $('.portfolio-description').eq(workIndex).addClass('is-open');
         $('body').addClass('no-scroll');
         portfolioDescriptionLoad();
     });
@@ -103,13 +110,22 @@ function navDots(){
         if( navDotMid > $('#portfolio').offset().top){
 
             if(navDotMid > $('#projects').offset().top){
-                $(this).css('background-color', 'black');
+                $(this).css({
+                    'background-color': 'black',
+                    'color': 'black'
+                });
             } else {
-                $(this).css('background-color', 'white');
+                $(this).css({
+                    'background-color': 'white',
+                    'color': 'white'
+                });
             }
 
         } else {
-            $(this).css('background-color', 'black');
+            $(this).css({
+                'background-color': 'black',
+                'color': 'black'
+            });
         }
     });
 

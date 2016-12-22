@@ -94,6 +94,12 @@ a {
     transform: none;
     opacity: 1; } }
 
+@keyframes scaleX {
+  0% {
+    transform: scale3d(0, 1, 1); }
+  100% {
+    transform: scale3d(1, 1, 1); } }
+
 @media screen and (max-width: 768px) {
   .tab-col {
     -ms-flex-direction: column;
@@ -211,6 +217,9 @@ section {
   #home-pg .nav-dots ul {
     list-style: none;
     text-align: -webkit-center; }
+    @media screen and (max-width: 768px) {
+      #home-pg .nav-dots ul {
+        margin-left: 40px; } }
     #home-pg .nav-dots ul li {
       width: 8px;
       height: 8px;
@@ -328,6 +337,12 @@ section {
   transition: background-color 1s ease-in-out;
   background-color: white;
   transform: none; }
+  #home-pg #portfolio ::-moz-selection {
+    background: white;
+    color: black; }
+  #home-pg #portfolio ::selection {
+    background: white;
+    color: black; }
   #home-pg #portfolio.scrolled {
     background-color: #171717; }
     #home-pg #portfolio.scrolled > .container > h1 {
@@ -358,6 +373,14 @@ section {
          column-count: 3;
     -moz-column-gap: 1em;
          column-gap: 1em; }
+    @media screen and (max-width: 768px) {
+      #home-pg #portfolio .masonry {
+        -moz-column-count: 2;
+             column-count: 2; } }
+    @media screen and (max-width: 425px) {
+      #home-pg #portfolio .masonry {
+        -moz-column-count: 1;
+             column-count: 1; } }
     #home-pg #portfolio .masonry .work {
       background-position: center;
       background-repeat: no-repeat;
@@ -367,8 +390,12 @@ section {
       width: 100%;
       height: 300px;
       filter: grayscale(100%);
-      transition: all 1s ease-in-out; }
+      transition: transform 1s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      transform: translate3d(0px, 100%, 0px); }
+      #home-pg #portfolio .masonry .work.loaded {
+        transform: none; }
       #home-pg #portfolio .masonry .work:hover {
+        box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.75);
         filter: none;
         cursor: pointer; }
       #home-pg #portfolio .masonry .work.small {
@@ -418,11 +445,10 @@ section {
         height: 1px;
         width: 100px;
         background-color: #fff;
-        transform: scale3d(0, 1, 1);
         transform-origin: left;
-        transition: transform 3s ease-in-out; }
+        animation: scaleX 3s ease-in-out; }
         #home-pg #portfolio .portfolio-description .loading .loading-bar.loaded {
-          transform: scale3d(1, 1, 1); }
+          display: block; }
     #home-pg #portfolio .portfolio-description .content {
       display: none;
       animation: slideDown 1s ease-in-out; }
@@ -491,7 +517,7 @@ section {
       margin-right: 0px; }
     @media screen and (max-width: 768px) {
       #home-pg #projects .logos .logo {
-        margin-right: 0px;
+        margin-right: 50px;
         width: 15vw;
         margin-bottom: 20px;
         height: auto; }
@@ -598,7 +624,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center; }
       #home-pg #fwends .friends a {
-        margin: 25px 50px; } }
+        margin: 25px 25px; } }
   @media screen and (max-width: 425px) {
     #home-pg #fwends .friends a {
       margin: 10px 0px; } }
