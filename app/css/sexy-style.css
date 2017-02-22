@@ -395,6 +395,8 @@ section {
         background-image: url(../assets/img/portfolio/raw/raw.jpg); }
       #home-pg #portfolio .masonry .work.fdis-web {
         background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg); }
+      #home-pg #portfolio .masonry .work.frecibo {
+        background-image: url(../assets/img/portfolio/frecibo/frecibo.jpg); }
   #home-pg #portfolio .portfolio-description {
     background-color: #171717;
     color: white;
@@ -485,7 +487,7 @@ section {
     margin-right: 100px;
     margin-bottom: 50px;
     height: 50px; }
-    #home-pg #projects .logos .logo:nth-of-type(2), #home-pg #projects .logos .logo:nth-of-type(4), #home-pg #projects .logos .logo:nth-of-type(5) {
+    #home-pg #projects .logos .logo:nth-of-type(1), #home-pg #projects .logos .logo:nth-of-type(3), #home-pg #projects .logos .logo:nth-of-type(4) {
       opacity: 0.5; }
     #home-pg #projects .logos .logo:last-of-type {
       margin-right: 0px; }

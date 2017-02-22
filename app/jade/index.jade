@@ -41,8 +41,8 @@ html(lang="en")
                             span bye
             .page-container
                 section#hello.row.right-center.scrolled
-                    .photo-creds
-                        span #[span.bold PhotoCreds]#[img.emoji(src="assets/img/emoji/camera.png" alt="Camera Emoji")] : #[a.strike-through(href="https://twitter.com/AnnaBlackbourn") Anna Blackbourn]
+                    //- .photo-creds
+                    //-     span #[span.bold PhotoCreds]#[img.emoji(src="assets/img/emoji/camera.png" alt="Camera Emoji")] : #[a.strike-through(href="https://twitter.com/AnnaBlackbourn") Anna Blackbourn]
                     .container
                         .col.content.right-bottom
                             object.logo(type='image/svg+xml', data='assets/img/Designer.svg')
@@ -67,6 +67,7 @@ html(lang="en")
                             span
                                 a.strike-through(href="https://github.com/aaronconway7", target="_blank") GitHub
                         .masonry
+                            .work.frecibo
                             .work.fdis-web.small
                             .work.raw
                             .work.lush-heat
@@ -76,6 +77,27 @@ html(lang="en")
                             .work.moneywise.small
                             .work.fairpay.small
                             .work.do-to
+                        .portfolio-description        
+                            .loading.col.center-center
+                                p.uppercase-and-space loading a cool little start up
+                                .loading-bar
+                            .container.content
+                                h1.uppercase-and-space
+                                    a.strike-through(href="https://frecibo.com", target='_blank') Frecibo.
+                                        img(src="assets/img/link.png", alt="Frecibo Link")
+                                p Frecibo is a new and exciting startup looking to connect home chefs with the community and in particular hungry students who are looking for affordable and healthy food.
+                                p I am a co-founder of the startup alongside Avantika Kariwala, Ali Jasem & Edoardo Barp. My role as the Hipster, Designer, Chief Design Officer (CDO), whichever term floats you boat involves the front end development of the platform as well as the creation of promotional graphics and the all important brand. The website features many common and modern design trends, focusing on large and beautiful imagery.
+                                p This is a project we are extremely excited about and can't wait to share with the rest of the world. Currently on a pilot run at The University of Warwick. Stay tuned.
+                                .stats
+                                    p #[span.bold.uppercase-and-space Skills Used:] Adobe Photoshop, Sketch, HTML, Jade, CSS, SASS, JQuery, Eden, Gulp, Adobe XD.
+                                    p #[span.bold.uppercase-and-space Date:] June 2016 - today
+                                video.screenshot.shadow(autoplay='', loop='', muted='', poster="assets/img/portfolio/frecibo/frecibo.png")
+                                    source(src='assets/vid/frecibo-homepage.mp4', type='video/mp4')
+                                img.screenshot(alt="Frecibo Homepage ABout" src="assets/img/portfolio/frecibo/home-pg-info.png")
+                                img.screenshot(alt="FDIS Area Search" src="assets/img/portfolio/frecibo/area-search-pg.png")
+                                img.screenshot(alt="FDIS Profile Page" src="assets/img/portfolio/frecibo/profile-pg.png")
+                            .close
+                                span ⤫
                         .portfolio-description        
                             .loading.col.center-center
                                 p.uppercase-and-space loading awesomeness
@@ -240,11 +262,11 @@ html(lang="en")
                     .container
                         p.text-center … I also have a few bits i’m working on at the moment…
                         .row.logos.mob-col
-                            img.logo(alt="frecibo", src="assets/img/portfolio/frecibo/frecibo-b&w.png")
+                            //- img.logo(alt="frecibo", src="assets/img/portfolio/frecibo/frecibo-b&w.png")
                             img.logo(alt="ndorsa", src="assets/img/portfolio/ndorsa/ndorsa-b&w.png")
                             img.logo(alt="eden", src="assets/img/portfolio/eden/eden-b&w.png")
                             img.logo(alt="the boar", src="assets/img/portfolio/boar/boar-b&w.png")
-                            img.logo(alt="givee", src="assets/img/portfolio/givee/givee-b&w.png")
+                            //- img.logo(alt="givee", src="assets/img/portfolio/givee/givee-b&w.png")
                 
                 section#interests-1.row.center-center
                     .row.background-vid
@@ -292,9 +314,9 @@ html(lang="en")
                     .footer
                         .container
                             .row.content.mob-col-reverse
-                                p.copyright Copyright &copy; 2016 #[span.bold Aaron Conway] All Rights Reserved. Made In Essex.
+                                p.copyright Copyright &copy; 2017 #[span.bold Aaron Conway] All Rights Reserved. Made In Essex.
                                 .version-number 
-                                    span.current v3.1.0
+                                    span.current v3.1.1
                                     .prev-versions
                                         span
                                             a.strike-through(href="v2.0.0/", target='_blank') v2.0.0

@@ -481,6 +481,8 @@ section
                     background-image: url(../assets/img/portfolio/raw/raw.jpg)
                 &.fdis-web
                     background-image: url(../assets/img/portfolio/fdis/fdis-web.jpg)
+                &.frecibo
+                    background-image: url(../assets/img/portfolio/frecibo/frecibo.jpg)
 
         .portfolio-description
             background-color: #171717
@@ -510,16 +512,11 @@ section
                     height: 1px
                     width: 100px
                     background-color: #fff
-                    // transform: scale3d(0, 1, 1)
                     transform-origin: left
                     animation: scaleX 3s ease-in-out
-                    // transform: scaleX(0)
-                    // transition: transform 3s ease-in-out
 
                     &.loaded
                         display: block
-                        // transform: scale3d(1, 1, 1)
-                        // transform: scaleX(1)
 
             .content
                 display: none
@@ -562,7 +559,6 @@ section
 
                 .screenshot
                     width: 100%
-                    // box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75)
                     margin-bottom: 25px
 
                     &.shadow
@@ -602,7 +598,7 @@ section
                 margin-bottom: 50px
                 height: 50px
 
-                &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5)
+                &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(4)
                     opacity: 0.5
 
                 &:last-of-type
@@ -712,7 +708,6 @@ section
                 height: 100%
 
     #fwends
-        // height: 100vh
 
         p
             font-size: 1.75rem
@@ -767,18 +762,6 @@ section
             font-size: 1.75rem
             color: rgba(0, 0, 0, 0.75)
             margin-bottom: 100px
-
-        // .social-media-links
-        //     font-style: italic
-        //     position: relative
-        //     transition: all 0.3s ease-in-out
-        //     justify-content: space-between
-        //
-        //     @media screen and (max-width: 768px)
-        //         justify-content: center
-        //
-        //         a
-        //             margin: 25px 50px
 
         .social-media
             font-style: italic
