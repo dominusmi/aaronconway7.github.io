@@ -14,8 +14,9 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "jquery": "^3.1.1",
-    "typed.js": "^1.1.4"
+  "devDependencies": {
+    "eden": "^1.1.7",
+    "jquery": "^3.2.1",
+    "typed.js": "^1.1.7"
   }
 }
