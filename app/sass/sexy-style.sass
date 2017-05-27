@@ -20,6 +20,49 @@
     src: url('../assets/fonts/poppins/Poppins-Light.ttf')
     font-weight: 100
 
+@font-face
+    font-family: Antonio
+    src: url('../assets/fonts/antonio/Antonio-Regular.ttf')
+    // font-weight: 300
+
+@font-face
+    font-family: Raleway
+    src: url('../assets/fonts/raleway/Raleway-Bold.ttf')
+    // font-weight: 700
+
+@font-face
+    font-family: Adam
+    src: url('../assets/fonts/adam/adam.otf')
+    // font-weight: 300
+
+@font-face
+    font-family: Lobster
+    src: url('../assets/fonts/lobster/Lobster.otf')
+    // font-weight: 300
+
+@font-face
+    font-family: Source Sans Pro
+    src: url('../assets/fonts/source-sans-pro/SourceSansPro-Black.otf')
+    // font-weight: 900
+
+@font-face
+    font-family: Angry Blu
+    src: url('../assets/fonts/angry-blue/angry-blue.TTF')
+
+@font-face
+    font-family: Abel
+    src: url('../assets/fonts/abel/Abel-Regular.ttf')
+
+@font-face
+    font-family: Dosis
+    src: url('../assets/fonts/dosis/Dosis-Light.otf')
+
+// variables
+
+// colours
+
+$fdis: #f5a623
+
 html
     background-color: #FA4B4B
     width: 100vw
@@ -343,3 +386,200 @@ html
                     margin-bottom: -5px
                 .name
                     font-weight: 900
+
+// Portfolio Page
+#portfolio
+    background-color: #181818
+    min-height: 100vh
+
+    #list
+        padding: 100px 0px
+
+        h6
+            font-weight: 300
+            font-size: 1rem
+            opacity: 0.2
+            position: absolute
+            padding-top: 28px
+            padding-left: 200px
+
+            @media screen and (max-width: 1100px)
+                padding-left: 100px
+            @media screen and (max-width: 800px)
+                padding-left: 50px
+                padding-top: 0px
+
+        h5
+            @media screen and (max-width: 768px)
+                font-size: 1.25rem
+
+        .work
+            position: relative
+            height: 90px
+            padding: 0px 100px
+            padding-left: 50%
+            cursor: pointer
+
+            @media screen and (max-width: 1330px)
+                padding-left: 40%
+            @media screen and (max-width: 1100px)
+                padding-left: 30%
+            @media screen and (max-width: 950px)
+                padding-left: 25%
+            @media screen and (max-width: 800px)
+                padding-left: 50px
+            @media screen and (max-width: 768px)
+                height: 55px
+
+            &:hover
+
+                .strip
+                    transform: scale3d(1, 1, 1)
+
+
+        .strip
+            padding: 0px 100px
+            align-items: center
+            position: absolute
+            width: 100%
+            top: 0px
+            left: 0px
+            transform-origin: center top
+            transform: scale3d(1, 0, 1)
+            transition: transform 0.6s cubic-bezier(.215,.61,.355,1)
+
+            @media screen and (max-width: 768px)
+                padding: 0px 25px
+
+            &.ndorsa
+                background-color: white
+
+                p
+                    color: black
+
+                .title
+                    font-family: Source Sans Pro
+
+            &.eden
+                background-color: #52ae76
+
+                p
+                    color: white
+
+                .title
+                    font-family: Source Sans Pro
+
+            &.frecibo
+                background-color: #a4c6b7
+
+                p
+                    color: black
+
+                .title
+                    font-family: Lobster
+
+            &.raw
+                background-color: #c3a541
+
+                p
+                    color: black
+
+                .title
+                    font-family: Adam
+
+            &.lush-heat
+                background-color: white
+
+                p
+                    color: black
+
+                .title
+                    font-family: Raleway
+
+            &.fdis
+                background-color: $fdis
+
+                p
+                    color: black
+
+                .title
+                    font-family: Antonio
+
+            &.tutorial
+                background-color: #1172c1
+
+                p
+                    color: white
+
+                .title
+                    font-family: Helvetica
+
+            &.uprising
+                background-color: black
+
+                p
+                    color: white
+
+                .title
+                    font-family: Angry Blu
+
+            &.moneywise
+                background-color: #bd3935
+
+                p
+                    color: white
+
+                .title
+                    font-family: Raleway
+
+            &.fairpay
+                background-color: #9c1c1c
+
+                p
+                    color: white
+
+                .title
+                    font-family: Abel
+
+            &.do-to
+                background-color: #f6d6a4
+
+                p
+                    color: black
+
+                .title
+                    font-family: Dosis
+
+            .title
+                font-size: 2em
+
+                &.large
+                    font-size: 2.5em
+
+                &.small
+                    font-size: 1.5em
+
+            .label
+                opacity: 0.5
+                font-size: 0.7em
+
+            .category, .year
+                font-weight: 900
+                font-size: 0.9em
+
+            .col.six
+
+                @media screen and (max-width: 768px)
+                    margin-bottom: 0px
+
+            .col.three
+
+                @media screen and (max-width: 768px)
+                    display: none
+
+            &.lush-heat, &.fdis
+
+                .title
+
+                    @media screen and (max-width: 1100px)
+                        font-size: 1.25em

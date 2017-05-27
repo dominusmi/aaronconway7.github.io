@@ -23,6 +23,38 @@
   src: url("../assets/fonts/poppins/Poppins-Light.ttf");
   font-weight: 100; }
 
+@font-face {
+  font-family: Antonio;
+  src: url("../assets/fonts/antonio/Antonio-Regular.ttf"); }
+
+@font-face {
+  font-family: Raleway;
+  src: url("../assets/fonts/raleway/Raleway-Bold.ttf"); }
+
+@font-face {
+  font-family: Adam;
+  src: url("../assets/fonts/adam/adam.otf"); }
+
+@font-face {
+  font-family: Lobster;
+  src: url("../assets/fonts/lobster/Lobster.otf"); }
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url("../assets/fonts/source-sans-pro/SourceSansPro-Black.otf"); }
+
+@font-face {
+  font-family: Angry Blu;
+  src: url("../assets/fonts/angry-blue/angry-blue.TTF"); }
+
+@font-face {
+  font-family: Abel;
+  src: url("../assets/fonts/abel/Abel-Regular.ttf"); }
+
+@font-face {
+  font-family: Dosis;
+  src: url("../assets/fonts/dosis/Dosis-Light.otf"); }
+
 html {
   background-color: #FA4B4B;
   width: 100vw;
@@ -297,3 +329,150 @@ html {
         margin-bottom: -5px; }
       #index #fwends .fwend .caption .name {
         font-weight: 900; }
+
+#portfolio {
+  background-color: #181818;
+  min-height: 100vh; }
+  #portfolio #list {
+    padding: 100px 0px; }
+    #portfolio #list h6 {
+      font-weight: 300;
+      font-size: 1rem;
+      opacity: 0.2;
+      position: absolute;
+      padding-top: 28px;
+      padding-left: 200px; }
+      @media screen and (max-width: 1100px) {
+        #portfolio #list h6 {
+          padding-left: 100px; } }
+      @media screen and (max-width: 800px) {
+        #portfolio #list h6 {
+          padding-left: 50px;
+          padding-top: 0px; } }
+    @media screen and (max-width: 768px) {
+      #portfolio #list h5 {
+        font-size: 1.25rem; } }
+    #portfolio #list .work {
+      position: relative;
+      height: 90px;
+      padding: 0px 100px;
+      padding-left: 50%;
+      cursor: pointer; }
+      @media screen and (max-width: 1330px) {
+        #portfolio #list .work {
+          padding-left: 40%; } }
+      @media screen and (max-width: 1100px) {
+        #portfolio #list .work {
+          padding-left: 30%; } }
+      @media screen and (max-width: 950px) {
+        #portfolio #list .work {
+          padding-left: 25%; } }
+      @media screen and (max-width: 800px) {
+        #portfolio #list .work {
+          padding-left: 50px; } }
+      @media screen and (max-width: 768px) {
+        #portfolio #list .work {
+          height: 55px; } }
+      #portfolio #list .work:hover .strip {
+        transform: scale3d(1, 1, 1); }
+    #portfolio #list .strip {
+      padding: 0px 100px;
+      -ms-flex-align: center;
+          align-items: center;
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      transform-origin: center top;
+      transform: scale3d(1, 0, 1);
+      transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
+      @media screen and (max-width: 768px) {
+        #portfolio #list .strip {
+          padding: 0px 25px; } }
+      #portfolio #list .strip.ndorsa {
+        background-color: white; }
+        #portfolio #list .strip.ndorsa p {
+          color: black; }
+        #portfolio #list .strip.ndorsa .title {
+          font-family: Source Sans Pro; }
+      #portfolio #list .strip.eden {
+        background-color: #52ae76; }
+        #portfolio #list .strip.eden p {
+          color: white; }
+        #portfolio #list .strip.eden .title {
+          font-family: Source Sans Pro; }
+      #portfolio #list .strip.frecibo {
+        background-color: #a4c6b7; }
+        #portfolio #list .strip.frecibo p {
+          color: black; }
+        #portfolio #list .strip.frecibo .title {
+          font-family: Lobster; }
+      #portfolio #list .strip.raw {
+        background-color: #c3a541; }
+        #portfolio #list .strip.raw p {
+          color: black; }
+        #portfolio #list .strip.raw .title {
+          font-family: Adam; }
+      #portfolio #list .strip.lush-heat {
+        background-color: white; }
+        #portfolio #list .strip.lush-heat p {
+          color: black; }
+        #portfolio #list .strip.lush-heat .title {
+          font-family: Raleway; }
+      #portfolio #list .strip.fdis {
+        background-color: #f5a623; }
+        #portfolio #list .strip.fdis p {
+          color: black; }
+        #portfolio #list .strip.fdis .title {
+          font-family: Antonio; }
+      #portfolio #list .strip.tutorial {
+        background-color: #1172c1; }
+        #portfolio #list .strip.tutorial p {
+          color: white; }
+        #portfolio #list .strip.tutorial .title {
+          font-family: Helvetica; }
+      #portfolio #list .strip.uprising {
+        background-color: black; }
+        #portfolio #list .strip.uprising p {
+          color: white; }
+        #portfolio #list .strip.uprising .title {
+          font-family: Angry Blu; }
+      #portfolio #list .strip.moneywise {
+        background-color: #bd3935; }
+        #portfolio #list .strip.moneywise p {
+          color: white; }
+        #portfolio #list .strip.moneywise .title {
+          font-family: Raleway; }
+      #portfolio #list .strip.fairpay {
+        background-color: #9c1c1c; }
+        #portfolio #list .strip.fairpay p {
+          color: white; }
+        #portfolio #list .strip.fairpay .title {
+          font-family: Abel; }
+      #portfolio #list .strip.do-to {
+        background-color: #f6d6a4; }
+        #portfolio #list .strip.do-to p {
+          color: black; }
+        #portfolio #list .strip.do-to .title {
+          font-family: Dosis; }
+      #portfolio #list .strip .title {
+        font-size: 2em; }
+        #portfolio #list .strip .title.large {
+          font-size: 2.5em; }
+        #portfolio #list .strip .title.small {
+          font-size: 1.5em; }
+      #portfolio #list .strip .label {
+        opacity: 0.5;
+        font-size: 0.7em; }
+      #portfolio #list .strip .category, #portfolio #list .strip .year {
+        font-weight: 900;
+        font-size: 0.9em; }
+      @media screen and (max-width: 768px) {
+        #portfolio #list .strip .col.six {
+          margin-bottom: 0px; } }
+      @media screen and (max-width: 768px) {
+        #portfolio #list .strip .col.three {
+          display: none; } }
+      @media screen and (max-width: 1100px) {
+        #portfolio #list .strip.lush-heat .title, #portfolio #list .strip.fdis .title {
+          font-size: 1.25em; } }
