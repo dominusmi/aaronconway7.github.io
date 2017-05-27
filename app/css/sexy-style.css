@@ -201,7 +201,7 @@ html {
         position: relative;
         font-size: 1rem;
         float: left;
-        margin-bottom: -7px; }
+        margin-bottom: -8px; }
         @media screen and (max-width: 768px) {
           #index #portfolio .portfolio-panel .item {
             font-size: 0.8rem; } }

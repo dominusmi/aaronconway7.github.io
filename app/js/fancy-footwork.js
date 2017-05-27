@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    smoothScrolling();
 });
 
 $(window).on("load", function() {
