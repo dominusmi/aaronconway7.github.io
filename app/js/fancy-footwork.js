@@ -1,21 +1,24 @@
 $(document).ready(function(){
-    typed();
+    smoothScrolling();
 });
 
-// $(window).on("load", function() {
-//     setTimeout(function(){
-//         $('#loading').addClass('loaded');
-//
-//     }, 3000);
-//     // $('#loading').fadeOut(1000);
-//     // $('main').fadeIn(1000);
-// });
+$(window).on("load", function() {
+    setTimeout(function(){
+        $('#index').addClass('loaded');
+        typed();
+    }, onLoad()+5000);
+});
 
 function typed(){
     Typed.new('.typed', {
-        strings: ["Hello World!", "Hi.", "Yo.", "Sup.", "Wag1.", "What'gwanin?", "Hello.", "What's up?"],
+        strings: ["Hello World!^500", "Hi.", "Yo.", "Sup.", "Wag1.", "What'gwanin?", "Hello.", "What's up?"],
         typeSpeed: 30,
         loop: true,
         showCursor: false
     });
+}
+
+function onLoad() {
+  var now = new Date().getTime();
+  return page_load_time = now - performance.timing.navigationStart;
 }

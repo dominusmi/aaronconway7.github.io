@@ -4,14 +4,25 @@ head
     include include/head
     title Aaron Conway.
 body#index
-    //- #loading
-    //-     .row.center-bottom.fill-y
-    //-         object(type='image/svg+xml', data='assets/img/outline.svg')
+    #loading
+        .row.center-bottom.fill-y
+            object(type='image/svg+xml', data='assets/img/outline.svg')
     main
         .hero
             .content.fill-y.row.right-center
                 h1.typed
             .box
+                ul.fill-y
+                    a(href="#about")
+                        li About
+                    a(href="#portfolio")
+                        li Portfolio
+                    a(href="#contact")
+                        li Contact
+                    a(href="#fwends")
+                        li Fwends
+                    li A.
+                
         section#about
             .container
                 h6 I'm Aaron.
@@ -37,6 +48,12 @@ body#index
                 .col.half
                     .portfolio-panel
                         .masonry.col-2.fluid.tab-col-1
+                            a(href="https://ndorsa.com", target="_blank")
+                                .item.ndorsa
+                                    img(alt="NDORSA", src="assets/img/portfolio/ndorsa/poster.jpg")
+                                    .caption
+                                        p.title Project.
+                                        p.project NDORSA
                             a(href="http://designofeden.com", target="_blank")
                                 .item.eden
                                     img(alt="Eden", src="assets/img/portfolio/eden/poster.jpg")
@@ -79,6 +96,12 @@ body#index
                                     .caption
                                         p.title Project.
                                         p.project Tutorial Ltd Website
+                            a(href="http://www.moneywisequoteme.com/", target="_blank")
+                                .item.moneywise
+                                    img(alt="MoneyWiseQuoteMe", src="assets/img/portfolio/moneywise/poster.jpg")
+                                    .caption
+                                        p.title Project.
+                                        p.project MoneyWiseQuoteMe Website
                             .item.uprising
                                 img(alt="Uprising", src="assets/img/portfolio/uprising/poster.jpg")
                                 .caption
