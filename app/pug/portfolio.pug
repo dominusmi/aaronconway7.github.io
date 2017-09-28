@@ -5,127 +5,1251 @@ head
     title Aaron Conway - Portfolio.
 body#portfolio
     main
+        .box
+            ul.fill-y
+                a(href="index.html")
+                    li Home
+                a(href="#portfolio")
+                    li Scroll to top
+                li A.
+        
+        .views.row.top-right
+            img.view.list-view.transition(src="assets/img/icons/list.svg", alt="List view")
+            img.view.grid-view.transition(src="assets/img/icons/grid.svg", alt="Grid view")
+        
         section#list
             h6 Portfolio.
             .list
-                .work.row.left-center
-                    h5 11. NDORSA
-                    .strip.ndorsa.row.fill-y
-                        .col.six.tab-full
-                            p.title.uppercase.small NDORSA
-                        .col.three
-                            p.label Category
-                            p.category Startup
-                        .col.three
-                            p.label Year
-                            p.year 2017
-                .work.row.left-center
-                    h5 10. Eden
-                    .strip.eden.row.fill-y
-                        .col.six.tab-full
-                            p.title.uppercase.small Eden.
-                        .col.three
-                            p.label Category
-                            p.category Front-end Framework
-                        .col.three
-                            p.label Year
-                            p.year 2017
-                .work.row.left-center
-                    h5 09. Frecibo
-                    .strip.frecibo.row.fill-y
-                        .col.six.tab-full
-                            p.title Frecibo
-                        .col.three
-                            p.label Category
-                            p.category Startup
-                        .col.three
-                            p.label Year
-                            p.year 2016-now
-                .work.row.left-center
-                    h5 08. RAW
-                    .strip.raw.row.fill-y
-                        .col.six.tab-full
-                            p.title.large RAW
-                        .col.three
-                            p.label Category
-                            p.category Branding
-                        .col.three
-                            p.label Year
-                            p.year 2016
-                .work.row.left-center
-                    h5 07. Lush Heat Treatment Ltd
-                    .strip.lush-heat.row.fill-y
-                        .col.six.tab-full
-                            p.uppercase.space.title.small Lush Heat Treatment Ltd
-                        .col.three
-                            p.label Category
-                            p.category Website
-                        .col.three
-                            p.label Year
-                            p.year 2016
-                .work.row.left-center
-                    h5 06. FDIS
-                    .strip.fdis.row.fill-y
-                        .col.six.tab-full
-                            p.uppercase.space.title.small Fire Door Inspection Solutions
-                        .col.three
-                            p.label Category
-                            p.category Branding + Website
-                        .col.three
-                            p.label Year
-                            p.year 2016
-                .work.row.left-center
-                    h5 05. Tutorial Ltd
-                    .strip.tutorial.row.fill-y
-                        .col.six.tab-full
-                            p.title.uppercase.small #[strong Tutorial] Ltd
-                        .col.three
-                            p.label Category
-                            p.category Website
-                        .col.three
-                            p.label Year
-                            p.year 2016
-                .work.row.left-center
-                    h5 04. Uprising
-                    .strip.uprising.row.fill-y
-                        .col.six.tab-full
-                            p.title.large Uprising
-                        .col.three
-                            p.label Category
-                            p.category Branding
-                        .col.three
-                            p.label Year
-                            p.year 2015
-                .work.row.left-center
-                    h5 03. MoneyWiseQuoteMe
-                    .strip.moneywise.row.fill-y
-                        .col.six.tab-full
-                            p.title.small MoneyWiseQuoteMe
-                        .col.three
-                            p.label Category
-                            p.category Website
-                        .col.three
-                            p.label Year
-                            p.year 2015
-                .work.row.left-center
-                    h5 02. Fairpay
-                    .strip.fairpay.row.fill-y
-                        .col.six.tab-full
-                            p.title Fairpay
-                        .col.three
-                            p.label Category
-                            p.category Web Application
-                        .col.three
-                            p.label Year
-                            p.year 2015
-                .work.row.left-center
-                    h5 01. DoTo!
-                    .strip.do-to.row.fill-y
-                        .col.six.tab-full
-                            p.title DoTo!
-                        .col.three
-                            p.label Category
-                            p.category Web Application
-                        .col.three
-                            p.label Year
-                            p.year 2015
+                //- a(href="#leicester-motors")
+                //-     .work.row.left-center
+                //-         h5 14. Leicester Motors
+                //-         .strip.leicester-motors.row.fill-y
+                //-             .col.six.tab-full
+                //-                 p.title.uppercase.small Leicester Motors
+                //-             .col.three
+                //-                 p.label Category
+                //-                 p.category Branding
+                //-             .col.three
+                //-                 p.label Year
+                //-                 p.year 2017
+                //- a(href="#mepiphany")
+                //-     .work.row.left-center
+                //-         h5 12. Mepiphany
+                //-         .strip.mepiphany.row.fill-y
+                //-             .col.six.tab-full
+                //-                 p.title mepiphany
+                //-             .col.three
+                //-                 p.label Category
+                //-                 p.category Branding
+                //-             .col.three
+                //-                 p.label Year
+                //-                 p.year 2017
+                a(href="#thirty-degrees")
+                    .work.row.left-center
+                        h5 11. Thirty Degrees
+                        .strip.thirty-degrees.row.fill-y
+                            .col.six.tab-full
+                                p.title.uppercase.small Thirty Degrees
+                            .col.three
+                                p.label Category
+                                p.category Startup
+                            .col.three
+                                p.label Year
+                                p.year 2017
+                //- a(href="#ndorsa")
+                //-     .work.row.left-center
+                //-         h5 11. NDORSA
+                //-         .strip.ndorsa.row.fill-y
+                //-             .col.six.tab-full
+                //-                 p.title.uppercase.small NDORSA
+                //-             .col.three
+                //-                 p.label Category
+                //-                 p.category Startup
+                //-             .col.three
+                //-                 p.label Year
+                //-                 p.year 2017
+                a(href="#eden")
+                    .work.row.left-center
+                        h5 10. Eden
+                        .strip.eden.row.fill-y
+                            .col.six.tab-full
+                                p.title.uppercase.small Eden.
+                            .col.three
+                                p.label Category
+                                p.category Front-end Framework
+                            .col.three
+                                p.label Year
+                                p.year 2017
+                a(href="#frecibo")
+                    .work.row.left-center
+                        h5 09. Frecibo
+                        .strip.frecibo.row.fill-y
+                            .col.six.tab-full
+                                p.title Frecibo
+                            .col.three
+                                p.label Category
+                                p.category Startup
+                            .col.three
+                                p.label Year
+                                p.year 2016-now
+                a(href="#raw")
+                    .work.row.left-center
+                        h5 08. RAW
+                        .strip.raw.row.fill-y
+                            .col.six.tab-full
+                                p.title.large RAW
+                            .col.three
+                                p.label Category
+                                p.category Branding
+                            .col.three
+                                p.label Year
+                                p.year 2016
+                a(href="#lush-heat")
+                    .work.row.left-center
+                        h5 07. Lush Heat Treatment Ltd
+                        .strip.lush-heat.row.fill-y
+                            .col.six.tab-full
+                                p.uppercase.space.title.small Lush Heat Treatment Ltd
+                            .col.three
+                                p.label Category
+                                p.category Website
+                            .col.three
+                                p.label Year
+                                p.year 2016
+                a(href="#fdis")
+                    .work.row.left-center
+                        h5 06. FDIS
+                        .strip.fdis.row.fill-y
+                            .col.six.tab-full
+                                p.uppercase.space.title.small Fire Door Inspection Solutions
+                            .col.three
+                                p.label Category
+                                p.category Branding + Website
+                            .col.three
+                                p.label Year
+                                p.year 2016
+                a(href="#tutorial")
+                    .work.row.left-center
+                        h5 05. Tutorial Ltd
+                        .strip.tutorial.row.fill-y
+                            .col.six.tab-full
+                                p.title.uppercase.small #[strong Tutorial] Ltd
+                            .col.three
+                                p.label Category
+                                p.category Website
+                            .col.three
+                                p.label Year
+                                p.year 2016
+                a(href="#uprising")
+                    .work.row.left-center
+                        h5 04. Uprising
+                        .strip.uprising.row.fill-y
+                            .col.six.tab-full
+                                p.title.large Uprising
+                            .col.three
+                                p.label Category
+                                p.category Branding
+                            .col.three
+                                p.label Year
+                                p.year 2015
+                a(href="#moneywise")
+                    .work.row.left-center
+                        h5 03. MoneyWiseQuoteMe
+                        .strip.moneywise.row.fill-y
+                            .col.six.tab-full
+                                p.title.small MoneyWiseQuoteMe
+                            .col.three
+                                p.label Category
+                                p.category Website
+                            .col.three
+                                p.label Year
+                                p.year 2015
+                a(href="#fairpay")
+                    .work.row.left-center
+                        h5 02. Fairpay
+                        .strip.fairpay.row.fill-y
+                            .col.six.tab-full
+                                p.title Fairpay
+                            .col.three
+                                p.label Category
+                                p.category Web Application
+                            .col.three
+                                p.label Year
+                                p.year 2015
+                a(href="#do-to")
+                    .work.row.left-center
+                        h5 01. DoTo!
+                        .strip.do-to.row.fill-y
+                            .col.six.tab-full
+                                p.title DoTo!
+                            .col.three
+                                p.label Category
+                                p.category Web Application
+                            .col.three
+                                p.label Year
+                                p.year 2015
+        
+        section#grid
+            .container
+                h6 Portfolio.
+            .grid.row.wrap
+                //- a.col.work.quarter.mepiphany(href="#mepiphany")
+                a.col.work.quarter.bg-center.thirty-degrees.overlay.dark(href="#thirty-degrees")
+                    .caption
+                        p.title Project.
+                        p.project Thirty Degrees
+                a.col.work.quarter.bg-center.eden.overlay.dark(href="#eden")
+                    .caption
+                        p.title Project.
+                        p.project Eden
+                a.col.work.quarter.bg-center.frecibo.overlay.dark(href="#frecibo")
+                    .caption
+                        p.title Project.
+                        p.project Frecibo
+                a.col.work.quarter.bg-center.raw.overlay.dark(href="#raw")
+                    .caption
+                        p.title Project.
+                        p.project RAW Rebrand
+                a.col.work.quarter.bg-center.lush-heat.overlay.dark(href="#lush-heat")
+                    .caption
+                        p.title Project.
+                        p.project Lush Heat Treatment Ltd Website
+                a.col.work.quarter.bg-center.fdis.overlay.dark(href="#fdis")
+                    .caption
+                        p.title Project.
+                        p.project FDIS Website + Branding
+                a.col.work.quarter.bg-center.tutorial.overlay.dark(href="#tutorial")
+                    .caption
+                        p.title Project.
+                        p.project Tutorial Ltd Website
+                a.col.work.quarter.bg-center.uprising.overlay.dark(href="#uprising")
+                    .caption
+                        p.title Project.
+                        p.project Uprising Logo
+                a.col.work.quarter.bg-center.moneywise.overlay.dark(href="#moneywise")
+                    .caption
+                        p.title Project.
+                        p.project MoneywiseQuoteMe Website
+                a.col.work.quarter.bg-center.fairpay.overlay.dark(href="#fairpay")
+                    .caption
+                        p.title Project.
+                        p.project Fairpay Web Application
+                a.col.work.quarter.bg-center.do-to.overlay.dark(href="#do-to")
+                    .caption
+                        p.title Project.
+                        p.project DoTo! Web Application
+                
+        section#clients
+            //- .client#leicester-motors
+            //-     .first-screen.row.center-bottom.bg-center
+            //-         .container
+            //-             .info-panel
+            //-                 .container
+            //-                     p.project-category Branding
+            //-                     a.client-name(href="#", target="_blank") Leicester Motors
+            //-                     p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            //-                     .row
+            //-                         .col
+            //-                             p.title Date
+            //-                             p June - July 2017 
+            //-     .further-info
+            //-         .pages
+            //-             .container
+            //-                 .page
+            //-                     h5.title.page-name.text-center Page Name
+            //-                     hr.quarter.center
+            //-                     p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                         .screen
+            //-                 .page
+            //-                     h5.title.page-name.text-center Page Name
+            //-                     hr.quarter.center
+            //-                     p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                         .screen
+            //-         .colours
+            //-             .container
+            //-                 h5.title.page-name.text-center Colour Scheme
+            //-                 hr.quarter.center
+            //-                 p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                 .palette
+            //-                     .row.fluid.fill-y.mob-col
+            //-                         .col.colour.colour-1.transition.fill-y.mob-full.center-center
+            //-                             p.hex-code.transition #HEXID
+            //-                         .col.fill-y.mob-full
+            //-                             .row.fill-y
+            //-                                 .col.colour.colour-2.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-3.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-4.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                             .row.fill-y
+            //-                                 .col.colour.colour-5.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-6.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-7.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-         .fonts
+            //-             .container
+            //-                 h5.title.page-name.text-center Fonts
+            //-                 hr.quarter.center
+            //-                 p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                 span.code.light.font-label Font Family Name
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //- .client#mepiphany
+            //-     .first-screen.row.center-bottom.bg-center
+            //-         .container
+            //-             .info-panel
+            //-                 .container
+            //-                     p.project-category Branding
+            //-                     a.client-name(href="http://mepiphany.com", target="_blank") Mepiphany
+            //-                     p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            //-                     .row
+            //-                         .col
+            //-                             p.title Date
+            //-                             p June - July 2017 
+            //-     .further-info
+            //-         .graphics
+            //-             .container
+            //-                 .graphic
+            //-                     h5.title.page-name.text-center Graphic Name
+            //-                     hr.quarter.center
+            //-                     p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                     img.graphic(src="assets/img/portfolio/mepiphany/logo.png", alt="Mepiphany Logo")
+            //-                         
+            //-         .colours
+            //-             .container
+            //-                 h5.title.page-name.text-center Colour Scheme
+            //-                 hr.quarter.center
+            //-                 p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                 .palette
+            //-                     .row.fluid.fill-y.mob-col
+            //-                         .col.colour.colour-1.transition.fill-y.mob-full.center-center
+            //-                             p.hex-code.transition #46ABE3
+            //-                         .col.fill-y.mob-full
+            //-                             .row.fill-y
+            //-                                 .col.colour.colour-2.transition.center-center
+            //-                                     p.hex-code.transition #47A4C4
+            //-                                 .col.colour.colour-3.transition.center-center
+            //-                                     p.hex-code.transition #59C5D8
+            //-                                 .col.colour.colour-4.transition.center-center
+            //-                                     p.hex-code.transition #4AA8C6
+            //-                             .row.fill-y
+            //-                                 .col.colour.colour-5.transition.center-center
+            //-                                     p.hex-code.transition #57AFC4
+            //-                                 .col.colour.colour-6.transition.center-center
+            //-                                     p.hex-code.transition #3D93B5
+            //-                                 .col.colour.colour-7.transition.center-center
+            //-                                     p.hex-code.transition #ffffff
+            //-         .fonts
+            //-             .container
+            //-                 h5.title.page-name.text-center Fonts
+            //-                 hr.quarter.center
+            //-                 p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                 span.code.light.font-label Grand Hotel
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //-                 h4.font The spectacle before us was indeed sublime.
+            .client#thirty-degrees
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                .row
+                                    .col
+                                        p.project-category Startup
+                                        a.client-name(href="https://thirty.degree", target="_blank") Thirty Degress
+                                    .col
+                                        .row.team-members.right-center
+                                            p.title.transition Team Members:
+                                            a.member.alex.bg-center.transition.overlay.light.on-hover.fade(href="http://", target="_blank")
+                                            a.member.ed.bg-center.transition.overlay.light.on-hover.fade(href="http://", target="_blank")
+                                            a.member.wastemane.bg-center.transition.overlay.light.on-hover.fade(href="http://", target="_blank")
+                                            a.member.tk.bg-center.transition.overlay.light.on-hover.fade(href="http://", target="_blank")
+                                        
+                                .desc
+                                    p Thirty Degrees is a Digital Agency specialising in the design and development of bespoke, mobile responsive web applications.
+                                    p The company was formed by myself and fellow university colleagues in June 2017 in order to take on web development projects of a larger scale compared to those we had undertaken in a sole freelance capacity. As well as being a co-founder and director of Thirty Degrees, I take on the role of a designer and front-end developer in the projects we partake in.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p June 2017 - today
+                                    .col.bottom-right
+                                        a.project-link(href="https://thirty.degree", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Coming Soon
+                                hr.quarter.center
+                                p.desc.text-center Serves as a temporary placeholder of the Thirty Degrees website prior to development of the full site. Main purpose is to display a brand and allow potential customers to contact the team.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/thirty-degrees/pages/coming-soon.png", alt="Thirty Degrees Coming Soon Page")
+                                        
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            //- p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #191919
+                                    .col.colour.colour-2.transition.center-center
+                                        p.hex-code.transition #000000
+                                    .col.colour.colour-3.transition.center-center
+                                        p.hex-code.transition #ffffff
+                                    .col.colour.colour-4.transition.center-center
+                                        p.hex-code.transition #4B4B4B
+                                                
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            //- p.desc.text-center Quicksand is a display sans serif with rounded terminals. The project was initiated by Andrew Paglinawan in 2008 using geometric shapes as a core foundation. It is designed for display purposes but kept legible enough to use in small sizes as well. In 2016, in collaboration with Andrew, it was thoroughly revised by Thomas Jockin to improve the quality.
+                            span.code.light.font-label Quicksand
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            //- .client#ndorsa
+            //-     .first-screen.row.center-bottom.bg-center
+            //-         .container
+            //-             .info-panel
+            //-                 .container
+            //-                     p.project-category Startup
+            //-                     a.client-name(href="http://ndorsa.com", target="_blank") NDORSA
+            //-                     p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            //-                     .row
+            //-                         .col
+            //-                             p.title Date
+            //-                             p June 2017 - today
+            //-                         .col.bottom-right
+            //-                             a.project-link(href="http://ndorsa.com", target="_blank") Visit Website
+            //-                                 img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+            //-     .further-info
+            //-         .pages
+            //-             .container
+            //-                 .page
+            //-                     h5.title.page-name.text-center Page Name
+            //-                     hr.quarter.center
+            //-                     p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                         .screen
+            //-                 .page
+            //-                     h5.title.page-name.text-center Page Name
+            //-                     hr.quarter.center
+            //-                     p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                         .screen
+            //-         .colours
+            //-             .container
+            //-                 h5.title.page-name.text-center Colour Scheme
+            //-                 hr.quarter.center
+            //-                 p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                 .palette
+            //-                     .row.fluid.fill-y.mob-col
+            //-                         .col.colour.colour-1.transition.fill-y.mob-full.center-center
+            //-                             p.hex-code.transition #ffffff
+            //-                         .col.fill-y.mob-full
+            //-                             .row.fill-y
+            //-                                 .col.colour.colour-2.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-3.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-4.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                             .row.fill-y
+            //-                                 .col.colour.colour-5.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-6.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-                                 .col.colour.colour-7.transition.center-center
+            //-                                     p.hex-code.transition #HEXID
+            //-         .fonts
+            //-             .container
+            //-                 h5.title.page-name.text-center Fonts
+            //-                 hr.quarter.center
+            //-                 p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            //-                 span.code.light.font-label Font Family Name
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //-                 h4.font The spectacle before us was indeed sublime.
+            //-                 h4.font The spectacle before us was indeed sublime.
+            .client#eden
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Open Source Project
+                                a.client-name(href="http://designofeden.com", target="_blank") Eden
+                                .desc 
+                                    p Eden is a front-end web framework focused on beautiful design and unique web development.
+                                    p It was developed as my 3rd year dissertation project at The University of Warwick where its main purpose is to easily allow users to design, build and develop beautiful looking websites that are unlike any other. Front-end frameworks such as Eden provide the base and foundation to start your web project.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p August 2016 - today
+                                    .col.bottom-right
+                                        a.project-link(href="http://designofeden.com", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Homepage
+                                hr.quarter.center
+                                p.desc.text-center Homepage giving a brief introduction to what the framework is about, examples of websites it has been used in and also brands that use it. Designed as a clean UI with options easy at hand. Features a centralised horizontal navigation bar at the top of the page.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/eden/pages/index.png", alt="Eden Index Page")
+                            .page
+                                h5.title.page-name.text-center Get Started & About
+                                hr.quarter.center
+                                p.desc.text-center Follows a similar clean design to the homepage with the same navigation bar and hero image at the top of each page. Content then follows underneath.
+                                .row
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/eden/pages/get-started.png", alt="Eden Get Started Page")
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/eden/pages/about.png", alt="Eden About Page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            //- p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #52AE76
+                                    .col.colour.colour-2.transition.center-center
+                                        p.hex-code.transition #2F2F2F
+                                    .col.colour.colour-3.transition.center-center
+                                        p.hex-code.transition #EEEEEEE
+                                    .col.colour.colour-4.transition.center-center
+                                        p.hex-code.transition #FFFFFF
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            //- p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Source Sans Pro
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#frecibo
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Startup
+                                a.client-name(href="https://frecibo.com", target="_blank") Frecibo
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p June 2016 - today
+                                    .col.bottom-right
+                                        a.project-link(href="https://frecibo.com", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/frecibo/pages/index.png", alt="Frecibo Index Page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #A4C6B7
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Lobster
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#raw
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Branding
+                                p.client-name RAW
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p June - September 2016
+                .further-info
+                    .graphics
+                        .container
+                            .graphic
+                                h5.title.page-name.text-center Graphic Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                img.graphic(src="assets/img/portfolio/raw/logo.jpg", alt="RAW Logo")
+                            .graphic
+                                h5.title.page-name.text-center Graphic Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .row
+                                    .col
+                                        img.graphic(src="assets/img/portfolio/raw/design2.png", alt="RAW Logo Design 2")
+                                    .col
+                                        img.graphic(src="assets/img/portfolio/raw/design1.png", alt="RAW Logo Design 1")
+                                    .col
+                                        img.graphic(src="assets/img/portfolio/raw/design3.png", alt="RAW Logo Design 3")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #C3A541
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Adam
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                    .testimonials
+                        .container
+                            h5.title.page-name.text-center Testimonials
+                            hr.quarter.center
+                            .slider.raw-testimonials
+                                .slides
+                                    .slide.testimonial.is-active
+                                        p.quote.text-center "This notion was even more evident in the decision behind employing the help of computer science student, web designer, and genius Aaron Conway to capture our ideas in a new logo. His ingenuity and particularly his patience with us, changing the tiniest details and accepting the pettiest of criticisms was fundamental to the eventual outcome".
+                                        p.author.text-center Nick Harris, Station Manager 2016/17
+                                    .slide.testimonial
+                                        p.quote.text-center "This notion was even more evident in the decision behind employing the help of computer science student, web designer, and genius Aaron Conway to capture our ideas in a new logo. His ingenuity and particularly his patience with us, changing the tiniest details and accepting the pettiest of criticisms was fundamental to the eventual outcome".
+                                        p.author.text-center Nick Harris, Station Manager 2016/17
+                                    .slide.testimonial
+                                        p.quote.text-center "This notion was even more evident in the decision behind employing the help of computer science student, web designer, and genius Aaron Conway to capture our ideas in a new logo. His ingenuity and particularly his patience with us, changing the tiniest details and accepting the pettiest of criticisms was fundamental to the eventual outcome".
+                                        p.author.text-center Nick Harris, Station Manager 2016/17
+                                span.slider-control.slide-left ❮
+                                span.slider-control.slide-right ❯
+                                .dots
+                                    .dot.is-active
+                                    .dot
+                                    .dot                        
+            .client#lush-heat
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Website
+                                a.client-name(href="http://lush-heat.com", target="_blank") Lush Heat Treatment Ltd
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p August 2016
+                                    .col.bottom-right
+                                        a.project-link(href="http://lush-heat.com", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/lush-heat/pages/index.png", alt="Lush Heat Treatment Ltd Index Page")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .row
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/lush-heat/pages/about.png", alt="Lush Heat Treatment Ltd About Page")
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/lush-heat/pages/about-gallery.png", alt="Lush Heat Treatment Ltd About-Gallery Page")
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/lush-heat/pages/approvals.png", alt="Lush Heat Treatment Ltd Approvals Page")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/lush-heat/pages/contact.png", alt="Lush Heat Treatment Ltd Contact Page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #ffffff
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Raleway
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#fdis
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Website + Branding
+                                a.client-name(href="http://fdisuk.com", target="_blank") Fire Door Inspection Solutions
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p April - November 2016
+                                    .col.bottom-right
+                                        a.project-link(href="http://fdisuk.com", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/fdis/pages/index.png", alt="FDIS Index Page")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/fdis/pages/fdis.png", alt="FDIS Main Page")
+                    .graphics
+                        .graphic
+                            .container
+                                h5.title.page-name.text-center Graphic Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            img.graphic(src="assets/img/portfolio/fdis/branding.jpg", alt="FDIS Branding")
+                            
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #F5A623
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Antonio
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#tutorial
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Website + Branding
+                                a.client-name(href="http://tutorial-ltd.co.uk", target="_blank") Tutorial Ltd
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p December 2015
+                                    .col.bottom-right
+                                        a.project-link(href="http://tutorial-ltd.co.uk", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/tutorial/pages/index.png", alt="Tutorial Index Page")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .row
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/tutorial/pages/performing-arts.png", alt="Tutorial Performing Arts Page")
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/tutorial/pages/timetable.png", alt="Eden Timetable Page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #1172C1
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Helvetica
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#uprising
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Branding
+                                p.client-name Uprising
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p May 2015
+                .further-info
+                    .graphics
+                        .container
+                            .graphic
+                                h5.title.page-name.text-center Graphic Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                img(src="assets/img/portfolio/uprising/logo.jpg", alt="Uprising logo")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #000000
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Angry Blu
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#moneywise
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Website
+                                a.client-name(href="http://moneywisequoteme.com", target="_blank") MoneywiseQuoteMe
+                                p.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p July - August 2015
+                                    .col.bottom-right
+                                        a.project-link(href="http://moneywisequoteme.com", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/moneywise/pages/index.png", alt="MoneywiseQuoteMe Index Page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #BD3935
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Raleway
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#fairpay
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Web Application
+                                a.client-name(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target="_blank") Fairpay
+                                p.desc Fairpay is a web application designed to help students keep track of their bills when moving into their new off campus accomodation. This was a coursework project for the Web Development Technologies module during my first year of University. I designed both the logo behind the project and the platform itself before developing it in HTML, CSS, PHP, JavaScript, JQuery, AJAX and SQL.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p February - March 2015
+                                    .col.bottom-right
+                                        a.project-link(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/fairpay/pages/index.png", alt="Fairpay Homepage")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .row
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/fairpay/pages/sign-up.png", alt="Fairpay sign up page")
+                                    .col
+                                        .browser
+                                            .browser-header.dark.row.center-center
+                                                .close.transition
+                                                .minimise.transition
+                                                .maximise.transition
+                                                .search.transition
+                                            img.screen(src="assets/img/portfolio/fairpay/pages/bills.png", alt="Fairpay bills page")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/fairpay/pages/settings.png", alt="Fairpay settings page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #9C1C1C
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Abel
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            .client#do-to
+                .first-screen.row.center-bottom.bg-center
+                    .container
+                        .info-panel
+                            .container
+                                p.project-category Web Application
+                                a.client-name(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target="_blank") DoTo!
+                                p.desc DoTo! is a to-do list web application. This was my first ever web project built during my first year of University when taking the Web Development Technologies module. I designed the brand behind the project as well as designing and developing both the front and back-end components of the application. This utilised a number of technologies such as HTML, CSS, PHP, JavaScript, JQuery, AJAX and SQL.
+                                .row
+                                    .col
+                                        p.title Date
+                                        p January - February 2015
+                                    .col.bottom-right
+                                        a.project-link(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target="_blank") Visit Website
+                                            img.arrow.transition(src="assets/img/icons/right-arrow.png", alt="Right Arrow")
+                .further-info
+                    .pages
+                        .container
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/do-to/pages/index.png", alt="DoTo! Homepage")
+                            .page
+                                h5.title.page-name.text-center Page Name
+                                hr.quarter.center
+                                p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .browser
+                                    .browser-header.dark.row.center-center
+                                        .close.transition
+                                        .minimise.transition
+                                        .maximise.transition
+                                        .search.transition
+                                    img.screen(src="assets/img/portfolio/do-to/pages/list.png", alt="DoTo! lists page")
+                    .colours
+                        .container
+                            h5.title.page-name.text-center Colour Scheme
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            .palette
+                                .row.fluid.fill-y.mob-col
+                                    .col.colour.colour-1.transition.fill-y.mob-full.center-center
+                                        p.hex-code.transition #F6D6A4
+                                    .col.fill-y.mob-full
+                                        .row.fill-y
+                                            .col.colour.colour-2.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-3.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-4.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                        .row.fill-y
+                                            .col.colour.colour-5.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-6.transition.center-center
+                                                p.hex-code.transition #HEXID
+                                            .col.colour.colour-7.transition.center-center
+                                                p.hex-code.transition #HEXID
+                    .fonts
+                        .container
+                            h5.title.page-name.text-center Fonts
+                            hr.quarter.center
+                            p.desc.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            span.code.light.font-label Dosis
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+                            h4.font The spectacle before us was indeed sublime.
+            
+    include include/foot
+    script(src="js/pages/portfolio.js")

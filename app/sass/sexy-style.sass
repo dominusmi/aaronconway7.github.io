@@ -42,8 +42,16 @@
 
 @font-face
     font-family: Source Sans Pro
+    src: url('../assets/fonts/source-sans-pro/SourceSansPro-Light.otf')
+    font-weight: 100
+@font-face
+    font-family: Source Sans Pro
+    src: url('../assets/fonts/source-sans-pro/SourceSansPro-Regular.otf')
+    font-weight: 300
+@font-face
+    font-family: Source Sans Pro
     src: url('../assets/fonts/source-sans-pro/SourceSansPro-Black.otf')
-    // font-weight: 900
+    font-weight: 900
 
 @font-face
     font-family: Angry Blu
@@ -57,11 +65,56 @@
     font-family: Dosis
     src: url('../assets/fonts/dosis/Dosis-Light.otf')
 
+@font-face
+    font-family: Grand Hotel
+    src: url('../assets/fonts/grand-hotel/GrandHotel-Regular.otf')
+
+
+@font-face
+    font-family: Quicksand
+    src: url('../assets/fonts/quicksand/Quicksand-Light.otf')
+    font-weight: 100
+@font-face
+    font-family: Quicksand
+    src: url('../assets/fonts/quicksand/Quicksand-Regular.otf')
+    font-weight: 300
+@font-face
+    font-family: Quicksand
+    src: url('../assets/fonts/quicksand/Quicksand-Bold.otf')
+    font-weight: 900
+
 // variables
+
+// fonts
+$mepiphany-font: Grand Hotel
+$thirty-degrees-font: Quicksand
+$ndorsa-font: Source Sans Pro
+$eden-font: Source Sans Pro
+$frecibo-font: Lobster
+$raw-font: Adam
+$lush-heat-font: Raleway
+$fdis-font: Antonio
+$tutorial-font: Helvetica
+$uprising-font: Angry Blu
+$moneywise-font: Raleway
+$fairpay-font: Abel
+$do-to-font: Dosis
 
 // colours
 
-$fdis: #f5a623
+$mepiphany-colour: #46abe3
+$thirty-degrees-colour: black
+$ndorsa-colour: white
+$eden-colour: #52ae76
+$frecibo-colour: #a4c6b7
+$raw-colour: #c3a541
+$lush-heat-colour: white
+$fdis-colour: #f5a623
+$tutorial-colour: #1172c1
+$uprising-colour: black
+$moneywise-colour: #bd3935
+$fairpay-colour: #9c1c1c
+$do-to-colour: #f6d6a4
 
 html
     background-color: #FA4B4B
@@ -74,6 +127,58 @@ html
 
 .red
     color: #FA4B4B
+
+h6
+    font-weight: 300
+    font-size: 1rem
+    opacity: 0.2
+
+.box
+    background-color: #FA4B4B
+    height: 50px
+    width: 50px
+    position: absolute
+    right: 25px
+    bottom: 25px
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1)
+
+    ul
+        display: none
+
+    &:hover
+        width: 500px
+        background-color: #181818
+
+        @media screen and (max-width: 768px)
+            width: 400px
+        @media screen and (max-width: 500px)
+            width: 300px
+
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0px 50px
+
+            @media screen and (max-width: 500px)
+                padding: 0px 25px
+
+            & > li
+                font-weight: 900
+                color: #FA4B4B
+
+            a
+                font-size: 0.8rem
+                opacity: 0.2
+
+                &:hover
+                    text-decoration: line-through
+                    color: #FA4B4B
+                    opacity: 1
+
+                    li
+                        color: #FA4B4B
+
 
 // index
 #index
@@ -153,52 +258,6 @@ html
                     margin-top: 250px
                 @media screen and (max-height: 450px)
                     margin-top: 200px
-
-        .box
-            background-color: #FA4B4B
-            height: 50px
-            width: 50px
-            position: absolute
-            right: 25px
-            bottom: 25px
-            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1)
-
-            ul
-                display: none
-
-            &:hover
-                width: 500px
-                background-color: #181818
-
-                @media screen and (max-width: 768px)
-                    width: 400px
-                @media screen and (max-width: 500px)
-                    width: 300px
-
-                ul
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
-                    padding: 0px 50px
-
-                    @media screen and (max-width: 500px)
-                        padding: 0px 25px
-
-                    & > li
-                        font-weight: 900
-                        color: #FA4B4B
-
-                    a
-                        font-size: 0.8rem
-                        opacity: 0.2
-
-                        &:hover
-                            text-decoration: line-through
-                            color: #FA4B4B
-                            opacity: 1
-
-                            li
-                                color: #FA4B4B
 
     section
         position: relative
@@ -392,6 +451,31 @@ html
     background-color: #181818
     min-height: 100vh
 
+    .box
+        z-index: 99
+        position: fixed
+
+        &:hover
+            width: 300px
+
+    .views
+        position: absolute
+        top: 30px
+        right: 50px
+        z-index: 99
+
+        .view
+            height: 15px
+            margin-right: 10px
+            opacity: 0.2
+            cursor: pointer
+
+            &:hover
+                opacity: 0.5
+
+            &:last-of-type
+                margin-right: 0px
+
     #list
         padding: 100px 0px
 
@@ -451,104 +535,122 @@ html
             @media screen and (max-width: 768px)
                 padding: 0px 25px
 
+            &.mepiphany
+                background-color: $mepiphany-colour
+
+                p
+                    color: white
+
+                .title
+                    font-family: $mepiphany-font
+
+            &.thirty-degrees
+                background-color: $thirty-degrees-colour
+
+                p
+                    color: white
+
+                .title
+                    font-family: $thirty-degrees-font
+
             &.ndorsa
-                background-color: white
+                background-color: $ndorsa-colour
 
                 p
                     color: black
 
                 .title
-                    font-family: Source Sans Pro
+                    font-family: $ndorsa-font
 
             &.eden
-                background-color: #52ae76
+                background-color: $eden-colour
 
                 p
                     color: white
 
                 .title
-                    font-family: Source Sans Pro
+                    font-family: $eden-font
 
             &.frecibo
-                background-color: #a4c6b7
+                background-color: $frecibo-colour
 
                 p
                     color: black
 
                 .title
-                    font-family: Lobster
+                    font-family: $frecibo-font
 
             &.raw
-                background-color: #c3a541
+                background-color: $raw-colour
 
                 p
                     color: black
 
                 .title
-                    font-family: Adam
+                    font-family: $raw-font
 
             &.lush-heat
-                background-color: white
+                background-color: $lush-heat-colour
 
                 p
                     color: black
 
                 .title
-                    font-family: Raleway
+                    font-family: $lush-heat-font
 
             &.fdis
-                background-color: $fdis
+                background-color: $fdis-colour
 
                 p
                     color: black
 
                 .title
-                    font-family: Antonio
+                    font-family: $fdis-font
 
             &.tutorial
-                background-color: #1172c1
+                background-color: $tutorial-colour
 
                 p
                     color: white
 
                 .title
-                    font-family: Helvetica
+                    font-family: $tutorial-font
 
             &.uprising
-                background-color: black
+                background-color: $uprising-colour
 
                 p
                     color: white
 
                 .title
-                    font-family: Angry Blu
+                    font-family: $uprising-font
 
             &.moneywise
-                background-color: #bd3935
+                background-color: $moneywise-colour
 
                 p
                     color: white
 
                 .title
-                    font-family: Raleway
+                    font-family: $moneywise-font
 
             &.fairpay
-                background-color: #9c1c1c
+                background-color: $fairpay-colour
 
                 p
                     color: white
 
                 .title
-                    font-family: Abel
+                    font-family: $fairpay-font
 
             &.do-to
-                background-color: #f6d6a4
+                background-color: $do-to-colour
 
                 p
                     color: black
 
                 .title
-                    font-family: Dosis
+                    font-family: $do-to-font
 
             .title
                 font-size: 2em
@@ -583,3 +685,554 @@ html
 
                     @media screen and (max-width: 1100px)
                         font-size: 1.25em
+
+    #grid
+        display: none
+        padding-bottom: 100px
+
+        .grid
+            padding: 0px 50px
+
+            .work
+                height: 25vh
+                margin-bottom: 40px
+                position: relative
+                font-size: 1rem
+
+                &:nth-of-type(4n+1)
+                    margin-left: 0px
+
+                &:hover
+
+
+                    &:after
+                        transition: all 0.5s ease-in-out
+                        opacity: 0
+
+                    .caption
+                        opacity: 0
+                        transform: translate3d(20px, 0px, 0px)
+
+                &.thirty-degrees
+                    background-image: url('../assets/img/portfolio/thirty-degrees/poster.jpg')
+                &.eden
+                    background-image: url('../assets/img/portfolio/eden/poster.jpg')
+                &.frecibo
+                    background-image: url('../assets/img/portfolio/frecibo/poster.jpg')
+                &.raw
+                    background-image: url('../assets/img/portfolio/raw/poster.jpg')
+                &.lush-heat
+                    background-image: url('../assets/img/portfolio/lush-heat/poster.jpg')
+                &.fdis
+                    background-image: url('../assets/img/portfolio/fdis/poster.jpg')
+                &.tutorial
+                    background-image: url('../assets/img/portfolio/tutorial/poster.jpg')
+                &.uprising
+                    background-image: url('../assets/img/portfolio/uprising/poster.jpg')
+                &.moneywise
+                    background-image: url('../assets/img/portfolio/moneywise/poster.jpg')
+                &.fairpay
+                    background-image: url('../assets/img/portfolio/fairpay/poster.jpg')
+                &.do-to
+                    background-image: url('../assets/img/portfolio/do-to/poster.jpg')
+
+                .caption
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    padding-left: 20px
+                    padding-bottom: 20px
+                    transition: opacity .75s cubic-bezier(.215,.61,.355,1),transform .75s cubic-bezier(.215,.61,.355,1)
+
+                    .title
+                        opacity: 0.2
+                        font-size: 0.8em
+                        margin-bottom: -5px
+                    .project
+                        font-weight: 900
+
+    #clients
+
+        .client
+
+            .first-screen
+                background-color: #eee
+                padding-top: 50vh
+                background-attachment: fixed
+
+                .info-panel
+                    background-color: #181818
+                    font-size: 0.9rem
+
+                    .project-category, .title, .project-link
+                        font-size: 0.8em
+
+                    .project-category, .title
+                        opacity: 0.2
+
+                    .client-name
+                        font-size: 1.8em
+                        margin-bottom: 10px
+                        font-weight: 900
+                        display: inline-block
+
+                    .desc
+                        margin-bottom: 30px
+                        opacity: 0.5
+                        font-size: 0.85rem
+
+                        p
+                            margin-bottom: 1em
+
+                            &:last-of-type
+                                margin-bottom: 0px
+
+                    .project-link
+
+                        &:hover
+
+                            .arrow
+                                transform: translate3d(2px, 0px, 0px)
+
+                        .arrow
+                            height: 1em
+                            vertical-align: middle
+                            margin-left: 5px
+
+                    .team-members
+
+                        .title
+                            transform: translate3d(10px, 0px, 0px)
+
+                        .member
+                            height: 25px
+                            width: 25px
+                            border-radius: 100px
+                            border: 2px solid white
+
+                            &:after
+                                border-radius: 100px
+
+                            &.wastemane
+                                background-image: url('../assets/img/team/wastemane.jpg')
+                            &.ed
+                                background-image: url('../assets/img/team/barp.jpg')
+                            &.alex
+                                background-image: url('../assets/img/team/macpherson.jpg')
+                            &.tk
+                                background-image: url('../assets/img/team/kilminster.jpg')
+
+                            &:nth-of-type(3)
+                                transform: translate3d(7px, 0px, 0px)
+                                z-index: 1
+                            &:nth-of-type(2)
+                                transform: translate3d(14px, 0px, 0px)
+                                z-index: 2
+                            &:nth-of-type(1)
+                                transform: translate3d(21px, 0px, 0px)
+                                z-index: 3
+
+                        &:hover
+
+                            .member, .title
+                                transform: none
+
+                            .title
+                                margin-right: 10px
+
+                            .member
+                                margin-right: 5px
+
+                                &:last-of-type
+                                    margin-right: 0px
+
+            .further-info
+                background-color: #181818
+
+                .title
+                    margin-bottom: 10px
+
+                hr
+                    // margin-bottom: 20px
+                    opacity: 0.5
+                    margin-bottom: 75px
+
+                .desc
+                    opacity: 0.2
+                    font-size: 0.8em
+                    margin-bottom: 75px
+
+                .graphics
+
+                    .graphic
+                        margin-bottom: 150px
+
+                        &:last-of-type
+                            margin-bottom: 0px
+
+                        .container
+                            padding-bottom: 0px
+
+                    img
+                        width: 100%
+
+                .pages
+
+                    .page
+                        margin-bottom: 150px
+
+                        &:last-of-type
+                            margin-bottom: 0px
+
+                        hr
+                            margin-bottom: 20px
+
+                        .browser
+
+                            .browser-header
+                                border-radius: 5px 5px 0 0
+                                padding: 10px 15px
+
+                                .close, .minimise, .maximise
+                                    min-width: 10px
+                                    max-width: 10px
+                                    min-height: 10px
+                                    max-height: 10px
+                                    background-color: #181818
+                                    border-radius: 100px
+                                    margin-right: 10px
+
+                                .close
+
+                                    &:hover
+                                        background-color: #ff4746
+
+                                .minimise
+
+                                    &:hover
+                                        background-color: #ffbe00
+
+                                .maximise
+                                    margin-right: 20px
+
+                                    &:hover
+                                        background-color: #00d644
+
+                                .search
+                                    background-color: #181818
+                                    opacity: 0.5
+                                    width: 100%
+                                    height: 20px
+                                    border-radius: 3px
+
+                                    &:hover
+                                        opacity: 0.75
+
+                            .screen
+                                background-color: rgb(23, 23, 23)
+                                height: auto
+                                width: 100%
+
+                .colours
+                    background-color: #141414
+
+                    .palette
+                        height: 250px
+
+                        // &>.row
+                        //
+                        //     &>.col
+                        //
+                        //         &:first-of-type
+                        //             width: 30%
+                        //         &:last-of-type
+                        //             width: 70%
+
+                        .colour
+
+                            &:hover
+                                transform: translate3d(0px, -10px, 0px)
+
+                                .hex-code
+                                    opacity: 1
+                                    transform: none
+                                    font-weight: 900
+
+                            .hex-code
+                                font-size: 0.8em
+                                opacity: 0.2
+                                transform: translate3d(0px, 5px, 0px)
+
+                            &-1
+                                background-color: rgba(255, 255, 255, 0.7)
+                            &-2
+                                background-color: rgba(255, 255, 255, 0.6)
+                            &-3
+                                background-color: rgba(255, 255, 255, 0.5)
+                            &-4
+                                background-color: rgba(255, 255, 255, 0.4)
+                            &-5
+                                background-color: rgba(255, 255, 255, 0.3)
+                            &-6
+                                background-color: rgba(255, 255, 255, 0.2)
+                            &-7
+                                background-color: rgba(255, 255, 255, 0.1)
+
+                .fonts
+                    background-color: #eee
+
+                    h5, h4, p
+                        color: #2f2f2f
+
+                    hr
+                        border-color: #2f2f2f
+
+                    .desc
+                        opacity: 0.5
+
+
+                    .font
+                        margin-bottom: 0.2em
+
+                        &:nth-of-type(1)
+                            font-weight: 100
+                        &:nth-of-type(2)
+                            font-weight: 300
+                        &:nth-of-type(3)
+                            font-weight: 900
+
+                .testimonials
+
+                    hr
+                        margin-bottom: 50px
+
+                    .quote
+                        font-style: italic
+                        font-size: 0.9em
+                        opacity: 0.5
+                        margin-bottom: 25px
+                        padding: 0px 75px
+
+                    .author
+                        opacity: 0.75
+                        font-size: 0.8em
+
+                    .slider
+                        height: auto
+
+                        .slides
+                            margin-bottom: 100px
+
+                        .slider-control
+                            top: 30%
+
+        #mepiphany
+
+            .first-screen, .fonts, .colour-1
+                background-color: $mepiphany-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/mepiphany/poster.jpg')
+
+            .colour-2
+                background-color: #47a4c4
+            .colour-3
+                background-color: #59c5d8
+            .colour-4
+                background-color: #4aa8c6
+            .colour-5
+                background-color: #57afc4
+            .colour-6
+                background-color: #3d93b5
+            .colour-7
+                background-color: #ffffff
+
+            .fonts
+
+                h5, h4, p
+                    color: white
+
+                hr
+                    border-color: white
+
+                .font
+                    font-family: $mepiphany-font
+
+        #thirty-degrees
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/thirty-degrees/poster.jpg')
+
+            .colour-1
+                background-color: #191919
+            .colour-2
+                background-color: #000000
+            .colour-3
+                background-color: #ffffff
+
+                p
+                    color: #2f2f2f
+
+            .colour-4
+                background-color: #4B4B4B
+
+            .fonts
+
+                .font
+                    font-family: $thirty-degrees-font
+
+        #ndorsa
+
+            .first-screen, .fonts, .colour-1
+                background-color: $ndorsa-colour
+
+        #eden
+
+            .first-screen, .fonts, .colour-1
+                background-color: $eden-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/eden/poster.jpg')
+
+            .colour-2
+                background-color: #2F2F2F
+            .colour-3, .colour-4
+                p
+                    color: #2F2F2F
+            .colour-3
+                background-color: #EEEEEE
+            .colour-4
+                background-color: #FFFFFF
+
+            .fonts
+
+                h5, h4, p
+                    color: white
+
+                hr
+                    border-color: white
+
+                .font
+                    font-family: $eden-font
+
+        #frecibo
+
+            .first-screen, .fonts, .colour-1
+                background-color: $frecibo-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/frecibo/poster.jpg')
+
+            .font
+                font-family: $frecibo-font
+
+        #raw
+
+            .first-screen, .fonts, .colour-1
+                background-color: $raw-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/raw/poster.jpg')
+
+            .font
+                font-family: $raw-font
+
+        #lush-heat
+
+            .first-screen, .fonts, .colour-1
+                background-color: $lush-heat-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/lush-heat/poster.jpg')
+
+            .font
+                font-family: lush-heat-font
+
+        #fdis
+
+            .first-screen, .fonts, .colour-1
+                background-color: $fdis-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/fdis/poster.jpg')
+
+            .font
+                font-family: $fdis-font
+
+        #tutorial
+
+            .first-screen, .fonts, .colour-1
+                background-color: $tutorial-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/tutorial/poster.jpg')
+
+            .fonts
+
+                h5, h4, p
+                    color: white
+
+                hr
+                    border-color: white
+
+                .font
+                    font-family: $tutorial-font
+
+        #uprising
+
+            .first-screen, .fonts, .colour-1
+                background-color: $uprising-colour
+
+            .first-screen
+                background-image: url('../assets/img/portfolio/uprising/poster.jpg')
+
+            .fonts
+
+                h5, h4, p
+                    color: white
+
+                hr
+                    border-color: white
+
+                .font
+                    font-family: $uprising-font
+
+        #moneywise
+
+            .first-screen, .fonts, .colour-1
+                background-color: $moneywise-colour
+
+            .fonts
+
+                h5, h4, p
+                    color: white
+
+                hr
+                    border-color: white
+
+                .font
+                    font-family: $moneywise-font
+
+        #fairpay
+
+            .first-screen, .fonts, .colour-1
+                background-color: $fairpay-colour
+
+            .fonts
+
+                h5, h4, p
+                    color: white
+
+                hr
+                    border-color: white
+
+                .font
+                    font-family: $fairpay-font
+
+        #do-to
+
+            .first-screen, .fonts, .colour-1
+                background-color: $do-to-colour
+
+            .font
+                font-family: $do-to-font

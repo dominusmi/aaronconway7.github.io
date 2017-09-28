@@ -1,1 +1,1 @@
-function typed(){Typed.new(".typed",{strings:["Hello World!^500","Hi.","Yo.","Sup.","Wag1.","What'gwanin?","Hello.","What's up?"],typeSpeed:30,loop:!0,showCursor:!1})}function onLoad(){var e=(new Date).getTime();return page_load_time=e-performance.timing.navigationStart}$(document).ready(function(){}),$(window).on("load",function(){setTimeout(function(){$("#index").addClass("loaded"),typed()},onLoad()+5e3)});
+$(document).ready(function(){smoothScrolling()});
