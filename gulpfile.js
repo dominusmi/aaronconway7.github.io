@@ -44,24 +44,9 @@ gulp.task('css-nano', function(){
         .pipe(gulp.dest('css'))
 });
 
-gulp.task('fonts', function() {
-    return gulp.src('app/assets/fonts/**/*')
-        .pipe(gulp.dest('assets/fonts'))
-});
-
-gulp.task('docs', function() {
-    return gulp.src('app/assets/docs/**/*')
-        .pipe(gulp.dest('assets/docs'))
-});
-
-gulp.task('img', function() {
-    return gulp.src('app/assets/img/**/*')
-        .pipe(gulp.dest('assets/img'))
-});
-
-gulp.task('vid', function() {
-    return gulp.src('app/assets/vid/**/*')
-        .pipe(gulp.dest('assets/vid'))
+gulp.task('assets', function() {
+    return gulp.src('app/assets/**/*')
+        .pipe(gulp.dest('assets'))
 });
 
 gulp.task('bower', function(){
@@ -79,7 +64,7 @@ gulp.task('bower', function(){
 
 gulp.task('minify', ['html-min', 'uglify', 'css-nano']);
 
-gulp.task('transfer', ['fonts', 'docs', 'img', 'vid']);
+gulp.task('transfer', ['assets']);
 
 gulp.task('serve', ['pug', 'sass'], function() {
     browserSync.init({

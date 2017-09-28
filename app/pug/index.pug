@@ -1,157 +1,161 @@
 doctype html
 html(lang='en')
-head
-    include include/head
-    title Aaron Conway.
-body#index
-    #loading
-        .row.center-bottom.fill-y
-            object(type='image/svg+xml', data='assets/img/outline.svg')
-    main
-        .hero
-            .content.fill-y.row.right-center
-                h1.typed
-            .box
-                ul.fill-y
-                    a(href="#about")
-                        li About
-                    a(href="#portfolio")
-                        li Portfolio
-                    a(href="#contact")
-                        li Contact
-                    a(href="#fwends")
-                        li Fwends
-                    li A.
-                
-        section#about
-            .container
-                h6 I'm Aaron.
-                h3 I’m a #[span.red designer] who can develop.  A #[span.red developer] who can design. One or the other.
-                .row.facts.mob-col
-                    .col.tab-full
-                        h5 Where
-                        p Essex, UK
-                    .col.mob-full
-                        h5 Now
-                        p University of Warwick
-                        p NDORSA
-                        p Frecibo
-                        p Thirty Degrees
-                    .col.mob-full
-                        h5 Awards
-                        p SRA (1)
-        section#portfolio
-            .row
-                .col.half
-                    .container
-                        h6 Portfolio.
-                        h3 I am very lucky to have worked with a number of amazing #[span.red clients] & on a number of amazing #[span.red projects].
-                .col.half
-                    .portfolio-panel
-                        .masonry.col-2.fluid.tab-col-1
-                            a(href="https://ndorsa.com", target="_blank")
-                                .item.ndorsa
-                                    img(alt="NDORSA", src="assets/img/portfolio/ndorsa/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project NDORSA
-                            a(href="http://designofeden.com", target="_blank")
-                                .item.eden
-                                    img(alt="Eden", src="assets/img/portfolio/eden/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project Eden
-                            a(href="https://frecibo.com", target="_blank")
-                                .item.frecibo
-                                    img(alt="Frecibo", src="assets/img/portfolio/frecibo/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project Frecibo
-                            a(href="http://fdisuk.com", target="_blank")
-                                .item.fdis-website
-                                    img(alt="RAW", src="assets/img/portfolio/fdis/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project FDIS Website + Branding
-                            a(href="https://www.radio.warwick.ac.uk/")
-                                .item.raw
-                                    img(alt="RAW", src="assets/img/portfolio/raw/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project RAW Rebrand
-                            a(href="http://lush-heat.com/", target="_blank")
-                                .item.lush-heat
-                                    img(alt="Lush Heat Treatment Ltd", src="assets/img/portfolio/lush-heat/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project Lush Heat Treatment Ltd Website
-                            a(href="http://tutorial-ltd.co.uk/", target="_blank")
-                                .item.tutorial
-                                    img(alt="Tutorial Ltd", src="assets/img/portfolio/tutorial/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project Tutorial Ltd Website
-                            a(href="http://www.moneywisequoteme.com/", target="_blank")
-                                .item.moneywise
-                                    img(alt="MoneyWiseQuoteMe", src="assets/img/portfolio/moneywise/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project MoneyWiseQuoteMe Website
-                            .item.uprising
-                                img(alt="Uprising", src="assets/img/portfolio/uprising/poster.jpg")
-                                .caption
-                                    p.title Project.
-                                    p.project Uprising Logo
-                            a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target="_blank")
-                                .item.fairpay
-                                    img(alt="Fairpay", src="assets/img/portfolio/fairpay/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project Fairpay Web Application
-                            a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target="_blank")
-                                .item.do-to
-                                    img(alt="Uprising", src="assets/img/portfolio/do-to/poster.jpg")
-                                    .caption
-                                        p.title Project.
-                                        p.project DoTo! Web Application
-        section#contact
-            .container
-                h6 Contact.
-                h3 If you want to get in touch to work on a cool project or just grab a beer or something, you can email me at #[a.red(href="mailto:hello@aaronconway.co.uk") hello@aaronconway.co.uk].
-                h3 You can also find me on the line via #[a.red.twitter(href="https://twitter.com/aaronconway7", target="_blank") twitter], #[a.red.insta(href="https://www.instagram.com/aaronconway7/", target="_blank") insta] and #[a.red.linkedin(href="https://www.linkedin.com/in/aaronconway7/", target="_blank") linkedin].
-        section#fwends
-            .row.fluid.wrap
-                a.col(href="http://tbjgolden.com/", target="_blank")
-                    .fwend.golden.bg-center
-                        .caption.fill-y.col.bottom-left.fill-x
-                            p.title Name.
-                            p.name Tom Golden
-                a.col(href="https://www.linkedin.com/in/hamish-lacmane-7b080b107/", target="_blank")
-                    .fwend.wastemane.bg-center
-                        .caption.fill-y.col.bottom-left.fill-x
-                            p.title Name.
-                            p.name Hamish Wastemane
-                a.col(href="http://edoardobarp.com/", target="_blank")
-                    .fwend.ed.bg-center
-                        .caption.fill-y.col.bottom-left.fill-x
-                            p.title Name.
-                            p.name Edoardo Barp
-                a.col(href="http://www.alexmacpherson.uk/", target="_blank")
-                    .fwend.alex.bg-center
-                        .caption.fill-y.col.bottom-left.fill-x
-                            p.title Name.
-                            p.name Alex Macpherson
-                a.col(href="http://yashasmudumbai.co.uk/", target="_blank")
-                    .fwend.yash.bg-center
-                        .caption.fill-y.col.bottom-left.fill-x
-                            p.title Name.
-                            p.name Yashas Mudumbai
-                a.col(href="http://tomkilminster.uk/", target="_blank")
-                    .fwend.tk.bg-center
-                        .caption.fill-y.col.bottom-left.fill-x
-                            p.title Name.
-                            p.name Tom Kilminster
+    head
+        include include/head
+        title Aaron Conway.
+    body#index
+        #loading
+            .row.center-bottom.fill-y
+                object(type='image/svg+xml', data='assets/img/outline.svg')
+        main
+            .hero
+                .content.fill-y.row.right-center
+                    h1.typed
+                .box
+                    ul.fill-y
+                        a(href="#about")
+                            li About
+                        a(href="#portfolio")
+                            li Portfolio
+                        a(href="#contact")
+                            li Contact
+                        a(href="#fwends")
+                            li Fwends
+                        li A.
                     
-    include include/foot
-    script(src="js/typed.min.js")
-    script(src="js/pages/index.js")
+            section#about
+                .container
+                    h6 I'm Aaron.
+                    h3 I’m a #[span.red designer] who can develop.  A #[span.red developer] who can design. One or the other.
+                    .row.facts.mob-col
+                        .col.tab-full
+                            h5 Where
+                            p Essex, UK
+                        .col.mob-full
+                            h5 Now
+                            p University of Warwick
+                            p NDORSA
+                            p Frecibo
+                            p Thirty Degrees
+                        .col.mob-full
+                            h5 Awards
+                            p SRA (1)
+            section#portfolio
+                .row
+                    .col.half
+                        .container
+                            h6 Portfolio.
+                            h3 I am very lucky to have worked with a number of amazing #[span.red clients] & on a number of amazing #[span.red projects].
+                    .col.half
+                        .portfolio-panel
+                            .masonry.col-2.fluid.tab-col-1
+                                a(href="https://ndorsa.com", target="_blank")
+                                    .item.ndorsa
+                                        img(alt="NDORSA", src="assets/img/portfolio/ndorsa/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project NDORSA
+                                a(href="http://designofeden.com", target="_blank")
+                                    .item.eden
+                                        img(alt="Eden", src="assets/img/portfolio/eden/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project Eden
+                                a(href="https://frecibo.com", target="_blank")
+                                    .item.frecibo
+                                        img(alt="Frecibo", src="assets/img/portfolio/frecibo/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project Frecibo
+                                a(href="http://fdisuk.com", target="_blank")
+                                    .item.fdis-website
+                                        img(alt="RAW", src="assets/img/portfolio/fdis/poster2.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project FDIS Website
+                                a(href="https://www.radio.warwick.ac.uk/")
+                                    .item.raw
+                                        img(alt="RAW", src="assets/img/portfolio/raw/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project RAW Rebrand
+                                a(href="http://fdis.com", target="_blank")
+                                    .item.fdis-brand
+                                        img(alt="Fire Door Inspection Solutions", src="assets/img/portfolio/fdis/poster1.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project FDIS Branding
+                                a(href="http://lush-heat.com/", target="_blank")
+                                    .item.lush-heat
+                                        img(alt="Lush Heat Treatment Ltd", src="assets/img/portfolio/lush-heat/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project Lush Heat Treatment Ltd Website
+                                a(href="http://tutorial-ltd.co.uk/", target="_blank")
+                                    .item.tutorial
+                                        img(alt="Tutorial Ltd", src="assets/img/portfolio/tutorial/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project Tutorial Ltd Website
+                                a(href="http://www.moneywisequoteme.com/", target="_blank")
+                                    .item.moneywise
+                                        img(alt="MoneyWiseQuoteMe", src="assets/img/portfolio/moneywise/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project MoneyWiseQuoteMe Website
+                                .item.uprising
+                                    img(alt="Uprising", src="assets/img/portfolio/uprising/poster.jpg")
+                                    .caption
+                                        p.title Project.
+                                        p.project Uprising Logo
+                                a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target="_blank")
+                                    .item.fairpay
+                                        img(alt="Fairpay", src="assets/img/portfolio/fairpay/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project Fairpay Web Application
+                                a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target="_blank")
+                                    .item.do-to
+                                        img(alt="Uprising", src="assets/img/portfolio/do-to/poster.jpg")
+                                        .caption
+                                            p.title Project.
+                                            p.project DoTo! Web Application
+            section#contact
+                .container
+                    h6 Contact.
+                    h3 If you want to get in touch to work on a cool project or just grab a beer or something, you can email me at #[a.red(href="mailto:hello@aaronconway.co.uk") hello@aaronconway.co.uk].
+                    h3 You can also find me on the line via #[a.red.twitter(href="https://twitter.com/aaronconway7", target="_blank") twitter], #[a.red.insta(href="https://www.instagram.com/aaronconway7/", target="_blank") insta] and #[a.red.linkedin(href="https://www.linkedin.com/in/aaronconway7/", target="_blank") linkedin].
+            section#fwends
+                .row.fluid.wrap
+                    a.col(href="http://tbjgolden.com/", target="_blank")
+                        .fwend.golden.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Tom Golden
+                    a.col(href="https://www.linkedin.com/in/hamish-lacmane-7b080b107/", target="_blank")
+                        .fwend.wastemane.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Hamish Wastemane
+                    a.col(href="http://edoardobarp.com/", target="_blank")
+                        .fwend.ed.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Edoardo Barp
+                    a.col(href="http://www.alexmacpherson.uk/", target="_blank")
+                        .fwend.alex.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Alex Macpherson
+                    a.col(href="http://yashasmudumbai.co.uk/", target="_blank")
+                        .fwend.yash.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Yashas Mudumbai
+                    a.col(href="http://tomkilminster.uk/", target="_blank")
+                        .fwend.tk.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Tom Kilminster
+                        
+        include include/foot

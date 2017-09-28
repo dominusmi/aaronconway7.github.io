@@ -93,6 +93,12 @@ html {
 * {
   font-family: Poppins;
   color: #eee; }
+  *::-moz-selection {
+    background-color: #FA4B4B;
+    color: white; }
+  *::selection {
+    background-color: #FA4B4B;
+    color: white; }
 
 .red {
   color: #FA4B4B; }

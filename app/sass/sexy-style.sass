@@ -115,9 +115,11 @@ $uprising-colour: black
 $moneywise-colour: #bd3935
 $fairpay-colour: #9c1c1c
 $do-to-colour: #f6d6a4
+$fdis: #f5a623
+$red: #FA4B4B
 
 html
-    background-color: #FA4B4B
+    background-color: $red
     width: 100vw
     overflow-x: hidden
 
@@ -125,8 +127,12 @@ html
     font-family: Poppins
     color: #eee
 
+    &::selection
+        background-color: $red
+        color: white
+
 .red
-    color: #FA4B4B
+    color: $red
 
 h6
     font-weight: 300
