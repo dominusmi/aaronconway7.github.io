@@ -62,9 +62,10 @@
 // colours
 
 $fdis: #f5a623
+$red: #FA4B4B
 
 html
-    background-color: #FA4B4B
+    background-color: $red
     width: 100vw
     overflow-x: hidden
 
@@ -72,8 +73,12 @@ html
     font-family: Poppins
     color: #eee
 
+    &::selection
+        background-color: $red
+        color: white
+
 .red
-    color: #FA4B4B
+    color: $red
 
 // index
 #index
@@ -155,7 +160,7 @@ html
                     margin-top: 200px
 
         .box
-            background-color: #FA4B4B
+            background-color: $red
             height: 50px
             width: 50px
             position: absolute
@@ -186,7 +191,7 @@ html
 
                     & > li
                         font-weight: 900
-                        color: #FA4B4B
+                        color: $red
 
                     a
                         font-size: 0.8rem
@@ -194,11 +199,11 @@ html
 
                         &:hover
                             text-decoration: line-through
-                            color: #FA4B4B
+                            color: $red
                             opacity: 1
 
                             li
-                                color: #FA4B4B
+                                color: $red
 
     section
         position: relative
