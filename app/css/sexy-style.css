@@ -117,13 +117,13 @@ html {
       text-align: right; }
       @media screen and (max-width: 1440px) {
         #index .hero h1 {
-          font-size: 3.5rem; } }
+          font-size: 2.5rem; } }
       @media screen and (max-width: 1330px) {
         #index .hero h1 {
-          font-size: 3rem; } }
+          font-size: 2rem; } }
       @media screen and (max-width: 1160px) {
         #index .hero h1 {
-          font-size: 2.5rem; } }
+          font-size: 1.5rem; } }
       @media screen and (max-width: 1000px) {
         #index .hero h1 {
           transform: translate3d(-90px, 100px, 0px); } }
