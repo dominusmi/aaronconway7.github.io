@@ -80,7 +80,53 @@ html
 .red
     color: $red
 
-// index
+.box
+    background-color: $red
+    height: 50px
+    width: 50px
+    position: fixed
+    right: 25px
+    bottom: 25px
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1)
+    z-index: 99
+
+    ul
+        display: none
+
+    &:hover
+        width: 500px
+        background-color: #181818
+
+        @media screen and (max-width: 768px)
+            width: 400px
+        @media screen and (max-width: 500px)
+            width: 300px
+
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0px 50px
+
+            @media screen and (max-width: 500px)
+                padding: 0px 25px
+
+            & > li
+                font-weight: 900
+                color: $red
+
+            a
+                font-size: 0.8rem
+                opacity: 0.2
+
+                &:hover
+                    text-decoration: line-through
+                    color: $red
+                    opacity: 1
+
+                    li
+                        color: $red
+
 #index
     height: 100vh
     overflow-y: hidden
@@ -95,7 +141,7 @@ html
             object
                 display: none
 
-        main
+        #home
 
             .hero
                 transform: none
@@ -107,6 +153,9 @@ html
 
         object
             height: 75vh
+
+// index
+#home
 
     .hero
         position: fixed
@@ -135,15 +184,6 @@ html
             transform: translate3d(-90px, 50px, 0px)
             text-align: right
 
-            // @media screen and (max-width: 1440px)
-            //     font-size: 3.5rem
-            // @media screen and (max-width: 1330px)
-            //     font-size: 3rem
-            // @media screen and (max-width: 1160px)
-            //     font-size: 2.5rem
-            // @media screen and (max-width: 1000px)
-            //     transform: translate3d(-90px, 100px, 0px)
-
             @media screen and (max-width: 1440px)
                 font-size: 2.5rem
             @media screen and (max-width: 1330px)
@@ -167,52 +207,6 @@ html
                     margin-top: 250px
                 @media screen and (max-height: 450px)
                     margin-top: 200px
-
-        .box
-            background-color: $red
-            height: 50px
-            width: 50px
-            position: absolute
-            right: 25px
-            bottom: 25px
-            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1)
-
-            ul
-                display: none
-
-            &:hover
-                width: 500px
-                background-color: #181818
-
-                @media screen and (max-width: 768px)
-                    width: 400px
-                @media screen and (max-width: 500px)
-                    width: 300px
-
-                ul
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
-                    padding: 0px 50px
-
-                    @media screen and (max-width: 500px)
-                        padding: 0px 25px
-
-                    & > li
-                        font-weight: 900
-                        color: $red
-
-                    a
-                        font-size: 0.8rem
-                        opacity: 0.2
-
-                        &:hover
-                            text-decoration: line-through
-                            color: $red
-                            opacity: 1
-
-                            li
-                                color: $red
 
     section
         position: relative
@@ -261,7 +255,7 @@ html
                 @media screen and (max-width: 425px)
                     font-size: 0.9rem
 
-    #portfolio
+    .portfolio
         background-color: #141414
         height: 100vh
         overflow-y: hidden
@@ -403,197 +397,93 @@ html
 
 // Portfolio Page
 #portfolio
-    background-color: #181818
+    background-color: #141414
     min-height: 100vh
 
-    #list
-        padding: 100px 0px
+    .title
+        color: #eee
 
-        h6
-            font-weight: 300
-            font-size: 1rem
-            opacity: 0.2
-            position: absolute
-            padding-top: 28px
-            padding-left: 200px
-
-            @media screen and (max-width: 1100px)
-                padding-left: 100px
-            @media screen and (max-width: 800px)
-                padding-left: 50px
-                padding-top: 0px
-
-        h5
-            @media screen and (max-width: 768px)
-                font-size: 1.25rem
+    #grid
+        justify-content: space-between
+        padding: 0px 75px
 
         .work
+            height: calc(((100vw - 150px) / 2) - 37.5px)
+            width: calc(((100vw - 150px) / 2) - 37.5px)
+            margin-bottom: 75px
             position: relative
-            height: 90px
-            padding: 0px 100px
-            padding-left: 50%
-            cursor: pointer
-
-            @media screen and (max-width: 1330px)
-                padding-left: 40%
-            @media screen and (max-width: 1100px)
-                padding-left: 30%
-            @media screen and (max-width: 950px)
-                padding-left: 25%
-            @media screen and (max-width: 800px)
-                padding-left: 50px
-            @media screen and (max-width: 768px)
-                height: 55px
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
 
             &:hover
+                cursor: pointer
 
-                .strip
-                    transform: scale3d(1, 1, 1)
+                .caption
+                    opacity: 1
 
+                    .title, .project
+                        transform: none
 
-        .strip
-            padding: 0px 100px
-            align-items: center
-            position: absolute
-            width: 100%
-            top: 0px
-            left: 0px
-            transform-origin: center top
-            transform: scale3d(1, 0, 1)
-            transition: transform 0.6s cubic-bezier(.215,.61,.355,1)
-
-            @media screen and (max-width: 768px)
-                padding: 0px 25px
-
+            &.makeuptutstv
+                background-image: url('../assets/img/portfolio/makeuptuts/poster.jpg')
+            &.fanbytes
+                background-image: url('../assets/img/portfolio/fanbytes/poster.jpg')
+            &.leicester-motors
+                background-image: url('../assets/img/portfolio/leicester-motors/poster.jpg')
+            &.mepiphany
+                background-image: url('../assets/img/portfolio/mepiphany/poster.jpg')
+            &.thirty-degrees
+                background-image: url('../assets/img/portfolio/thirty-degrees/poster.jpg')
             &.ndorsa
-                background-color: white
-
-                p
-                    color: black
-
-                .title
-                    font-family: Source Sans Pro
-
+                background-image: url('../assets/img/portfolio/ndorsa/poster.jpg')
             &.eden
-                background-color: #52ae76
-
-                p
-                    color: white
-
-                .title
-                    font-family: Source Sans Pro
-
+                background-image: url('../assets/img/portfolio/eden/poster.jpg')
+            &.pacman
+                background-image: url('../assets/img/portfolio/pacman/poster.jpg')
             &.frecibo
-                background-color: #a4c6b7
-
-                p
-                    color: black
-
-                .title
-                    font-family: Lobster
-
+                background-image: url('../assets/img/portfolio/frecibo/poster.jpg')
+            &.fdis-website
+                background-image: url('../assets/img/portfolio/fdis/poster2.jpg')
             &.raw
-                background-color: #c3a541
-
-                p
-                    color: black
-
-                .title
-                    font-family: Adam
-
+                background-image: url('../assets/img/portfolio/raw/poster.jpg')
+            &.fdis-brand
+                background-image: url('../assets/img/portfolio/fdis/poster1.jpg')
             &.lush-heat
-                background-color: white
-
-                p
-                    color: black
-
-                .title
-                    font-family: Raleway
-
-            &.fdis
-                background-color: $fdis
-
-                p
-                    color: black
-
-                .title
-                    font-family: Antonio
-
+                background-image: url('../assets/img/portfolio/lush-heat/poster.jpg')
             &.tutorial
-                background-color: #1172c1
-
-                p
-                    color: white
-
-                .title
-                    font-family: Helvetica
-
-            &.uprising
-                background-color: black
-
-                p
-                    color: white
-
-                .title
-                    font-family: Angry Blu
-
+                background-image: url('../assets/img/portfolio/tutorial/poster.jpg')
             &.moneywise
-                background-color: #bd3935
-
-                p
-                    color: white
-
-                .title
-                    font-family: Raleway
-
+                background-image: url('../assets/img/portfolio/moneywise/poster.jpg')
+            &.uprising
+                background-image: url('../assets/img/portfolio/uprising/poster.jpg')
             &.fairpay
-                background-color: #9c1c1c
-
-                p
-                    color: white
-
-                .title
-                    font-family: Abel
-
+                background-image: url('../assets/img/portfolio/fairpay/poster.jpg')
             &.do-to
-                background-color: #f6d6a4
+                background-image: url('../assets/img/portfolio/do-to/poster.jpg')
 
-                p
-                    color: black
+            .caption
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 100%
+                padding-left: 20px
+                padding-bottom: 20px
+                opacity: 0
+                background-color: rgba(40, 38, 34, 0.75)
+                transition: opacity .75s cubic-bezier(.215,.61,.355,1)
+                font-size: 1rem
 
-                .title
-                    font-family: Dosis
+                @media screen and (max-width: 425px)
+                    font-size: 0.8rem
 
-            .title
-                font-size: 2em
+                .title, .project
+                    transform: translate3d(-20px, 0px, 0px)
+                    transition: transform .75s cubic-bezier(.215,.61,.355,1)
 
-                &.large
-                    font-size: 2.5em
-
-                &.small
-                    font-size: 1.5em
-
-            .label
-                opacity: 0.5
-                font-size: 0.7em
-
-            .category, .year
-                font-weight: 900
-                font-size: 0.9em
-
-            .col.six
-
-                @media screen and (max-width: 768px)
-                    margin-bottom: 0px
-
-            .col.three
-
-                @media screen and (max-width: 768px)
-                    display: none
-
-            &.lush-heat, &.fdis
 
                 .title
-
-                    @media screen and (max-width: 1100px)
-                        font-size: 1.25em
+                    opacity: 0.2
+                    font-size: 0.8em
+                    margin-bottom: -5px
+                .project
+                    font-weight: 900
