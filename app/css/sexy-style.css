@@ -346,20 +346,70 @@ html {
       font-weight: 900; }
 
 #portfolio {
-  background-color: #141414;
-  min-height: 100vh; }
-  #portfolio .title {
-    color: #eee; }
-  #portfolio #grid {
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    padding: 0px 75px; }
-    #portfolio #grid .work {
-      height: calc(((100vw - 150px) / 2) - 37.5px);
-      width: calc(((100vw - 150px) / 2) - 37.5px);
-      margin-bottom: 75px;
-      position: relative;
+  background-color: white;
+  min-height: 100vh;
+  transition: all 0.5s ease-in-out; }
+  #portfolio.black {
+    background-color: #141414; }
+    #portfolio.black .custom-controls path {
+      color: white; }
+    #portfolio.black .title {
+      color: white; }
+    #portfolio.black #grid .work {
       box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75); }
+  #portfolio .custom-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+    #portfolio .custom-controls svg {
+      margin-right: 5px;
+      cursor: pointer; }
+      #portfolio .custom-controls svg:last-of-type {
+        margin-right: 0px; }
+      #portfolio .custom-controls svg:hover path {
+        color: #FA4B4B;
+        opacity: 1; }
+    #portfolio .custom-controls path {
+      color: black;
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out; }
+    #portfolio .custom-controls .theme-change:hover path {
+      color: black;
+      stroke: white; }
+    #portfolio .custom-controls .theme-change path {
+      opacity: 1;
+      color: white;
+      stroke: black;
+      stroke-width: 50px; }
+    #portfolio .custom-controls .theme-black:hover path {
+      color: white;
+      stroke: black; }
+    #portfolio .custom-controls .theme-black path {
+      color: black;
+      stroke: white; }
+  #portfolio .title {
+    color: #2f2f2f;
+    transition: all 0.5s ease-in-out; }
+  #portfolio #grid {
+    padding: 0px 75px 75px 75px; }
+    #portfolio #grid.big {
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      #portfolio #grid.big .work {
+        height: calc(((100vw - 150px) / 2) - 20px);
+        width: calc(((100vw - 150px) / 2) - 20px);
+        margin-bottom: 40px;
+        position: relative;
+        margin-left: 0px; }
+    #portfolio #grid .work {
+      height: 150px;
+      width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5));
+      margin-bottom: 40px;
+      margin-left: 40px;
+      position: relative;
+      transition: all 0.5s ease-in-out; }
+      #portfolio #grid .work:nth-of-type(5n+1) {
+        margin-left: 0px; }
       #portfolio #grid .work:hover {
         cursor: pointer; }
         #portfolio #grid .work:hover .caption {
@@ -402,6 +452,8 @@ html {
         background-image: url("../assets/img/portfolio/fairpay/poster.jpg"); }
       #portfolio #grid .work.do-to {
         background-image: url("../assets/img/portfolio/do-to/poster.jpg"); }
+      #portfolio #grid .work.old {
+        display: none; }
       #portfolio #grid .work .caption {
         position: absolute;
         left: 0;
@@ -426,3 +478,9 @@ html {
           margin-bottom: -5px; }
         #portfolio #grid .work .caption .project {
           font-weight: 900; }
+  #portfolio #load-more {
+    background-color: #FA4B4B;
+    color: white;
+    cursor: pointer; }
+    #portfolio #load-more:hover h1 {
+      text-decoration: line-through; }

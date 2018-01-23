@@ -397,22 +397,103 @@ html
 
 // Portfolio Page
 #portfolio
-    background-color: #141414
+    background-color: white
     min-height: 100vh
+    transition: all 0.5s ease-in-out
+
+    &.black
+        background-color: #141414
+
+        .custom-controls
+
+            path
+                color: white
+
+        .title
+            color: white
+
+        #grid
+
+            .work
+                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
+
+
+
+    .custom-controls
+        position: absolute
+        top: 10px
+        right: 10px
+
+        svg
+            margin-right: 5px
+            cursor: pointer
+
+            &:last-of-type
+                margin-right: 0px
+
+            &:hover
+
+                path
+                    color: $red
+                    opacity: 1
+
+        path
+            color: black
+            opacity: 0.5
+            transition: all 0.3s ease-in-out
+
+        .theme-change
+
+            &:hover
+
+                path
+                    color: black
+                    stroke: white
+            path
+                opacity: 1
+                color: white
+                stroke: black
+                stroke-width: 50px
+
+        .theme-black
+
+            &:hover
+
+                path
+                    color: white
+                    stroke: black
+            path
+                color: black
+                stroke: white
 
     .title
-        color: #eee
+        color: #2f2f2f
+        transition: all 0.5s ease-in-out
 
     #grid
-        justify-content: space-between
-        padding: 0px 75px
+        padding: 0px 75px 75px 75px
+
+        &.big
+            justify-content: space-between
+
+            .work
+                height: calc(((100vw - 150px) / 2) - 20px)
+                width: calc(((100vw - 150px) / 2) - 20px)
+                margin-bottom: 40px
+                position: relative
+                margin-left: 0px
+
 
         .work
-            height: calc(((100vw - 150px) / 2) - 37.5px)
-            width: calc(((100vw - 150px) / 2) - 37.5px)
-            margin-bottom: 75px
+            height: 150px
+            width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5))
+            margin-bottom: 40px
+            margin-left: 40px
             position: relative
-            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
+            transition: all 0.5s ease-in-out
+
+            &:nth-of-type(5n+1)
+                margin-left: 0px
 
             &:hover
                 cursor: pointer
@@ -460,6 +541,9 @@ html
             &.do-to
                 background-image: url('../assets/img/portfolio/do-to/poster.jpg')
 
+            &.old
+                display: none
+
             .caption
                 position: absolute
                 left: 0
@@ -487,3 +571,13 @@ html
                     margin-bottom: -5px
                 .project
                     font-weight: 900
+
+    #load-more
+        background-color: $red
+        color: white
+        cursor: pointer
+
+        &:hover
+
+            h1
+                text-decoration: line-through

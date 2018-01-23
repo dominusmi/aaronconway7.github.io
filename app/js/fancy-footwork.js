@@ -58,7 +58,25 @@ $(window).on('hashchange', function() {
                 if (page == "home") {
                     typed();
                 }
-            }, 5000);
+            }, 0);
         });
     }, 1500)
+});
+
+$('body').on("click", '#load-more', function(){
+    $('.work.old').toggle();
+    $(this).find('h1').html("Hide old work!");
+});
+
+$('body').on("click", '.theme-change', function(){
+    $(this).toggleClass('theme-black');
+    $('#portfolio').toggleClass('black')
+});
+
+$('body').on("click", '.small-grid', function(){
+    $('#grid').removeClass('big');
+});
+
+$('body').on("click", '.big-grid', function(){
+    $('#grid').addClass('big');
 });
