@@ -19,17 +19,27 @@ gulp.task('sass', function(){
 });
 
 gulp.task('pug', function() {
-    return gulp.src('app/pug/*.pug')
+    gulp.src('app/pug/*.pug')
         .pipe(pug({
             pretty: true
         })) // pipe to pug plugin
         .pipe(gulp.dest('app')) // tell gulp our output folder
+
+    gulp.src('app/pug/portfolio/*.pug')
+        .pipe(pug({
+            pretty: true
+        })) // pipe to pug plugin
+        .pipe(gulp.dest('app/portfolio')) // tell gulp our output folder
 });
 
 gulp.task('html-min', function() {
-    return gulp.src('app/*.html')
+    gulp.src('app/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('./'));
+
+        gulp.src('app/portfolio/*.html')
+            .pipe(htmlmin({collapseWhitespace: true}))
+            .pipe(gulp.dest('portfolio'));
 });
 
 gulp.task('uglify', function(){
@@ -73,7 +83,7 @@ gulp.task('serve', ['pug', 'sass'], function() {
         },
     });
 
-    gulp.watch('app/pug/*.pug', ['pug']);
+    gulp.watch('app/pug/**/*.pug', ['pug']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
     gulp.watch('app/sass/*.sass', ['sass']);
 });

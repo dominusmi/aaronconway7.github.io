@@ -391,31 +391,34 @@ html {
     color: #2f2f2f;
     transition: all 0.5s ease-in-out; }
   #portfolio #grid {
-    padding: 0px 75px 75px 75px; }
-    #portfolio #grid.big {
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      #portfolio #grid.big .work {
-        height: calc(((100vw - 150px) / 2) - 20px);
-        width: calc(((100vw - 150px) / 2) - 20px);
-        margin-bottom: 40px;
-        position: relative;
-        margin-left: 0px; }
+    padding: 0px 75px 75px 75px;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    #portfolio #grid.small {
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+      #portfolio #grid.small .work {
+        height: 150px;
+        width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5));
+        margin-left: 40px; }
+        #portfolio #grid.small .work:nth-of-type(5n+1) {
+          margin-left: 0px; }
     #portfolio #grid .work {
-      height: 150px;
-      width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5));
+      height: calc(((100vw - 150px) / 2) - 20px);
+      width: calc(((100vw - 150px) / 2) - 20px);
       margin-bottom: 40px;
-      margin-left: 40px;
+      margin-left: 0px;
       position: relative;
       transition: all 0.5s ease-in-out; }
-      #portfolio #grid .work:nth-of-type(5n+1) {
-        margin-left: 0px; }
       #portfolio #grid .work:hover {
         cursor: pointer; }
         #portfolio #grid .work:hover .caption {
-          opacity: 1; }
-          #portfolio #grid .work:hover .caption .title, #portfolio #grid .work:hover .caption .project {
-            transform: none; }
+          transform: none; }
+      #portfolio #grid .work.hovered {
+        opacity: 0.1 !important; }
+      #portfolio #grid .work:nth-of-type(2n) .caption {
+        right: auto;
+        left: -30%; }
       #portfolio #grid .work.makeuptutstv {
         background-image: url("../assets/img/portfolio/makeuptuts/poster.jpg"); }
       #portfolio #grid .work.fanbytes {
@@ -454,30 +457,31 @@ html {
         background-image: url("../assets/img/portfolio/do-to/poster.jpg"); }
       #portfolio #grid .work.old {
         display: none; }
-      #portfolio #grid .work .caption {
+      #portfolio #grid .work a {
         position: absolute;
         left: 0;
-        bottom: 0;
+        top: 0;
         width: 100%;
-        height: 100%;
-        padding-left: 20px;
-        padding-bottom: 20px;
+        height: 100%; }
+      #portfolio #grid .work .caption {
+        position: absolute;
+        left: 70%;
+        bottom: 100px;
+        width: calc(((100vw - 150px) / 2) - 20px);
+        color: black;
+        z-index: 99;
         opacity: 0;
-        background-color: rgba(40, 38, 34, 0.75);
-        transition: opacity 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
-        font-size: 1rem; }
-        @media screen and (max-width: 425px) {
-          #portfolio #grid .work .caption {
-            font-size: 0.8rem; } }
-        #portfolio #grid .work .caption .title, #portfolio #grid .work .caption .project {
-          transform: translate3d(-20px, 0px, 0px);
-          transition: transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1); }
-        #portfolio #grid .work .caption .title {
-          opacity: 0.2;
-          font-size: 0.8em;
-          margin-bottom: -5px; }
-        #portfolio #grid .work .caption .project {
-          font-weight: 900; }
+        transform: translateX(-20px);
+        transition: transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
+        padding: 25px;
+        background-color: white;
+        border-radius: 2px; }
+        #portfolio #grid .work .caption .work-type, #portfolio #grid .work .caption .work-name {
+          color: black; }
+        #portfolio #grid .work .caption .work-type {
+          opacity: 0.5; }
+        #portfolio #grid .work .caption .work-name {
+          line-height: 1.25em; }
   #portfolio #load-more {
     background-color: #FA4B4B;
     color: white;

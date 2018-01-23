@@ -1,5 +1,6 @@
 $(document).ready(function(){
     console.log("I see you peeking 👀");
+    window.sr = ScrollReveal();
 });
 
 $(window).on("load", function() {
@@ -14,20 +15,23 @@ $(window).on("load", function() {
             $('#index').addClass('loaded');
             if (page == "home") {
                 typed();
+            } else if (page == "portfolio") {
+                sr.reveal('.work');
             }
         }, 5000);
     });
 });
 
-// $('main').on("load", function(){
-//     var page = location.hash.slice(1).replace(/#/g , '/');
-//     setTimeout(function(){
-//         $('#index').addClass('loaded');
-//         if (page == "home") {
-//             typed();
-//         }
-//     }, onLoad()+5000);
-// });
+$('main').on("load", function(){
+    // var page = location.hash.slice(1).replace(/#/g , '/');
+    // setTimeout(function(){
+    //     $('#index').addClass('loaded');
+    //     if (page == "home") {
+    //         typed();
+    //     }
+    // }, onLoad()+5000);
+    // window.sr = new scrollReveal();
+});
 
 function typed(){
     Typed.new('.typed', {
@@ -57,6 +61,8 @@ $(window).on('hashchange', function() {
                 $('#index').addClass('loaded');
                 if (page == "home") {
                     typed();
+                } else if (page == "portfolio") {
+                    sr.reveal('.work');
                 }
             }, 0);
         });
@@ -74,9 +80,15 @@ $('body').on("click", '.theme-change', function(){
 });
 
 $('body').on("click", '.small-grid', function(){
-    $('#grid').removeClass('big');
+    $('#grid').addClass('small');
 });
 
 $('body').on("click", '.big-grid', function(){
-    $('#grid').addClass('big');
+    $('#grid').removeClass('small');
+});
+
+$('body').on("mouseenter", '.work', function(){
+    $(this).siblings('.work').addClass('hovered');
+}).on("mouseleave", '.work', function(){
+    $(this).siblings('.work').removeClass('hovered');
 });

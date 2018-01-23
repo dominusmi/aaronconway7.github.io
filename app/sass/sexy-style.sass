@@ -232,7 +232,6 @@ html
                 @media screen and (max-height: 500px)
                     font-size: 1rem
 
-
     #about
         margin-top: 100vh
         background-color: #181818
@@ -417,8 +416,6 @@ html
             .work
                 box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
 
-
-
     .custom-controls
         position: absolute
         top: 10px
@@ -472,37 +469,42 @@ html
 
     #grid
         padding: 0px 75px 75px 75px
+        justify-content: space-between
 
-        &.big
-            justify-content: space-between
+        &.small
+            justify-content: flex-start
 
             .work
-                height: calc(((100vw - 150px) / 2) - 20px)
-                width: calc(((100vw - 150px) / 2) - 20px)
-                margin-bottom: 40px
-                position: relative
-                margin-left: 0px
+                height: 150px
+                width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5))
+                margin-left: 40px
 
+                &:nth-of-type(5n+1)
+                    margin-left: 0px
 
         .work
-            height: 150px
-            width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5))
+            height: calc(((100vw - 150px) / 2) - 20px)
+            width: calc(((100vw - 150px) / 2) - 20px)
             margin-bottom: 40px
-            margin-left: 40px
+            margin-left: 0px
             position: relative
             transition: all 0.5s ease-in-out
-
-            &:nth-of-type(5n+1)
-                margin-left: 0px
 
             &:hover
                 cursor: pointer
 
                 .caption
-                    opacity: 1
+                    // opacity: 1
+                    transform: none
 
-                    .title, .project
-                        transform: none
+            &.hovered
+                opacity: 0.1 !important
+
+            &:nth-of-type(2n)
+
+                .caption
+                    right: auto
+                    left: -30%
 
             &.makeuptutstv
                 background-image: url('../assets/img/portfolio/makeuptuts/poster.jpg')
@@ -544,33 +546,64 @@ html
             &.old
                 display: none
 
-            .caption
+            a
                 position: absolute
                 left: 0
-                bottom: 0
+                top: 0
                 width: 100%
                 height: 100%
-                padding-left: 20px
-                padding-bottom: 20px
+
+            .caption
+                position: absolute
+                left: 70%
+                bottom: 100px
+                width: calc(((100vw - 150px) / 2) - 20px)
+                color: black
+                z-index: 99
                 opacity: 0
-                background-color: rgba(40, 38, 34, 0.75)
-                transition: opacity .75s cubic-bezier(.215,.61,.355,1)
-                font-size: 1rem
+                transform: translateX(-20px)
+                transition: transform .75s cubic-bezier(.215,.61,.355,1)
+                padding: 25px
+                background-color: white
+                border-radius: 2px
 
-                @media screen and (max-width: 425px)
-                    font-size: 0.8rem
+                .work-type, .work-name
+                    color: black
 
-                .title, .project
-                    transform: translate3d(-20px, 0px, 0px)
-                    transition: transform .75s cubic-bezier(.215,.61,.355,1)
+                .work-type
+                    // margin-bottom: -10px
+                    opacity: 0.5
 
+                .work-name
+                    line-height: 1.25em
 
-                .title
-                    opacity: 0.2
-                    font-size: 0.8em
-                    margin-bottom: -5px
-                .project
-                    font-weight: 900
+            // .caption
+            //     position: absolute
+            //     left: 0
+            //     bottom: 0
+            //     width: 100%
+            //     height: 100%
+            //     padding-left: 20px
+            //     padding-bottom: 20px
+            //     opacity: 0
+            //     background-color: rgba(40, 38, 34, 0.75)
+            //     transition: opacity .75s cubic-bezier(.215,.61,.355,1)
+            //     font-size: 1rem
+            //
+            //     @media screen and (max-width: 425px)
+            //         font-size: 0.8rem
+            //
+            //     .title, .project
+            //         transform: translate3d(-20px, 0px, 0px)
+            //         transition: transform .75s cubic-bezier(.215,.61,.355,1)
+            //
+            //
+            //     .title
+            //         opacity: 0.2
+            //         font-size: 0.8em
+            //         margin-bottom: -5px
+            //     .project
+            //         font-weight: 900
 
     #load-more
         background-color: $red
