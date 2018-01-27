@@ -55,10 +55,23 @@
   font-family: Dosis;
   src: url("../assets/fonts/dosis/Dosis-Light.otf"); }
 
+@font-face {
+  font-family: iA Writer;
+  src: url("../assets/fonts/ia-writer-duospace/iAWriterDuospace-Regular.otf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: iA Writer;
+  src: url("../assets/fonts/ia-writer-duospace/iAWriterDuospace-Bold.otf");
+  font-weight: 700; }
+
 html {
   background-color: #FA4B4B;
   width: 100vw;
   overflow-x: hidden; }
+  html.lock {
+    height: 100vh;
+    overflow: hidden; }
 
 * {
   font-family: Poppins;
@@ -109,13 +122,28 @@ html {
         color: #FA4B4B; }
       .box:hover ul a {
         font-size: 0.8rem;
-        opacity: 0.2; }
+        opacity: 0.2;
+        position: relative; }
+        .box:hover ul a:after {
+          position: absolute;
+          content: "";
+          display: block;
+          height: 2px;
+          width: 0;
+          top: 50%;
+          left: 0;
+          transform: translate3d(-1%, 0, 0) scaleX(1);
+          background: #fff;
+          opacity: .9;
+          transition: width .3s ease,transform .3s ease-out .3s;
+          transform-origin: right center; }
         .box:hover ul a:hover {
-          text-decoration: line-through;
-          color: #FA4B4B;
-          opacity: 1; }
+          opacity: 0.75; }
           .box:hover ul a:hover li {
             color: #FA4B4B; }
+          .box:hover ul a:hover:after {
+            width: 102%;
+            transform: translate3d(-1%, 0, 0) scaleX(0); }
 
 #index {
   height: 100vh;
@@ -233,48 +261,82 @@ html {
       #home #about .facts p {
         font-size: 0.9rem; } }
 
-#home .portfolio {
+#home #portfolio {
   background-color: #141414;
   height: 100vh;
   overflow-y: hidden; }
-  #home .portfolio .portfolio-panel {
+  #home #portfolio .portfolio-panel {
     background-color: #272622;
     height: 100vh;
     overflow-y: scroll; }
-    #home .portfolio .portfolio-panel .item {
+    #home #portfolio .portfolio-panel .item {
       position: relative;
       font-size: 1rem;
       float: left;
       margin-bottom: -8px; }
       @media screen and (max-width: 768px) {
-        #home .portfolio .portfolio-panel .item {
+        #home #portfolio .portfolio-panel .item {
           font-size: 0.8rem; } }
-      #home .portfolio .portfolio-panel .item:hover {
+      #home #portfolio .portfolio-panel .item:hover {
         cursor: pointer; }
-        #home .portfolio .portfolio-panel .item:hover img {
+        #home #portfolio .portfolio-panel .item:hover img {
           opacity: 1; }
-        #home .portfolio .portfolio-panel .item:hover .caption {
+        #home #portfolio .portfolio-panel .item:hover .caption {
           opacity: 0;
           transform: translate3d(20px, 0px, 0px); }
-      #home .portfolio .portfolio-panel .item.eden {
+      #home #portfolio .portfolio-panel .item.eden {
         background-color: transparent; }
-      #home .portfolio .portfolio-panel .item img {
+      #home #portfolio .portfolio-panel .item.old {
+        display: none; }
+      #home #portfolio .portfolio-panel .item .project-link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; }
+      #home #portfolio .portfolio-panel .item img {
         width: 100%;
         opacity: 0.25;
         transition: opacity 0.75s cubic-bezier(0.215, 0.61, 0.355, 1); }
-      #home .portfolio .portfolio-panel .item .caption {
+      #home #portfolio .portfolio-panel .item .caption {
         position: absolute;
         left: 0;
         bottom: 0;
         padding-left: 20px;
         padding-bottom: 20px;
         transition: opacity 0.75s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1); }
-        #home .portfolio .portfolio-panel .item .caption .title {
+        #home #portfolio .portfolio-panel .item .caption .title {
           opacity: 0.2;
           font-size: 0.8em;
           margin-bottom: -5px; }
-        #home .portfolio .portfolio-panel .item .caption .project {
+        #home #portfolio .portfolio-panel .item .caption .project {
           font-weight: 900; }
+    #home #portfolio .portfolio-panel .show-old-work {
+      padding: 40px 25px;
+      background-color: #FA4B4B; }
+      #home #portfolio .portfolio-panel .show-old-work:hover {
+        cursor: pointer; }
+        #home #portfolio .portfolio-panel .show-old-work:hover h3 {
+          color: white; }
+          #home #portfolio .portfolio-panel .show-old-work:hover h3:after {
+            width: 102%;
+            transform: translate3d(-1%, 0, 0) scaleX(0); }
+      #home #portfolio .portfolio-panel .show-old-work h3 {
+        color: #c53232;
+        position: relative; }
+        #home #portfolio .portfolio-panel .show-old-work h3:after {
+          position: absolute;
+          content: "";
+          display: block;
+          height: 7px;
+          width: 0;
+          top: 50%;
+          left: 0;
+          transform: translate3d(-1%, 0, 0) scaleX(1);
+          background: #fff;
+          opacity: .9;
+          transition: width .3s ease,transform .3s ease-out .3s;
+          transform-origin: right center; }
 
 #home #contact {
   background-color: #0F0F0F; }
@@ -283,14 +345,30 @@ html {
   @media screen and (max-width: 425px) {
     #home #contact h3 {
       font-size: 1rem; } }
-  #home #contact a:hover {
-    text-decoration: line-through; }
+  #home #contact a {
+    position: relative; }
     #home #contact a:hover.twitter {
       color: #00b6f1; }
     #home #contact a:hover.insta {
       color: #c32aa3; }
     #home #contact a:hover.linkedin {
       color: #007bb6; }
+    #home #contact a:hover:after {
+      width: 102%;
+      transform: translate3d(-1%, 0, 0) scaleX(0); }
+    #home #contact a:after {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 7px;
+      width: 0;
+      top: 50%;
+      left: 0;
+      transform: translate3d(-1%, 0, 0) scaleX(1);
+      background: #fff;
+      opacity: .9;
+      transition: width .3s ease,transform .3s ease-out .3s;
+      transform-origin: right center; }
 
 #home #fwends .row > .col {
   width: 33.33333%; }
@@ -387,9 +465,17 @@ html {
     #portfolio .custom-controls .theme-black path {
       color: black;
       stroke: white; }
-  #portfolio .title {
-    color: #2f2f2f;
-    transition: all 0.5s ease-in-out; }
+  #portfolio .banner {
+    padding: 100px 75px;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    #portfolio .banner .title {
+      color: #2f2f2f;
+      transition: all 0.5s ease-in-out; }
+    #portfolio .banner .external-links {
+      color: black; }
+      #portfolio .banner .external-links a:hover {
+        text-decoration: line-through; }
   #portfolio #grid {
     padding: 0px 75px 75px 75px;
     -ms-flex-pack: justify;
@@ -409,7 +495,8 @@ html {
       margin-bottom: 40px;
       margin-left: 0px;
       position: relative;
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.5s ease-in-out;
+      visibility: hidden; }
       #portfolio #grid .work:hover {
         cursor: pointer; }
         #portfolio #grid .work:hover .caption {
@@ -488,3 +575,108 @@ html {
     cursor: pointer; }
     #portfolio #load-more:hover h1 {
       text-decoration: line-through; }
+
+#portfolio-pull-out {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none; }
+  #portfolio-pull-out .portfolio-panel {
+    height: 100vh;
+    width: 80vw;
+    background-color: #141414;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    #portfolio-pull-out .portfolio-panel .close-panel {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      opacity: 0.5;
+      font-size: 1.5rem;
+      cursor: pointer; }
+      #portfolio-pull-out .portfolio-panel .close-panel:hover {
+        opacity: 0.75; }
+    #portfolio-pull-out .portfolio-panel .project-info {
+      padding: 100px 50px; }
+      #portfolio-pull-out .portfolio-panel .project-info * {
+        font-family: iA Writer; }
+      #portfolio-pull-out .portfolio-panel .project-info .project-title {
+        opacity: 0.25; }
+      #portfolio-pull-out .portfolio-panel .project-info .project-name {
+        margin-bottom: 50px; }
+      #portfolio-pull-out .portfolio-panel .project-info .fact-file {
+        font-size: 0.85rem;
+        margin-bottom: 50px; }
+        #portfolio-pull-out .portfolio-panel .project-info .fact-file .fact {
+          margin-bottom: 20px; }
+          #portfolio-pull-out .portfolio-panel .project-info .fact-file .fact:last-of-type {
+            margin-bottom: 0px; }
+        #portfolio-pull-out .portfolio-panel .project-info .fact-file .date, #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members span {
+          color: rgba(255, 255, 255, 0.5); }
+        #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members {
+          margin-bottom: 20px !important; }
+          #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members span {
+            margin-right: 5px; }
+          #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member {
+            height: 1.5em;
+            width: 1.5em;
+            border: 2px solid white;
+            border-radius: 100px; }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:after {
+              opacity: 0;
+              border-radius: 100px; }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:nth-of-type(2) {
+              transform: translateX(-0.5em); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:nth-of-type(3) {
+              transform: translateX(-1em); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:nth-of-type(4) {
+              transform: translateX(-1.5em); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member.wastemane {
+              background-image: url("../assets/img/team/wastemane.jpg"); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member.ed {
+              background-image: url("../assets/img/team/barp.jpg"); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member.alex {
+              background-image: url("../assets/img/team/macpherson.jpg"); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member.tk {
+              background-image: url("../assets/img/team/kilminster.jpg"); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:hover {
+              cursor: pointer; }
+              #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:hover:after {
+                opacity: 0.75; }
+          #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members:hover .member {
+            transform: none;
+            margin-right: 5px; }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members:hover .member:last-of-type {
+              margin-right: 0px; }
+        #portfolio-pull-out .portfolio-panel .project-info .fact-file .desc {
+          width: 50%;
+          line-height: 1.8em; }
+      #portfolio-pull-out .portfolio-panel .project-info .project-link {
+        background-color: #FA4B4B;
+        color: white;
+        font-weight: 700;
+        width: 200px;
+        height: 50px;
+        border-radius: 2px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center; }
+        #portfolio-pull-out .portfolio-panel .project-info .project-link:hover span {
+          transform: translateX(5px); }
+        #portfolio-pull-out .portfolio-panel .project-info .project-link span {
+          margin-left: 5px; }
+    #portfolio-pull-out .portfolio-panel .gallery {
+      height: 100vh;
+      overflow-y: auto; }
+      #portfolio-pull-out .portfolio-panel .gallery img {
+        width: 100%;
+        height: auto; }

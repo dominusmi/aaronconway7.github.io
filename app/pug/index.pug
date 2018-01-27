@@ -15,200 +15,192 @@ html(lang='en')
             ul.fill-y
                 a(href="#")
                     li Home
+                a(href="#about")
+                    li About
                 a(href="#portfolio")
                     li Portfolio
-                a(href="#blog")
-                    li Blog
-                //- a(href="#fwends")
-                //-     li Fwends
+                a(href="#contact")
+                    li Contact
+                a(href="#fwends")
+                    li Fwends
                 li A.
-        main
-        //- main
-        //-     .hero
-        //-         .content.fill-y.row.right-center
-        //-             h1.typed
-        //-         .box
-        //-             ul.fill-y
-        //-                 a(href="#about")
-        //-                     li About
-        //-                 a(href="#portfolio")
-        //-                     li Portfolio
-        //-                 a(href="#contact")
-        //-                     li Contact
-        //-                 a(href="#fwends")
-        //-                     li Fwends
-        //-                 li A.
-        //- 
-        //-     section#about
-        //-         .container
-        //-             h6 I'm Aaron.
-        //-             h3 I’m a #[span.red designer] who can develop.  A #[span.red developer] who can design. One or the other.
-        //-             .row.facts.mob-col
-        //-                 .col.tab-full
-        //-                     h5 Where
-        //-                     p Essex, UK
-        //-                 .col.mob-full
-        //-                     h5 Now
-        //-                     p University of Warwick
-        //-                     p NDORSA
-        //-                     p The Boar
-        //-                     p Frecibo
-        //-                     p Thirty Degrees
-        //-                 .col.mob-full
-        //-                     h5 Awards
-        //-                     p SRA (1)
-        //-     section#portfolio
-        //-         .row
-        //-             .col.half
-        //-                 .container
-        //-                     h6 Portfolio.
-        //-                     h3 I am very lucky to have worked with a number of amazing #[span.red clients] & on a number of amazing #[span.red projects].
-        //-             .col.half
-        //-                 .portfolio-panel
-        //-                     .masonry.col-2.fluid.tab-col-1
-        //-                         a(href="https://makeuptuts.tv", target="_blank")
-        //-                             .item.makeuptuts
-        //-                                 img(src="assets/img/portfolio/makeuptuts/poster.jpg", alt="MakeUpTuts TV")
-        //-                                 .caption
-        //-                                     p.title Website.
-        //-                                     p.project MakeUpTuts TV
-        //-                         a(href="#")
-        //-                             .item.leicester-motors
-        //-                                 img(src="assets/img/portfolio/leicester-motors/poster.jpg", alt="Leicester Motors")
-        //-                                 .caption
-        //-                                     p.title Branding.
-        //-                                     p.project Leicester Motors
-        //-                         a(href="https://fanbytes.co.uk", target="_blank")
-        //-                             .item.fanbytes
-        //-                                 img(src="assets/img/portfolio/fanbytes/poster.jpg", alt="Fanbytes")
-        //-                                 .caption
-        //-                                     p.title Website.
-        //-                                     p.project Fanbytes
-        //-                         a(href="#")
-        //-                             .item.mepiphany
-        //-                                 img(src="assets/img/portfolio/mepiphany/poster.jpg", alt="Mepiphany")
-        //-                                 .caption
-        //-                                     p.title Branding.
-        //-                                     p.project Mepiphany
-        //-                         a(href="https://thirty.degree", target="_blank")
-        //-                             .item.thirty-degrees
-        //-                                 img(src="assets/img/portfolio/thirty-degrees/poster.jpg", alt="Thirty Degrees")
-        //-                                 .caption
-        //-                                     p.title Startup.
-        //-                                     p.project Thirty Degrees
-        //-                         a(href="https://ndorsa.com", target="_blank")
-        //-                             .item.ndorsa
-        //-                                 img(alt="NDORSA", src="assets/img/portfolio/ndorsa/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Startup.
-        //-                                     p.project NDORSA
-        //-                         a(href="http://designofeden.com", target="_blank")
-        //-                             .item.eden
-        //-                                 img(alt="Eden", src="assets/img/portfolio/eden/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Project.
-        //-                                     p.project Eden
-        //-                         a(href="#")
-        //-                             .item.pacman
-        //-                                 img(src="assets/img/portfolio/pacman/poster.jpg", alt="Pacman")
-        //-                                 .caption
-        //-                                     p.title Project.
-        //-                                     p.project C++ Pacman Game
-        //-                         a(href="https://frecibo.com", target="_blank")
-        //-                             .item.frecibo
-        //-                                 img(alt="Frecibo", src="assets/img/portfolio/frecibo/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Startup.
-        //-                                     p.project Frecibo
-        //-                         a(href="http://fdisuk.com", target="_blank")
-        //-                             .item.fdis-website
-        //-                                 img(alt="RAW", src="assets/img/portfolio/fdis/poster2.jpg")
-        //-                                 .caption
-        //-                                     p.title Website.
-        //-                                     p.project FDIS
-        //-                         a(href="https://www.radio.warwick.ac.uk/")
-        //-                             .item.raw
-        //-                                 img(alt="RAW", src="assets/img/portfolio/raw/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Branding.
-        //-                                     p.project RAW
-        //-                         a(href="http://fdis.com", target="_blank")
-        //-                             .item.fdis-brand
-        //-                                 img(alt="Fire Door Inspection Solutions", src="assets/img/portfolio/fdis/poster1.jpg")
-        //-                                 .caption
-        //-                                     p.title Branding.
-        //-                                     p.project FDIS
-        //-                         a(href="http://lush-heat.com/", target="_blank")
-        //-                             .item.lush-heat
-        //-                                 img(alt="Lush Heat Treatment Ltd", src="assets/img/portfolio/lush-heat/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Website.
-        //-                                     p.project Lush Heat Treatment Ltd
-        //-                         a(href="http://tutorial-ltd.co.uk/", target="_blank")
-        //-                             .item.tutorial
-        //-                                 img(alt="Tutorial Ltd", src="assets/img/portfolio/tutorial/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Website.
-        //-                                     p.project Tutorial Ltd
-        //-                         a(href="http://www.moneywisequoteme.com/", target="_blank")
-        //-                             .item.moneywise
-        //-                                 img(alt="MoneyWiseQuoteMe", src="assets/img/portfolio/moneywise/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Website.
-        //-                                     p.project MoneyWiseQuoteMe
-        //-                         .item.uprising
-        //-                             img(alt="Uprising", src="assets/img/portfolio/uprising/poster.jpg")
-        //-                             .caption
-        //-                                 p.title Branding.
-        //-                                 p.project Uprising
-        //-                         a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target="_blank")
-        //-                             .item.fairpay
-        //-                                 img(alt="Fairpay", src="assets/img/portfolio/fairpay/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Web Application.
-        //-                                     p.project Fairpay
-        //-                         a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target="_blank")
-        //-                             .item.do-to
-        //-                                 img(alt="Uprising", src="assets/img/portfolio/do-to/poster.jpg")
-        //-                                 .caption
-        //-                                     p.title Web Application.
-        //-                                     p.project DoTo!
-        //-     section#contact
-        //-         .container
-        //-             h6 Contact.
-        //-             h3 If you want to get in touch to work on a cool project or just grab a beer or something, you can email me at #[a.red(href="mailto:hello@aaronconway.co.uk") hello@aaronconway.co.uk].
-        //-             h3 You can also find me on the line via #[a.red.twitter(href="https://twitter.com/aaronconway7", target="_blank") twitter], #[a.red.insta(href="https://www.instagram.com/aaronconway7/", target="_blank") insta] and #[a.red.linkedin(href="https://www.linkedin.com/in/aaronconway7/", target="_blank") linkedin].
-        //-     section#fwends
-        //-         .row.fluid.wrap
-        //-             a.col(href="http://tbjgolden.com/", target="_blank")
-        //-                 .fwend.golden.bg-center
-        //-                     .caption.fill-y.col.bottom-left.fill-x
-        //-                         p.title Name.
-        //-                         p.name Tom Golden
-        //-             a.col(href="https://www.linkedin.com/in/hamish-lacmane-7b080b107/", target="_blank")
-        //-                 .fwend.wastemane.bg-center
-        //-                     .caption.fill-y.col.bottom-left.fill-x
-        //-                         p.title Name.
-        //-                         p.name Hamish Wastemane
-        //-             a.col(href="http://edoardobarp.com/", target="_blank")
-        //-                 .fwend.ed.bg-center
-        //-                     .caption.fill-y.col.bottom-left.fill-x
-        //-                         p.title Name.
-        //-                         p.name Edoardo Barp
-        //-             a.col(href="http://www.alexmacpherson.uk/", target="_blank")
-        //-                 .fwend.alex.bg-center
-        //-                     .caption.fill-y.col.bottom-left.fill-x
-        //-                         p.title Name.
-        //-                         p.name Alex Macpherson
-        //-             a.col(href="http://yashasmudumbai.co.uk/", target="_blank")
-        //-                 .fwend.yash.bg-center
-        //-                     .caption.fill-y.col.bottom-left.fill-x
-        //-                         p.title Name.
-        //-                         p.name Yashas Mudumbai
-        //-             a.col(href="http://tomkilminster.uk/", target="_blank")
-        //-                 .fwend.tk.bg-center
-        //-                     .caption.fill-y.col.bottom-left.fill-x
-        //-                         p.title Name.
-        //-                         p.name Tom Kilminster
+        main#home
+            .hero
+                .content.fill-y.row.right-center
+                    h1.typed
+            section#about
+                .container
+                    h6.reveal I'm Aaron.
+                    h3.reveal I’m a #[span.red designer] who can develop.  A #[span.red developer] who can design. One or the other.
+                    .row.facts.mob-col
+                        .col.tab-full.reveal
+                            h5 Where
+                            p Essex, UK
+                        .col.mob-full.reveal
+                            h5 Now
+                            p University of Warwick
+                            p NDORSA
+                            p The Boar
+                            p Frecibo
+                            p Thirty Degrees
+                        .col.mob-full.reveal
+                            h5 Awards
+                            p SRA (1)
+            section#portfolio
+                .row
+                    .col.half
+                        .container
+                            h6.reveal Portfolio.
+                            h3.reveal I am very lucky to have worked with a number of amazing #[span.red clients] & on a number of amazing #[span.red projects].
+                    .col.half
+                        .portfolio-panel.reveal
+                            .masonry.col-2.fluid.tab-col-1
+                                .item.makeuptuts
+                                    a(href="#portfolio#makeuptutstv").project-link
+                                    img(src="assets/img/portfolio/makeuptuts/poster.jpg", alt="MakeUpTuts TV")
+                                    .caption
+                                        p.title Website.
+                                        p.project MakeUpTuts TV
+                                .item.leicester-motors
+                                    a(href="#portfolio#leicester-motors").project-link
+                                    img(src="assets/img/portfolio/leicester-motors/poster.jpg", alt="Leicester Motors")
+                                    .caption
+                                        p.title Branding.
+                                        p.project Leicester Motors
+                                .item.fanbytes
+                                    a(href="#portfolio#fanbytes", target="_blank").project-link
+                                    img(src="assets/img/portfolio/fanbytes/poster.jpg", alt="Fanbytes")
+                                    .caption
+                                        p.title Website.
+                                        p.project Fanbytes
+                                .item.mepiphany
+                                    a(href="#portfolio#mepiphany").project-link
+                                    img(src="assets/img/portfolio/mepiphany/poster.jpg", alt="Mepiphany")
+                                    .caption
+                                        p.title Branding.
+                                        p.project Mepiphany
+                                .item.thirty-degrees
+                                    a(href="#portfolio#thirty-degrees", target="_blank").project-link
+                                    img(src="assets/img/portfolio/thirty-degrees/poster.jpg", alt="Thirty Degrees")
+                                    .caption
+                                        p.title Startup.
+                                        p.project Thirty Degrees
+                                .item.ndorsa
+                                    a(href="#portfolio#ndorsa", target="_blank").project-link
+                                    img(alt="NDORSA", src="assets/img/portfolio/ndorsa/poster.jpg")
+                                    .caption
+                                        p.title Startup.
+                                        p.project NDORSA
+                                .item.eden
+                                    a(href="#portfolio#eden", target="_blank").project-link
+                                    img(alt="Eden", src="assets/img/portfolio/eden/poster.jpg")
+                                    .caption
+                                        p.title Project.
+                                        p.project Eden
+                                //- a(href="#")
+                                //-     .item.pacman
+                                //-         img(src="assets/img/portfolio/pacman/poster.jpg", alt="Pacman")
+                                //-         .caption
+                                //-             p.title Project.
+                                //-             p.project C++ Pacman Game
+                                .item.frecibo
+                                    a(href="#portfolio#frecibo", target="_blank").project-link
+                                    img(alt="Frecibo", src="assets/img/portfolio/frecibo/poster.jpg")
+                                    .caption
+                                        p.title Startup.
+                                        p.project Frecibo
+                                .item.fdis-website
+                                    a(href="#portfolio#fdis", target="_blank").project-link
+                                    img(alt="FDIS", src="assets/img/portfolio/fdis/poster2.jpg")
+                                    .caption
+                                        p.title Website.
+                                        p.project FDIS
+                                .item.raw
+                                    a(href="#portfolio#raw").project-link
+                                    img(alt="RAW", src="assets/img/portfolio/raw/poster.jpg")
+                                    .caption
+                                        p.title Branding.
+                                        p.project RAW
+                                .item.fdis-brand
+                                    a(href="#portfolio#fdis", target="_blank").project-link
+                                    img(alt="Fire Door Inspection Solutions", src="assets/img/portfolio/fdis/poster1.jpg")
+                                    .caption
+                                        p.title Branding.
+                                        p.project FDIS
+                                .item.lush-heat
+                                    a(href="#portfolio#lush-heat", target="_blank").project-link
+                                    img(alt="Lush Heat Treatment Ltd", src="assets/img/portfolio/lush-heat/poster.jpg")
+                                    .caption
+                                        p.title Website.
+                                        p.project Lush Heat Treatment Ltd
+                                .item.tutorial.old
+                                    a(href="http://tutorial-ltd.co.uk/", target="_blank").project-link
+                                    img(alt="Tutorial Ltd", src="assets/img/portfolio/tutorial/poster.jpg")
+                                    .caption
+                                        p.title Website.
+                                        p.project Tutorial Ltd
+                                .item.moneywise.old
+                                    a(href="http://www.moneywisequoteme.com/", target="_blank").project-link
+                                    img(alt="MoneyWiseQuoteMe", src="assets/img/portfolio/moneywise/poster.jpg")
+                                    .caption
+                                        p.title Website.
+                                        p.project MoneyWiseQuoteMe
+                                .item.uprising.old
+                                    img(alt="Uprising", src="assets/img/portfolio/uprising/poster.jpg")
+                                    .caption
+                                        p.title Branding.
+                                        p.project Uprising
+                                .item.fairpay.old
+                                    a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/coursework/", target="_blank").project-link
+                                    img(alt="Fairpay", src="assets/img/portfolio/fairpay/poster.jpg")
+                                    .caption
+                                        p.title Web Application.
+                                        p.project Fairpay
+                                .item.do-to.old
+                                    a(href="http://cs139.dcs.warwick.ac.uk/~u1415940/cs139/labs/", target="_blank").project-link
+                                    img(alt="Uprising", src="assets/img/portfolio/do-to/poster.jpg")
+                                    .caption
+                                        p.title Web Application.
+                                        p.project DoTo!
+                            .show-old-work.row.center-center
+                                h3.text-center.transition Show my old work!
+            #portfolio-pull-out
+            section#contact
+                .container
+                    h6.reveal Contact.
+                    h3.reveal If you want to get in touch to work on a cool project or just grab a beer or something, you can email me at #[a.red(href="mailto:hello@aaronconway.co.uk") hello@aaronconway.co.uk].
+                    h3.reveal You can also find me on the line via #[a.red.twitter(href="https://twitter.com/aaronconway7", target="_blank") twitter], #[a.red.insta(href="https://www.instagram.com/aaronconway7/", target="_blank") insta] and #[a.red.linkedin(href="https://www.linkedin.com/in/aaronconway7/", target="_blank") linkedin].
+            section#fwends.reveal
+                .row.fluid.wrap
+                    a.col(href="http://tbjgolden.com/", target="_blank")
+                        .fwend.golden.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Tom Golden
+                    a.col(href="https://www.linkedin.com/in/hamish-lacmane-7b080b107/", target="_blank")
+                        .fwend.wastemane.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Hamish Wastemane
+                    a.col(href="http://edoardobarp.com/", target="_blank")
+                        .fwend.ed.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Edoardo Barp
+                    a.col(href="http://www.alexmacpherson.uk/", target="_blank")
+                        .fwend.alex.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Alex Macpherson
+                    a.col(href="http://yashasmudumbai.co.uk/", target="_blank")
+                        .fwend.yash.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Yashas Mudumbai
+                    a.col(href="http://tomkilminster.uk/", target="_blank")
+                        .fwend.tk.bg-center
+                            .caption.fill-y.col.bottom-left.fill-x
+                                p.title Name.
+                                p.name Tom Kilminster
                         
         include include/foot
