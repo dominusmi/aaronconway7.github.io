@@ -585,14 +585,21 @@ html {
   left: 0;
   top: 0;
   z-index: 99;
-  display: none; }
+  transition: transform 0.75s ease-in-out;
+  transform: translateX(100%); }
+  #portfolio-pull-out.loaded {
+    transform: none; }
   #portfolio-pull-out .portfolio-panel {
     height: 100vh;
     width: 80vw;
     background-color: #141414;
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%); }
+    #portfolio-pull-out .portfolio-panel.loaded {
+      transform: none; }
     #portfolio-pull-out .portfolio-panel .close-panel {
       position: absolute;
       top: 10px;
@@ -627,7 +634,14 @@ html {
             height: 1.5em;
             width: 1.5em;
             border: 2px solid white;
-            border-radius: 100px; }
+            border-radius: 100px;
+            position: relative; }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member a {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%; }
             #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:after {
               opacity: 0;
               border-radius: 100px; }
@@ -645,6 +659,8 @@ html {
               background-image: url("../assets/img/team/macpherson.jpg"); }
             #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member.tk {
               background-image: url("../assets/img/team/kilminster.jpg"); }
+            #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member.mitch {
+              background-image: url("../assets/img/team/mitch.jpg"); }
             #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:hover {
               cursor: pointer; }
               #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members .member:hover:after {
@@ -655,7 +671,7 @@ html {
             #portfolio-pull-out .portfolio-panel .project-info .fact-file .team-members:hover .member:last-of-type {
               margin-right: 0px; }
         #portfolio-pull-out .portfolio-panel .project-info .fact-file .desc {
-          width: 50%;
+          width: 60%;
           line-height: 1.8em; }
       #portfolio-pull-out .portfolio-panel .project-info .project-link {
         background-color: #FA4B4B;
@@ -680,3 +696,38 @@ html {
       #portfolio-pull-out .portfolio-panel .gallery img {
         width: 100%;
         height: auto; }
+      #portfolio-pull-out .portfolio-panel .gallery .browser {
+        margin-top: 100px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75); }
+        #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header {
+          border-radius: 5px 5px 0 0;
+          padding: 10px 15px; }
+          #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .close, #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .minimise, #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .maximise {
+            min-width: 10px;
+            max-width: 10px;
+            min-height: 10px;
+            max-height: 10px;
+            background-color: #181818;
+            border-radius: 100px;
+            margin-right: 10px; }
+          #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .close:hover {
+            background-color: #ff4746; }
+          #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .minimise:hover {
+            background-color: #ffbe00; }
+          #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .maximise {
+            margin-right: 20px; }
+            #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .maximise:hover {
+              background-color: #00d644; }
+          #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .search {
+            background-color: #181818;
+            opacity: 0.5;
+            width: 100%;
+            height: 20px;
+            border-radius: 3px; }
+            #portfolio-pull-out .portfolio-panel .gallery .browser .browser-header .search:hover {
+              opacity: 0.75; }
+        #portfolio-pull-out .portfolio-panel .gallery .browser .screen {
+          background-color: #171717;
+          height: auto;
+          width: 100%;
+          display: inherit; }

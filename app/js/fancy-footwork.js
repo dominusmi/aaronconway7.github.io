@@ -9,10 +9,30 @@ $(document).ready(function(){
 });
 
 $(window).on("load", function() {
-    setTimeout(function(){
-        $('#index').addClass('loaded');
-        typed();
-    }, onLoad() + 500);
+    var page = location.hash.slice(1).replace(/#/g , '/');
+    if (page == "") {
+        setTimeout(function(){
+            $('#index').addClass('loaded');
+            typed();
+        }, onLoad() + 500);
+    } else if (page.indexOf("portfolio/") >= 0) {
+        var href = page +".html";
+        $('#portfolio-pull-out').load(href, function(){
+            $('#index').addClass('loaded');
+            typed();
+            $(window).scrollTop($('#portfolio').offset().top);
+            $(this).addClass('loaded');
+            setTimeout(function(){
+                $('#portfolio-pull-out .portfolio-panel').addClass('loaded');
+            }, 750);
+        }, onLoad() + 500);
+    } else if ($('#'+page).length > 0){
+        setTimeout(function(){
+            $('#index').addClass('loaded');
+            typed();
+            $(window).scrollTop($('#'+page).offset().top);
+        }, onLoad() + 500);
+    }
 });
 
 function typed(){
@@ -31,11 +51,13 @@ function onLoad() {
 
 $(window).on('hashchange', function() {
     var page = location.hash.slice(1).replace(/#/g , '/');
-    if (page.indexOf("/") >= 0) {
+    if (page.indexOf("portfolio/") >= 0) {
         var href = page +".html";
         $('#portfolio-pull-out').load(href, function(){
-            $(this).show();
-            console.log("loaded");
+            $(this).addClass('loaded');
+            setTimeout(function(){
+                $('#portfolio-pull-out .portfolio-panel').addClass('loaded');
+            }, 750);
         });
     }
 });
@@ -74,9 +96,19 @@ $('.show-old-work').click(function(){
 });
 
 var portfolioScrolled = false;
+var lastScrollTop = 0;
 
 $(window).scroll(function(e){
     var wScroll = $(this).scrollTop();
+
+    if (wScroll > lastScrollTop){
+        // downscroll code
+        console.log("Scrolling down");
+    } else {
+       // upscroll code
+       console.log("Scrolling up");
+    }
+    lastScrollTop = wScroll;
 
     if (wScroll >= $('#portfolio').offset().top) {
         if (!portfolioScrolled) {
@@ -105,6 +137,9 @@ $('.portfolio-panel').scroll(function(){
 });
 
 $('body').on("click", '#portfolio-pull-out .close-panel', function(){
-    $('#portfolio-pull-out').hide();
+    $('#portfolio-pull-out .portfolio-panel').removeClass('loaded');
+    setTimeout(function(){
+        $('#portfolio-pull-out').removeClass('loaded');
+    }, 500);
     window.location.hash="portfolio";
 });

@@ -728,7 +728,11 @@ html
     left: 0
     top: 0
     z-index: 99
-    display: none
+    transition: transform 0.75s ease-in-out
+    transform: translateX(100%)
+
+    &.loaded
+        transform: none
 
     .portfolio-panel
         height: 100vh
@@ -737,6 +741,11 @@ html
         position: absolute
         right: 0
         top: 0
+        transition: transform 0.5s ease-in-out
+        transform: translateX(100%)
+
+        &.loaded
+            transform: none
 
         .close-panel
             position: absolute
@@ -785,6 +794,14 @@ html
                         width: 1.5em
                         border: 2px solid white
                         border-radius: 100px
+                        position: relative
+
+                        a
+                            position: absolute
+                            left: 0
+                            top: 0
+                            width: 100%
+                            height: 100%
 
                         &:after
                             opacity: 0
@@ -805,6 +822,8 @@ html
                             background-image: url('../assets/img/team/macpherson.jpg')
                         &.tk
                             background-image: url('../assets/img/team/kilminster.jpg')
+                        &.mitch
+                            background-image: url('../assets/img/team/mitch.jpg')
 
                         &:hover
                             cursor: pointer
@@ -822,7 +841,7 @@ html
                                 margin-right: 0px
 
                 .desc
-                    width: 50%
+                    width: 60%
                     line-height: 1.8em
 
             .project-link
@@ -851,3 +870,52 @@ html
             img
                 width: 100%
                 height: auto
+
+            .browser
+                margin-top: 100px
+                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
+
+                .browser-header
+                    border-radius: 5px 5px 0 0
+                    padding: 10px 15px
+
+                    .close, .minimise, .maximise
+                        min-width: 10px
+                        max-width: 10px
+                        min-height: 10px
+                        max-height: 10px
+                        background-color: #181818
+                        border-radius: 100px
+                        margin-right: 10px
+
+                    .close
+
+                        &:hover
+                            background-color: #ff4746
+
+                    .minimise
+
+                        &:hover
+                            background-color: #ffbe00
+
+                    .maximise
+                        margin-right: 20px
+
+                        &:hover
+                            background-color: #00d644
+
+                    .search
+                        background-color: #181818
+                        opacity: 0.5
+                        width: 100%
+                        height: 20px
+                        border-radius: 3px
+
+                        &:hover
+                            opacity: 0.75
+
+                .screen
+                    background-color: rgb(23, 23, 23)
+                    height: auto
+                    width: 100%
+                    display: inherit
