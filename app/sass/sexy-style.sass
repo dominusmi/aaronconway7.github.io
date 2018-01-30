@@ -68,6 +68,8 @@
     font-weight: 700
 
 // variables
+$tab: 768px
+$mob: 425px
 
 // colours
 
@@ -199,6 +201,9 @@ html
         transform: translate3d(0px, 100vh, 0px)
         transition: transform 1.5s cubic-bezier(.215,.61,.355,1)
 
+        &.transparent
+            opacity: 0
+
         @media screen and (max-width: 1000px)
             background-size: cover
 
@@ -287,13 +292,32 @@ html
 
     #portfolio
         background-color: #141414
-        height: 100vh
-        overflow-y: hidden
+        // height: 100vh
+        // overflow-y: hidden
+
+        &.fixed
+
+            .text-col
+                position: fixed
+                left: 0
+                top: 0
+
+            .portfolio-col
+                margin-left: 50%
+                width: 50%
+
+        .text-col, .portfolio-col
+            width: 50%
+
+        .text-col
+
+            &.transparent
+                opacity: 0
 
         .portfolio-panel
             background-color: #272622
-            height: 100vh
-            overflow-y: scroll
+            // height: 100vh
+            // overflow-y: scroll
 
             .item
                 position: relative
@@ -485,240 +509,6 @@ html
                 .name
                     font-weight: 900
 
-// Portfolio Page
-#portfolio
-    background-color: white
-    min-height: 100vh
-    transition: all 0.5s ease-in-out
-
-    &.black
-        background-color: #141414
-
-        .custom-controls
-
-            path
-                color: white
-
-        .title
-            color: white
-
-        #grid
-
-            .work
-                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
-
-    .custom-controls
-        position: absolute
-        top: 10px
-        right: 10px
-
-        svg
-            margin-right: 5px
-            cursor: pointer
-
-            &:last-of-type
-                margin-right: 0px
-
-            &:hover
-
-                path
-                    color: $red
-                    opacity: 1
-
-        path
-            color: black
-            opacity: 0.5
-            transition: all 0.3s ease-in-out
-
-        .theme-change
-
-            &:hover
-
-                path
-                    color: black
-                    stroke: white
-            path
-                opacity: 1
-                color: white
-                stroke: black
-                stroke-width: 50px
-
-        .theme-black
-
-            &:hover
-
-                path
-                    color: white
-                    stroke: black
-            path
-                color: black
-                stroke: white
-
-    .banner
-        padding: 100px 75px
-        justify-content: space-between
-
-        .title
-            color: #2f2f2f
-            transition: all 0.5s ease-in-out
-
-        .external-links
-            color: black
-
-            a
-
-                &:hover
-                    text-decoration: line-through
-
-    #grid
-        padding: 0px 75px 75px 75px
-        justify-content: space-between
-
-        &.small
-            justify-content: flex-start
-
-            .work
-                height: 150px
-                width: calc(((100vw - 150px) / 5) - ((5 - 1) * 40px / 5))
-                margin-left: 40px
-
-                &:nth-of-type(5n+1)
-                    margin-left: 0px
-
-        .work
-            height: calc(((100vw - 150px) / 2) - 20px)
-            width: calc(((100vw - 150px) / 2) - 20px)
-            margin-bottom: 40px
-            margin-left: 0px
-            position: relative
-            transition: all 0.5s ease-in-out
-            visibility: hidden
-
-            &:hover
-                cursor: pointer
-
-                .caption
-                    // opacity: 1
-                    transform: none
-
-            &.hovered
-                opacity: 0.1 !important
-
-            &:nth-of-type(2n)
-
-                .caption
-                    right: auto
-                    left: -30%
-
-            &.makeuptutstv
-                background-image: url('../assets/img/portfolio/makeuptuts/poster.jpg')
-            &.fanbytes
-                background-image: url('../assets/img/portfolio/fanbytes/poster.jpg')
-            &.leicester-motors
-                background-image: url('../assets/img/portfolio/leicester-motors/poster.jpg')
-            &.mepiphany
-                background-image: url('../assets/img/portfolio/mepiphany/poster.jpg')
-            &.thirty-degrees
-                background-image: url('../assets/img/portfolio/thirty-degrees/poster.jpg')
-            &.ndorsa
-                background-image: url('../assets/img/portfolio/ndorsa/poster.jpg')
-            &.eden
-                background-image: url('../assets/img/portfolio/eden/poster.jpg')
-            &.pacman
-                background-image: url('../assets/img/portfolio/pacman/poster.jpg')
-            &.frecibo
-                background-image: url('../assets/img/portfolio/frecibo/poster.jpg')
-            &.fdis-website
-                background-image: url('../assets/img/portfolio/fdis/poster2.jpg')
-            &.raw
-                background-image: url('../assets/img/portfolio/raw/poster.jpg')
-            &.fdis-brand
-                background-image: url('../assets/img/portfolio/fdis/poster1.jpg')
-            &.lush-heat
-                background-image: url('../assets/img/portfolio/lush-heat/poster.jpg')
-            &.tutorial
-                background-image: url('../assets/img/portfolio/tutorial/poster.jpg')
-            &.moneywise
-                background-image: url('../assets/img/portfolio/moneywise/poster.jpg')
-            &.uprising
-                background-image: url('../assets/img/portfolio/uprising/poster.jpg')
-            &.fairpay
-                background-image: url('../assets/img/portfolio/fairpay/poster.jpg')
-            &.do-to
-                background-image: url('../assets/img/portfolio/do-to/poster.jpg')
-
-            &.old
-                display: none
-
-            a
-                position: absolute
-                left: 0
-                top: 0
-                width: 100%
-                height: 100%
-
-            .caption
-                position: absolute
-                left: 70%
-                bottom: 100px
-                width: calc(((100vw - 150px) / 2) - 20px)
-                color: black
-                z-index: 99
-                opacity: 0
-                transform: translateX(-20px)
-                transition: transform .75s cubic-bezier(.215,.61,.355,1)
-                padding: 25px
-                background-color: white
-                border-radius: 2px
-
-                .work-type, .work-name
-                    color: black
-
-                .work-type
-                    // margin-bottom: -10px
-                    opacity: 0.5
-
-                .work-name
-                    line-height: 1.25em
-
-            // .caption
-            //     position: absolute
-            //     left: 0
-            //     bottom: 0
-            //     width: 100%
-            //     height: 100%
-            //     padding-left: 20px
-            //     padding-bottom: 20px
-            //     opacity: 0
-            //     background-color: rgba(40, 38, 34, 0.75)
-            //     transition: opacity .75s cubic-bezier(.215,.61,.355,1)
-            //     font-size: 1rem
-            //
-            //     @media screen and (max-width: 425px)
-            //         font-size: 0.8rem
-            //
-            //     .title, .project
-            //         transform: translate3d(-20px, 0px, 0px)
-            //         transition: transform .75s cubic-bezier(.215,.61,.355,1)
-            //
-            //
-            //     .title
-            //         opacity: 0.2
-            //         font-size: 0.8em
-            //         margin-bottom: -5px
-            //     .project
-            //         font-weight: 900
-
-    #load-more
-        background-color: $red
-        color: white
-        cursor: pointer
-
-        &:hover
-
-            h1
-                text-decoration: line-through
-
 #portfolio-pull-out
     height: 100vh
     width: 100vw
@@ -743,6 +533,10 @@ html
         top: 0
         transition: transform 0.5s ease-in-out
         transform: translateX(100%)
+
+        @media screen and (max-width: $tab)
+            width: 100%
+            overflow-y: auto
 
         &.loaded
             transform: none
@@ -844,6 +638,9 @@ html
                     width: 60%
                     line-height: 1.8em
 
+                    @media screen and (max-width: $tab)
+                        width: 100%
+
             .project-link
                 background-color: $red
                 color: white
@@ -867,6 +664,12 @@ html
             height: 100vh
             overflow-y: auto
 
+            @media screen and (max-width: $tab)
+                margin-left: 0px
+                height: auto
+                padding: 0px 50px
+                margin-bottom: 50px
+
             img
                 width: 100%
                 height: auto
@@ -875,6 +678,9 @@ html
                 margin-top: 100px
                 box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
                 margin-bottom: 50px
+
+                @media screen and (max-width: $tab)
+                    margin-top: 0px
 
                 .browser-header
                     border-radius: 5px 5px 0 0
