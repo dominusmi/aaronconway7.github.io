@@ -57,7 +57,19 @@
     font-family: Dosis
     src: url('../assets/fonts/dosis/Dosis-Light.otf')
 
+@font-face
+    font-family: iA Writer
+    src: url('../assets/fonts/ia-writer-duospace/iAWriterDuospace-Regular.otf')
+    font-weight: 300
+
+@font-face
+    font-family: iA Writer
+    src: url('../assets/fonts/ia-writer-duospace/iAWriterDuospace-Bold.otf')
+    font-weight: 700
+
 // variables
+$tab: 768px
+$mob: 425px
 
 // colours
 
@@ -68,6 +80,10 @@ html
     background-color: $red
     width: 100vw
     overflow-x: hidden
+
+    &.lock
+        height: 100vh
+        overflow: hidden
 
 *
     font-family: Poppins
@@ -80,7 +96,70 @@ html
 .red
     color: $red
 
-// index
+.box
+    background-color: $red
+    height: 50px
+    width: 50px
+    position: fixed
+    right: 25px
+    bottom: 25px
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1)
+    z-index: 99
+
+    ul
+        display: none
+
+    &:hover
+        width: 500px
+        background-color: #181818
+
+        @media screen and (max-width: 768px)
+            width: 400px
+        @media screen and (max-width: 500px)
+            width: 300px
+
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0px 50px
+
+            @media screen and (max-width: 500px)
+                padding: 0px 25px
+
+            & > li
+                font-weight: 900
+                color: $red
+
+            a
+                font-size: 0.8rem
+                opacity: 0.2
+                position: relative
+
+                &:after
+                    position: absolute
+                    content: ""
+                    display: block
+                    height: 2px
+                    width: 0
+                    top: 50%
+                    left: 0
+                    transform: translate3d(-1%,0,0) scaleX(1)
+                    background: #fff
+                    opacity: .9
+                    transition: width .3s ease,transform .3s ease-out .3s
+                    transform-origin: right center
+
+                &:hover
+                    opacity: 0.75
+
+                    li
+                        color: $red
+
+                    &:after
+                        width: 102%
+                        transform: translate3d(-1%,0,0) scaleX(0)
+
 #index
     height: 100vh
     overflow-y: hidden
@@ -95,7 +174,7 @@ html
             object
                 display: none
 
-        main
+        #home
 
             .hero
                 transform: none
@@ -108,6 +187,9 @@ html
         object
             height: 75vh
 
+// index
+#home
+
     .hero
         position: fixed
         top: 0
@@ -118,6 +200,9 @@ html
         background-size: contain
         transform: translate3d(0px, 100vh, 0px)
         transition: transform 1.5s cubic-bezier(.215,.61,.355,1)
+
+        &.transparent
+            opacity: 0
 
         @media screen and (max-width: 1000px)
             background-size: cover
@@ -134,15 +219,6 @@ html
             margin-right: 50%
             transform: translate3d(-90px, 50px, 0px)
             text-align: right
-
-            // @media screen and (max-width: 1440px)
-            //     font-size: 3.5rem
-            // @media screen and (max-width: 1330px)
-            //     font-size: 3rem
-            // @media screen and (max-width: 1160px)
-            //     font-size: 2.5rem
-            // @media screen and (max-width: 1000px)
-            //     transform: translate3d(-90px, 100px, 0px)
 
             @media screen and (max-width: 1440px)
                 font-size: 2.5rem
@@ -168,52 +244,6 @@ html
                 @media screen and (max-height: 450px)
                     margin-top: 200px
 
-        .box
-            background-color: $red
-            height: 50px
-            width: 50px
-            position: absolute
-            right: 25px
-            bottom: 25px
-            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1)
-
-            ul
-                display: none
-
-            &:hover
-                width: 500px
-                background-color: #181818
-
-                @media screen and (max-width: 768px)
-                    width: 400px
-                @media screen and (max-width: 500px)
-                    width: 300px
-
-                ul
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
-                    padding: 0px 50px
-
-                    @media screen and (max-width: 500px)
-                        padding: 0px 25px
-
-                    & > li
-                        font-weight: 900
-                        color: $red
-
-                    a
-                        font-size: 0.8rem
-                        opacity: 0.2
-
-                        &:hover
-                            text-decoration: line-through
-                            color: $red
-                            opacity: 1
-
-                            li
-                                color: $red
-
     section
         position: relative
 
@@ -237,7 +267,6 @@ html
 
                 @media screen and (max-height: 500px)
                     font-size: 1rem
-
 
     #about
         margin-top: 100vh
@@ -263,13 +292,32 @@ html
 
     #portfolio
         background-color: #141414
-        height: 100vh
-        overflow-y: hidden
+        // height: 100vh
+        // overflow-y: hidden
+
+        &.fixed
+
+            .text-col
+                position: fixed
+                left: 0
+                top: 0
+
+            .portfolio-col
+                margin-left: 50%
+                width: 50%
+
+        .text-col, .portfolio-col
+            width: 50%
+
+        .text-col
+
+            &.transparent
+                opacity: 0
 
         .portfolio-panel
             background-color: #272622
-            height: 100vh
-            overflow-y: scroll
+            // height: 100vh
+            // overflow-y: scroll
 
             .item
                 position: relative
@@ -293,6 +341,16 @@ html
                 &.eden
                     background-color: transparent
 
+                &.old
+                    display: none
+
+                .project-link
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+
                 img
                     width: 100%
                     opacity: 0.25
@@ -313,6 +371,38 @@ html
                     .project
                         font-weight: 900
 
+            .show-old-work
+                padding: 40px 25px
+                background-color: $red
+
+                &:hover
+                    cursor: pointer
+
+                    h3
+                        color: white
+
+                        &:after
+                            width: 102%
+                            transform: translate3d(-1%,0,0) scaleX(0)
+
+                h3
+                    color: #c53232
+                    position: relative
+
+                    &:after
+                        position: absolute
+                        content: ""
+                        display: block
+                        height: 7px
+                        width: 0
+                        top: 50%
+                        left: 0
+                        transform: translate3d(-1%,0,0) scaleX(1)
+                        background: #fff
+                        opacity: .9
+                        transition: width .3s ease,transform .3s ease-out .3s
+                        transform-origin: right center
+
     #contact
         background-color: #0F0F0F
 
@@ -325,9 +415,9 @@ html
                 font-size: 1rem
 
         a
+            position: relative
 
             &:hover
-                text-decoration: line-through
 
                 &.twitter
                     color: #00b6f1
@@ -335,6 +425,24 @@ html
                     color: #c32aa3
                 &.linkedin
                     color: #007bb6
+
+                &:after
+                    width: 102%
+                    transform: translate3d(-1%,0,0) scaleX(0)
+
+            &:after
+                position: absolute
+                content: ""
+                display: block
+                height: 7px
+                width: 0
+                top: 50%
+                left: 0
+                transform: translate3d(-1%,0,0) scaleX(1)
+                background: #fff
+                opacity: .9
+                transition: width .3s ease,transform .3s ease-out .3s
+                transform-origin: right center
 
     #fwends
 
@@ -401,199 +509,220 @@ html
                 .name
                     font-weight: 900
 
-// Portfolio Page
-#portfolio
-    background-color: #181818
-    min-height: 100vh
+#portfolio-pull-out
+    height: 100vh
+    width: 100vw
+    overflow: hidden
+    background-color: rgba(0, 0, 0, 0.9)
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 99
+    transition: transform 0.75s ease-in-out
+    transform: translateX(100%)
 
-    #list
-        padding: 100px 0px
+    &.loaded
+        transform: none
 
-        h6
-            font-weight: 300
-            font-size: 1rem
-            opacity: 0.2
+    .portfolio-panel
+        height: 100vh
+        width: 80vw
+        background-color: #141414
+        position: absolute
+        right: 0
+        top: 0
+        transition: transform 0.5s ease-in-out
+        transform: translateX(100%)
+
+        @media screen and (max-width: $tab)
+            width: 100%
+            overflow-y: auto
+
+        &.loaded
+            transform: none
+
+        .close-panel
             position: absolute
-            padding-top: 28px
-            padding-left: 200px
-
-            @media screen and (max-width: 1100px)
-                padding-left: 100px
-            @media screen and (max-width: 800px)
-                padding-left: 50px
-                padding-top: 0px
-
-        h5
-            @media screen and (max-width: 768px)
-                font-size: 1.25rem
-
-        .work
-            position: relative
-            height: 90px
-            padding: 0px 100px
-            padding-left: 50%
+            top: 10px
+            left: 20px
+            opacity: 0.5
+            font-size: 1.5rem
             cursor: pointer
 
-            @media screen and (max-width: 1330px)
-                padding-left: 40%
-            @media screen and (max-width: 1100px)
-                padding-left: 30%
-            @media screen and (max-width: 950px)
-                padding-left: 25%
-            @media screen and (max-width: 800px)
-                padding-left: 50px
-            @media screen and (max-width: 768px)
-                height: 55px
-
             &:hover
+                opacity: 0.75
 
-                .strip
-                    transform: scale3d(1, 1, 1)
+        .project-info
+            padding: 100px 50px
 
+            *
+                font-family: iA Writer
 
-        .strip
-            padding: 0px 100px
-            align-items: center
-            position: absolute
-            width: 100%
-            top: 0px
-            left: 0px
-            transform-origin: center top
-            transform: scale3d(1, 0, 1)
-            transition: transform 0.6s cubic-bezier(.215,.61,.355,1)
+            .project-title
+                opacity: 0.25
 
-            @media screen and (max-width: 768px)
-                padding: 0px 25px
+            .project-name
+                margin-bottom: 50px
 
-            &.ndorsa
-                background-color: white
+            .fact-file
+                font-size: 0.85rem
+                margin-bottom: 50px
 
-                p
-                    color: black
+                .fact
+                    margin-bottom: 20px
 
-                .title
-                    font-family: Source Sans Pro
+                    &:last-of-type
+                        margin-bottom: 0px
 
-            &.eden
-                background-color: #52ae76
+                .date, .team-members span
+                    color: rgba(255, 255, 255, 0.5)
 
-                p
-                    color: white
+                .team-members
+                    margin-bottom: 20px !important
 
-                .title
-                    font-family: Source Sans Pro
+                    span
+                        margin-right: 5px
 
-            &.frecibo
-                background-color: #a4c6b7
+                    .member
+                        height: 1.5em
+                        width: 1.5em
+                        border: 2px solid white
+                        border-radius: 100px
+                        position: relative
 
-                p
-                    color: black
+                        a
+                            position: absolute
+                            left: 0
+                            top: 0
+                            width: 100%
+                            height: 100%
 
-                .title
-                    font-family: Lobster
+                        &:after
+                            opacity: 0
+                            border-radius: 100px
 
-            &.raw
-                background-color: #c3a541
+                        &:nth-of-type(2)
+                            transform: translateX(-0.5em)
+                        &:nth-of-type(3)
+                            transform: translateX(-1em)
+                        &:nth-of-type(4)
+                            transform: translateX(-1.5em)
 
-                p
-                    color: black
+                        &.wastemane
+                            background-image: url('../assets/img/team/wastemane.jpg')
+                        &.ed
+                            background-image: url('../assets/img/team/barp.jpg')
+                        &.alex
+                            background-image: url('../assets/img/team/macpherson.jpg')
+                        &.tk
+                            background-image: url('../assets/img/team/kilminster.jpg')
+                        &.mitch
+                            background-image: url('../assets/img/team/mitch.jpg')
 
-                .title
-                    font-family: Adam
+                        &:hover
+                            cursor: pointer
 
-            &.lush-heat
-                background-color: white
+                            &:after
+                                opacity: 0.75
 
-                p
-                    color: black
+                    &:hover
 
-                .title
-                    font-family: Raleway
+                        .member
+                            transform: none
+                            margin-right: 5px
 
-            &.fdis
-                background-color: $fdis
+                            &:last-of-type
+                                margin-right: 0px
 
-                p
-                    color: black
+                .desc
+                    width: 60%
+                    line-height: 1.8em
 
-                .title
-                    font-family: Antonio
+                    @media screen and (max-width: $tab)
+                        width: 100%
 
-            &.tutorial
-                background-color: #1172c1
+            .project-link
+                background-color: $red
+                color: white
+                font-weight: 700
+                width: 200px
+                height: 50px
+                border-radius: 2px
+                display: flex
+                justify-content: center
+                align-items: center
 
-                p
-                    color: white
+                &:hover
 
-                .title
-                    font-family: Helvetica
+                    span
+                        transform: translateX(5px)
 
-            &.uprising
-                background-color: black
+                span
+                    margin-left: 5px
 
-                p
-                    color: white
+        .gallery
+            height: 100vh
+            overflow-y: auto
 
-                .title
-                    font-family: Angry Blu
+            @media screen and (max-width: $tab)
+                margin-left: 0px
+                height: auto
+                padding: 0px 50px
+                margin-bottom: 50px
 
-            &.moneywise
-                background-color: #bd3935
+            img
+                width: 100%
+                height: auto
 
-                p
-                    color: white
+            .browser
+                margin-top: 100px
+                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75)
+                margin-bottom: 50px
 
-                .title
-                    font-family: Raleway
+                @media screen and (max-width: $tab)
+                    margin-top: 0px
 
-            &.fairpay
-                background-color: #9c1c1c
+                .browser-header
+                    border-radius: 5px 5px 0 0
+                    padding: 10px 15px
 
-                p
-                    color: white
+                    .close, .minimise, .maximise
+                        min-width: 10px
+                        max-width: 10px
+                        min-height: 10px
+                        max-height: 10px
+                        background-color: #181818
+                        border-radius: 100px
+                        margin-right: 10px
 
-                .title
-                    font-family: Abel
+                    .close
 
-            &.do-to
-                background-color: #f6d6a4
+                        &:hover
+                            background-color: #ff4746
 
-                p
-                    color: black
+                    .minimise
 
-                .title
-                    font-family: Dosis
+                        &:hover
+                            background-color: #ffbe00
 
-            .title
-                font-size: 2em
+                    .maximise
+                        margin-right: 20px
 
-                &.large
-                    font-size: 2.5em
+                        &:hover
+                            background-color: #00d644
 
-                &.small
-                    font-size: 1.5em
+                    .search
+                        background-color: #181818
+                        opacity: 0.5
+                        width: 100%
+                        height: 20px
+                        border-radius: 3px
 
-            .label
-                opacity: 0.5
-                font-size: 0.7em
+                        &:hover
+                            opacity: 0.75
 
-            .category, .year
-                font-weight: 900
-                font-size: 0.9em
-
-            .col.six
-
-                @media screen and (max-width: 768px)
-                    margin-bottom: 0px
-
-            .col.three
-
-                @media screen and (max-width: 768px)
-                    display: none
-
-            &.lush-heat, &.fdis
-
-                .title
-
-                    @media screen and (max-width: 1100px)
-                        font-size: 1.25em
+                .screen
+                    background-color: rgb(23, 23, 23)
+                    height: auto
+                    width: 100%
+                    display: inherit
